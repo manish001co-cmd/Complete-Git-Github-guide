@@ -1,0 +1,1520 @@
+<!DOCTYPE html>
+<!-- saved from url=(0078)https://app.flowstep.ai/file?activeFileId=d1f23864-6f26-44db-98c3-ad75e16d27e1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+          <link rel="preconnect" href="https://fonts.googleapis.com/">
+          <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+          <link href="./css2" rel="stylesheet">
+          <script type="module" src="./tailwindStatic.js.download"></script>
+          <style type="text/tailwindcss">
+    
+    /* limit the size of max height elements */
+    .h-screen {
+      height: 956px !important;
+    }
+    .min-h-screen {
+      min-height: 956px !important;
+    }
+    
+    
+    * {
+        scrollbar-width: none;
+    }
+
+    *::-webkit-scrollbar {
+        display: none;
+    }
+
+    body {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0;
+        padding: 0;
+        margin: 0;
+    }
+    
+    
+    :root {
+        font-family: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    }
+
+    .font-sans {
+        font-family: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    }
+
+    .font-mono {
+        font-family: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+
+    .font-serif {
+        font-family: "Source Serif 4", "Inter", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    }
+    
+    @theme inline {
+        --radius: 0.65rem;
+        --background: oklch(1 0 0);
+        --foreground: oklch(0.145 0 0);
+        --card: oklch(1 0 0);
+        --card-foreground: oklch(0.145 0 0);
+        --popover: oklch(1 0 0);
+        --popover-foreground: oklch(0.145 0 0);
+        --primary: oklch(0.205 0 0);
+        --primary-foreground: oklch(0.985 0 0);
+        --secondary: oklch(0.97 0 0);
+        --secondary-foreground: oklch(0.205 0 0);
+        --muted: oklch(0.97 0 0);
+        --muted-foreground: oklch(0.556 0 0);
+        --accent: oklch(0.97 0 0);
+        --accent-foreground: oklch(0.205 0 0);
+        --destructive: oklch(0.577 0.245 27.325);
+        --border: oklch(0.922 0 0);
+        --input: oklch(0.922 0 0);
+        --ring: oklch(0.708 0 0);
+        --chart-1: oklch(0.646 0.222 41.116);
+        --chart-2: oklch(0.6 0.118 184.704);
+        --chart-3: oklch(0.398 0.07 227.392);
+        --chart-4: oklch(0.828 0.189 84.429);
+        --chart-5: oklch(0.769 0.188 70.08);
+        --sidebar: oklch(0.985 0 0);
+        --sidebar-foreground: oklch(0.145 0 0);
+        --sidebar-primary: oklch(0.205 0 0);
+        --sidebar-primary-foreground: oklch(0.985 0 0);
+        --sidebar-accent: oklch(0.97 0 0);
+        --sidebar-accent-foreground: oklch(0.205 0 0);
+        --sidebar-border: oklch(0.922 0 0);
+        --sidebar-ring: oklch(0.708 0 0);
+        --color-background: var(--background);
+        --color-foreground: var(--foreground);
+        --color-card: var(--card);
+        --color-card-foreground: var(--card-foreground);
+        --color-popover: var(--popover);
+        --color-popover-foreground: var(--popover-foreground);
+        --color-primary: var(--primary);
+        --color-primary-foreground: var(--primary-foreground);
+        --color-secondary: var(--secondary);
+        --color-secondary-foreground: var(--secondary-foreground);
+        --color-muted: var(--muted);
+        --color-muted-foreground: var(--muted-foreground);
+        --color-accent: var(--accent);
+        --color-accent-foreground: var(--accent-foreground);
+        --color-destructive: var(--destructive);
+        --color-border: var(--border);
+        --color-input: var(--input);
+        --color-ring: var(--ring);
+        --color-chart-1: var(--chart-1);
+        --color-chart-2: var(--chart-2);
+        --color-chart-3: var(--chart-3);
+        --color-chart-4: var(--chart-4);
+        --color-chart-5: var(--chart-5);
+        --color-sidebar: var(--sidebar);
+        --color-sidebar-foreground: var(--sidebar-foreground);
+        --color-sidebar-primary: var(--sidebar-primary);
+        --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+        --color-sidebar-accent: var(--sidebar-accent);
+        --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+        --color-sidebar-border: var(--sidebar-border);
+        --color-sidebar-ring: var(--sidebar-ring);
+    }
+    
+    .bg-background {
+        background: var(--color-background);
+    }
+    .bg-foreground {
+        background: var(--color-foreground);
+    }
+    .bg-card {
+        background: var(--color-card);
+    }
+    .bg-card-foreground {
+        background: var(--color-card-foreground);
+    }
+    .bg-popover {
+        background: var(--color-popover);
+    }
+    .bg-popover-foreground {
+        background: var(--color-popover-foreground);
+    }
+    .bg-primary {
+        background: var(--color-primary);
+    }
+    .bg-primary-foreground {
+        background: var(--color-primary-foreground);
+    }
+    .bg-secondary {
+        background: var(--color-secondary);
+    }
+    .bg-secondary-foreground {
+        background: var(--color-secondary-foreground);
+    }
+    .bg-muted {
+        background: var(--color-muted);
+    }
+    .bg-muted-foreground {
+        background: var(--color-muted-foreground);
+    }
+    .bg-accent {
+        background: var(--color-accent);
+    }
+    .bg-accent-foreground {
+        background: var(--color-accent-foreground);
+    }
+    .bg-destructive {
+        background: var(--color-destructive);
+    }
+    .bg-border {
+        background: var(--color-border);
+    }
+    .bg-input {
+        background: var(--color-input);
+    }
+    .bg-ring {
+        background: var(--color-ring);
+    }
+
+    .text-card {
+        color: var(--color-card);
+    }
+    .text-card-foreground {
+        color: var(--color-card-foreground);
+    }
+    .text-popover {
+        color: var(--color-popover);
+    }
+    .text-popover-foreground {
+        color: var(--color-popover-foreground);
+    }
+    .text-primary {
+        color: var(--color-primary);
+    }
+    .text-primary-foreground {
+        color: var(--color-primary-foreground);
+    }
+    .text-secondary {
+        color: var(--color-secondary);
+    }
+    .text-secondary-foreground {
+        color: var(--color-secondary-foreground);
+    }
+    .text-muted {
+        color: var(--color-muted);
+    }
+    .text-muted-foreground {
+        color: var(--color-muted-foreground);
+    }
+    .text-accent {
+        color: var(--color-accent);
+    }
+    .text-accent-foreground {
+        color: var(--color-accent-foreground);
+    }
+    .text-destructive {
+        color: var(--color-destructive);
+    }
+    .text-border {
+        color: var(--color-border);
+    }
+    .text-input {
+        color: var(--color-input);
+    }
+    .text-ring {
+        color: var(--color-ring);
+    }
+    .border {
+        border-color: var(--color-border);
+    }
+    .border-border {
+        border-color: var(--color-border);
+    }
+    .border-primary {
+        border-color: var(--color-primary);
+    }
+    .border-secondary {
+        border-color: var(--color-secondary);
+    }
+    .border-muted {
+        border-color: var(--color-muted);
+    }
+    .border-accent {
+        border-color: var(--color-accent);
+    }
+    .border-destructive {
+        border-color: var(--color-destructive);
+    }
+    .border-input {
+        border-color: var(--color-input);
+    }
+    .border-ring {
+        border-color: var(--color-border);
+    }
+    .border-t {
+        border-color: var(--color-border);
+    }
+    .border-b {
+        border-color: var(--color-border);
+    }
+    .border-l {
+        border-color: var(--color-border);
+    }
+    .border-r {
+        border-color: var(--color-border);
+    }    
+    </style>
+          <link rel="stylesheet" href="./tw-animate.css" crossorigin="anonymous">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>/*! tailwindcss v4.1.11 | MIT License | https://tailwindcss.com */
+@layer properties;
+@layer theme, base, components, utilities;
+@layer theme {
+  :root, :host {
+    --font-sans: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+    monospace;
+    --color-red-100: oklch(93.6% 0.032 17.717);
+    --color-red-700: oklch(50.5% 0.213 27.518);
+    --color-amber-100: oklch(96.2% 0.059 95.617);
+    --color-amber-400: oklch(82.8% 0.189 84.429);
+    --color-amber-500: oklch(76.9% 0.188 70.08);
+    --color-amber-600: oklch(66.6% 0.179 58.318);
+    --color-amber-700: oklch(55.5% 0.163 48.998);
+    --color-green-100: oklch(96.2% 0.044 156.743);
+    --color-green-500: oklch(72.3% 0.219 149.579);
+    --color-green-600: oklch(62.7% 0.194 149.214);
+    --color-green-700: oklch(52.7% 0.154 150.069);
+    --color-neutral-100: oklch(97% 0 0);
+    --color-neutral-200: oklch(92.2% 0 0);
+    --color-neutral-500: oklch(55.6% 0 0);
+    --color-neutral-950: oklch(14.5% 0 0);
+    --color-black: #000;
+    --color-white: #fff;
+    --spacing: 0.25rem;
+    --container-sm: 24rem;
+    --text-xs: 0.75rem;
+    --text-xs--line-height: calc(1 / 0.75);
+    --text-sm: 0.875rem;
+    --text-sm--line-height: calc(1.25 / 0.875);
+    --text-base: 1rem;
+    --text-base--line-height: calc(1.5 / 1);
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --tracking-tight: -0.025em;
+    --radius-md: 0.375rem;
+    --radius-lg: 0.5rem;
+    --radius-xl: 0.75rem;
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --default-font-family: var(--font-sans);
+    --default-mono-font-family: var(--font-mono);
+    --background: oklch(1 0 0);
+    --foreground: oklch(0.145 0 0);
+    --card: oklch(1 0 0);
+    --card-foreground: oklch(0.145 0 0);
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch(0.145 0 0);
+    --primary: oklch(0.205 0 0);
+    --primary-foreground: oklch(0.985 0 0);
+    --secondary: oklch(0.97 0 0);
+    --secondary-foreground: oklch(0.205 0 0);
+    --muted: oklch(0.97 0 0);
+    --muted-foreground: oklch(0.556 0 0);
+    --accent: oklch(0.97 0 0);
+    --accent-foreground: oklch(0.205 0 0);
+    --destructive: oklch(0.577 0.245 27.325);
+    --border: oklch(0.922 0 0);
+    --input: oklch(0.922 0 0);
+    --ring: oklch(0.708 0 0);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+    --color-popover: var(--popover);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-destructive: var(--destructive);
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+  }
+}
+@layer base {
+  *, ::after, ::before, ::backdrop, ::file-selector-button {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
+  }
+  html, :host {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+    font-family: var(--default-font-family, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji');
+    font-feature-settings: var(--default-font-feature-settings, normal);
+    font-variation-settings: var(--default-font-variation-settings, normal);
+    -webkit-tap-highlight-color: transparent;
+  }
+  hr {
+    height: 0;
+    color: inherit;
+    border-top-width: 1px;
+  }
+  abbr:where([title]) {
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  a {
+    color: inherit;
+    -webkit-text-decoration: inherit;
+    text-decoration: inherit;
+  }
+  b, strong {
+    font-weight: bolder;
+  }
+  code, kbd, samp, pre {
+    font-family: var(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace);
+    font-feature-settings: var(--default-mono-font-feature-settings, normal);
+    font-variation-settings: var(--default-mono-font-variation-settings, normal);
+    font-size: 1em;
+  }
+  small {
+    font-size: 80%;
+  }
+  sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  sub {
+    bottom: -0.25em;
+  }
+  sup {
+    top: -0.5em;
+  }
+  table {
+    text-indent: 0;
+    border-color: inherit;
+    border-collapse: collapse;
+  }
+  :-moz-focusring {
+    outline: auto;
+  }
+  progress {
+    vertical-align: baseline;
+  }
+  summary {
+    display: list-item;
+  }
+  ol, ul, menu {
+    list-style: none;
+  }
+  img, svg, video, canvas, audio, iframe, embed, object {
+    display: block;
+    vertical-align: middle;
+  }
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+  button, input, select, optgroup, textarea, ::file-selector-button {
+    font: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    border-radius: 0;
+    background-color: transparent;
+    opacity: 1;
+  }
+  :where(select:is([multiple], [size])) optgroup {
+    font-weight: bolder;
+  }
+  :where(select:is([multiple], [size])) optgroup option {
+    padding-inline-start: 20px;
+  }
+  ::file-selector-button {
+    margin-inline-end: 4px;
+  }
+  ::placeholder {
+    opacity: 1;
+  }
+  @supports (not (-webkit-appearance: -apple-pay-button))  or (contain-intrinsic-size: 1px) {
+    ::placeholder {
+      color: currentcolor;
+      @supports (color: color-mix(in lab, red, red)) {
+        color: color-mix(in oklab, currentcolor 50%, transparent);
+      }
+    }
+  }
+  textarea {
+    resize: vertical;
+  }
+  ::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  ::-webkit-date-and-time-value {
+    min-height: 1lh;
+    text-align: inherit;
+  }
+  ::-webkit-datetime-edit {
+    display: inline-flex;
+  }
+  ::-webkit-datetime-edit-fields-wrapper {
+    padding: 0;
+  }
+  ::-webkit-datetime-edit, ::-webkit-datetime-edit-year-field, ::-webkit-datetime-edit-month-field, ::-webkit-datetime-edit-day-field, ::-webkit-datetime-edit-hour-field, ::-webkit-datetime-edit-minute-field, ::-webkit-datetime-edit-second-field, ::-webkit-datetime-edit-millisecond-field, ::-webkit-datetime-edit-meridiem-field {
+    padding-block: 0;
+  }
+  :-moz-ui-invalid {
+    box-shadow: none;
+  }
+  button, input:where([type='button'], [type='reset'], [type='submit']), ::file-selector-button {
+    appearance: button;
+  }
+  ::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+    height: auto;
+  }
+  [hidden]:where(:not([hidden='until-found'])) {
+    display: none !important;
+  }
+}
+@layer utilities {
+  .\@container\/card-header {
+    container-type: inline-size;
+    container-name: card-header;
+  }
+  .absolute {
+    position: absolute;
+  }
+  .relative {
+    position: relative;
+  }
+  .inset-0 {
+    inset: calc(var(--spacing) * 0);
+  }
+  .top-1 {
+    top: calc(var(--spacing) * 1);
+  }
+  .top-1\/2 {
+    top: calc(1/2 * 100%);
+  }
+  .top-3 {
+    top: calc(var(--spacing) * 3);
+  }
+  .right-1 {
+    right: calc(var(--spacing) * 1);
+  }
+  .right-3 {
+    right: calc(var(--spacing) * 3);
+  }
+  .bottom-3 {
+    bottom: calc(var(--spacing) * 3);
+  }
+  .left-3 {
+    left: calc(var(--spacing) * 3);
+  }
+  .left-4 {
+    left: calc(var(--spacing) * 4);
+  }
+  .mx-auto {
+    margin-inline: auto;
+  }
+  .mt-1 {
+    margin-top: calc(var(--spacing) * 1);
+  }
+  .mt-2 {
+    margin-top: calc(var(--spacing) * 2);
+  }
+  .mb-1 {
+    margin-bottom: calc(var(--spacing) * 1);
+  }
+  .mb-2 {
+    margin-bottom: calc(var(--spacing) * 2);
+  }
+  .mb-3 {
+    margin-bottom: calc(var(--spacing) * 3);
+  }
+  .mb-6 {
+    margin-bottom: calc(var(--spacing) * 6);
+  }
+  .mb-8 {
+    margin-bottom: calc(var(--spacing) * 8);
+  }
+  .flex {
+    display: flex;
+  }
+  .grid {
+    display: grid;
+  }
+  .inline-flex {
+    display: inline-flex;
+  }
+  .size-3 {
+    width: calc(var(--spacing) * 3);
+    height: calc(var(--spacing) * 3);
+  }
+  .size-4 {
+    width: calc(var(--spacing) * 4);
+    height: calc(var(--spacing) * 4);
+  }
+  .size-5 {
+    width: calc(var(--spacing) * 5);
+    height: calc(var(--spacing) * 5);
+  }
+  .size-6 {
+    width: calc(var(--spacing) * 6);
+    height: calc(var(--spacing) * 6);
+  }
+  .h-1\.5 {
+    height: calc(var(--spacing) * 1.5);
+  }
+  .h-2 {
+    height: calc(var(--spacing) * 2);
+  }
+  .h-6 {
+    height: calc(var(--spacing) * 6);
+  }
+  .h-7 {
+    height: calc(var(--spacing) * 7);
+  }
+  .h-8 {
+    height: calc(var(--spacing) * 8);
+  }
+  .h-9 {
+    height: calc(var(--spacing) * 9);
+  }
+  .h-12 {
+    height: calc(var(--spacing) * 12);
+  }
+  .h-14 {
+    height: calc(var(--spacing) * 14);
+  }
+  .h-32 {
+    height: calc(var(--spacing) * 32);
+  }
+  .h-fit {
+    height: fit-content;
+  }
+  .h-full {
+    height: 100%;
+  }
+  .min-h-\[40px\] {
+    min-height: 40px;
+  }
+  .min-h-\[320px\] {
+    min-height: 320px;
+  }
+  .min-h-screen {
+    min-height: 100vh;
+  }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
+  }
+  .w-2 {
+    width: calc(var(--spacing) * 2);
+  }
+  .w-6 {
+    width: calc(var(--spacing) * 6);
+  }
+  .w-7 {
+    width: calc(var(--spacing) * 7);
+  }
+  .w-8 {
+    width: calc(var(--spacing) * 8);
+  }
+  .w-12 {
+    width: calc(var(--spacing) * 12);
+  }
+  .w-24 {
+    width: calc(var(--spacing) * 24);
+  }
+  .w-fit {
+    width: fit-content;
+  }
+  .w-full {
+    width: 100%;
+  }
+  .w-screen {
+    width: 100vw;
+  }
+  .max-w-\[1140px\] {
+    max-width: 1140px;
+  }
+  .max-w-screen {
+    max-width: 100vw;
+  }
+  .max-w-sm {
+    max-width: var(--container-sm);
+  }
+  .min-w-fit {
+    min-width: fit-content;
+  }
+  .min-w-screen {
+    min-width: 100vw;
+  }
+  .flex-1 {
+    flex: 1;
+  }
+  .shrink-0 {
+    flex-shrink: 0;
+  }
+  .-translate-y-1\/2 {
+    --tw-translate-y: calc(calc(1/2 * 100%) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  .auto-rows-min {
+    grid-auto-rows: min-content;
+  }
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .grid-rows-\[auto_auto\] {
+    grid-template-rows: auto auto;
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .items-start {
+    align-items: flex-start;
+  }
+  .justify-between {
+    justify-content: space-between;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .gap-0 {
+    gap: calc(var(--spacing) * 0);
+  }
+  .gap-1 {
+    gap: calc(var(--spacing) * 1);
+  }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
+  }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
+  }
+  .gap-6 {
+    gap: calc(var(--spacing) * 6);
+  }
+  .self-stretch {
+    align-self: stretch;
+  }
+  .overflow-hidden {
+    overflow: hidden;
+  }
+  .overflow-visible {
+    overflow: visible;
+  }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
+  }
+  .rounded-lg {
+    border-radius: var(--radius-lg);
+  }
+  .rounded-md {
+    border-radius: var(--radius-md);
+  }
+  .rounded-xl {
+    border-radius: var(--radius-xl);
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .border-0 {
+    border-style: var(--tw-border-style);
+    border-width: 0px;
+  }
+  .border-1 {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .border-2 {
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+  }
+  .border-t-0 {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 0px;
+  }
+  .border-t-1 {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 1px;
+  }
+  .border-r-0 {
+    border-right-style: var(--tw-border-style);
+    border-right-width: 0px;
+  }
+  .border-b-0 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 0px;
+  }
+  .border-b-1 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+  }
+  .border-b-2 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 2px;
+  }
+  .border-l-0 {
+    border-left-style: var(--tw-border-style);
+    border-left-width: 0px;
+  }
+  .border-dashed {
+    --tw-border-style: dashed;
+    border-style: dashed;
+  }
+  .border-solid {
+    --tw-border-style: solid;
+    border-style: solid;
+  }
+  .border-\[\#e7000b\]\/30 {
+    border-color: color-mix(in oklab, #e7000b 30%, transparent);
+  }
+  .border-\[\#e7000b\]\/40 {
+    border-color: color-mix(in oklab, #e7000b 40%, transparent);
+  }
+  .border-black\/1 {
+    border-color: color-mix(in srgb, #000 1%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-black) 1%, transparent);
+    }
+  }
+  .border-neutral-200 {
+    border-color: var(--color-neutral-200);
+  }
+  .border-neutral-950 {
+    border-color: var(--color-neutral-950);
+  }
+  .bg-\[\#e7000b\] {
+    background-color: #e7000b;
+  }
+  .bg-\[\#e7000b\]\/5 {
+    background-color: color-mix(in oklab, #e7000b 5%, transparent);
+  }
+  .bg-amber-100 {
+    background-color: var(--color-amber-100);
+  }
+  .bg-amber-400 {
+    background-color: var(--color-amber-400);
+  }
+  .bg-background {
+    background-color: var(--background);
+  }
+  .bg-card {
+    background-color: var(--card);
+  }
+  .bg-green-100 {
+    background-color: var(--color-green-100);
+  }
+  .bg-green-500 {
+    background-color: var(--color-green-500);
+  }
+  .bg-neutral-100 {
+    background-color: var(--color-neutral-100);
+  }
+  .bg-neutral-100\/50 {
+    background-color: color-mix(in srgb, oklch(97% 0 0) 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-neutral-100) 50%, transparent);
+    }
+  }
+  .bg-neutral-950 {
+    background-color: var(--color-neutral-950);
+  }
+  .bg-red-100 {
+    background-color: var(--color-red-100);
+  }
+  .bg-white {
+    background-color: var(--color-white);
+  }
+  .bg-\[linear-gradient\(to_top\,oklch\(0\.145_0_0\/0\.7\)\,transparent\)\] {
+    background-image: linear-gradient(to top,oklch(0.145 0 0/0.7),transparent);
+  }
+  .object-cover {
+    object-fit: cover;
+  }
+  .p-0 {
+    padding: calc(var(--spacing) * 0);
+  }
+  .p-2 {
+    padding: calc(var(--spacing) * 2);
+  }
+  .p-3 {
+    padding: calc(var(--spacing) * 3);
+  }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
+  }
+  .p-6 {
+    padding: calc(var(--spacing) * 6);
+  }
+  .p-8 {
+    padding: calc(var(--spacing) * 8);
+  }
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
+  }
+  .px-3 {
+    padding-inline: calc(var(--spacing) * 3);
+  }
+  .px-4 {
+    padding-inline: calc(var(--spacing) * 4);
+  }
+  .px-8 {
+    padding-inline: calc(var(--spacing) * 8);
+  }
+  .py-0\.5 {
+    padding-block: calc(var(--spacing) * 0.5);
+  }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
+  }
+  .pt-2 {
+    padding-top: calc(var(--spacing) * 2);
+  }
+  .pt-3 {
+    padding-top: calc(var(--spacing) * 3);
+  }
+  .pr-4 {
+    padding-right: calc(var(--spacing) * 4);
+  }
+  .pl-9 {
+    padding-left: calc(var(--spacing) * 9);
+  }
+  .text-center {
+    text-align: center;
+  }
+  .text-right {
+    text-align: right;
+  }
+  .text-3xl {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
+  .text-base {
+    font-size: var(--text-base);
+    line-height: var(--tw-leading, var(--text-base--line-height));
+  }
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
+  .text-sm {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
+  .text-xs {
+    font-size: var(--text-xs);
+    line-height: var(--tw-leading, var(--text-xs--line-height));
+  }
+  .leading-4 {
+    --tw-leading: calc(var(--spacing) * 4);
+    line-height: calc(var(--spacing) * 4);
+  }
+  .leading-5 {
+    --tw-leading: calc(var(--spacing) * 5);
+    line-height: calc(var(--spacing) * 5);
+  }
+  .leading-6 {
+    --tw-leading: calc(var(--spacing) * 6);
+    line-height: calc(var(--spacing) * 6);
+  }
+  .leading-7 {
+    --tw-leading: calc(var(--spacing) * 7);
+    line-height: calc(var(--spacing) * 7);
+  }
+  .leading-9 {
+    --tw-leading: calc(var(--spacing) * 9);
+    line-height: calc(var(--spacing) * 9);
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
+  .font-medium {
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+  }
+  .font-semibold {
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+  }
+  .tracking-tight {
+    --tw-tracking: var(--tracking-tight);
+    letter-spacing: var(--tracking-tight);
+  }
+  .whitespace-nowrap {
+    white-space: nowrap;
+  }
+  .text-\[\#e7000b\] {
+    color: #e7000b;
+  }
+  .text-amber-500 {
+    color: var(--color-amber-500);
+  }
+  .text-amber-600 {
+    color: var(--color-amber-600);
+  }
+  .text-amber-700 {
+    color: var(--color-amber-700);
+  }
+  .text-card-foreground {
+    color: var(--card-foreground);
+  }
+  .text-foreground {
+    color: var(--foreground);
+  }
+  .text-green-600 {
+    color: var(--color-green-600);
+  }
+  .text-green-700 {
+    color: var(--color-green-700);
+  }
+  .text-neutral-500 {
+    color: var(--color-neutral-500);
+  }
+  .text-neutral-950 {
+    color: var(--color-neutral-950);
+  }
+  .text-red-700 {
+    color: var(--color-red-700);
+  }
+  .text-white {
+    color: var(--color-white);
+  }
+  .shadow-sm {
+    --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-xs {
+    --tw-shadow: 0 1px 2px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.05));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .transition-\[color\,box-shadow\] {
+    transition-property: color,box-shadow;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .transition-all {
+    transition-property: all;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .transition-colors {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .outline-none {
+    --tw-outline-style: none;
+    outline-style: none;
+  }
+  .hover\:bg-accent {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--accent);
+      }
+    }
+  }
+  .hover\:bg-primary\/90 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: color-mix(in srgb, oklch(0.205 0 0) 90%, transparent);
+        @supports (color: color-mix(in lab, red, red)) {
+          background-color: color-mix(in oklab, var(--primary) 90%, transparent);
+        }
+      }
+    }
+  }
+  .hover\:text-accent-foreground {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--accent-foreground);
+      }
+    }
+  }
+  .focus-visible\:border-ring {
+    &:focus-visible {
+      border-color: var(--ring);
+    }
+  }
+  .focus-visible\:ring-\[3px\] {
+    &:focus-visible {
+      --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    }
+  }
+  .focus-visible\:ring-ring\/50 {
+    &:focus-visible {
+      --tw-ring-color: color-mix(in srgb, oklch(0.708 0 0) 50%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        --tw-ring-color: color-mix(in oklab, var(--ring) 50%, transparent);
+      }
+    }
+  }
+  .disabled\:pointer-events-none {
+    &:disabled {
+      pointer-events: none;
+    }
+  }
+  .disabled\:opacity-50 {
+    &:disabled {
+      opacity: 50%;
+    }
+  }
+  .has-data-\[slot\=card-action\]\:grid-cols-\[1fr_auto\] {
+    &:has(*[data-slot="card-action"]) {
+      grid-template-columns: 1fr auto;
+    }
+  }
+  .has-\[\>svg\]\:px-3 {
+    &:has(>svg) {
+      padding-inline: calc(var(--spacing) * 3);
+    }
+  }
+  .aria-invalid\:border-destructive {
+    &[aria-invalid="true"] {
+      border-color: var(--destructive);
+    }
+  }
+  .aria-invalid\:ring-destructive\/20 {
+    &[aria-invalid="true"] {
+      --tw-ring-color: color-mix(in srgb, oklch(0.577 0.245 27.325) 20%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        --tw-ring-color: color-mix(in oklab, var(--destructive) 20%, transparent);
+      }
+    }
+  }
+  .dark\:border-input {
+    @media (prefers-color-scheme: dark) {
+      border-color: var(--input);
+    }
+  }
+  .dark\:bg-input\/30 {
+    @media (prefers-color-scheme: dark) {
+      background-color: color-mix(in srgb, oklch(0.922 0 0) 30%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        background-color: color-mix(in oklab, var(--input) 30%, transparent);
+      }
+    }
+  }
+  .dark\:hover\:bg-input\/50 {
+    @media (prefers-color-scheme: dark) {
+      &:hover {
+        @media (hover: hover) {
+          background-color: color-mix(in srgb, oklch(0.922 0 0) 50%, transparent);
+          @supports (color: color-mix(in lab, red, red)) {
+            background-color: color-mix(in oklab, var(--input) 50%, transparent);
+          }
+        }
+      }
+    }
+  }
+  .dark\:aria-invalid\:ring-destructive\/40 {
+    @media (prefers-color-scheme: dark) {
+      &[aria-invalid="true"] {
+        --tw-ring-color: color-mix(in srgb, oklch(0.577 0.245 27.325) 40%, transparent);
+        @supports (color: color-mix(in lab, red, red)) {
+          --tw-ring-color: color-mix(in oklab, var(--destructive) 40%, transparent);
+        }
+      }
+    }
+  }
+  .\[\&_svg\]\:pointer-events-none {
+    & svg {
+      pointer-events: none;
+    }
+  }
+  .\[\&_svg\]\:shrink-0 {
+    & svg {
+      flex-shrink: 0;
+    }
+  }
+  .\[\&_svg\:not\(\[class\*\=\'size-\'\]\)\]\:size-4 {
+    & svg:not([class*='size-']) {
+      width: calc(var(--spacing) * 4);
+      height: calc(var(--spacing) * 4);
+    }
+  }
+  .\[\.border-b\]\:pb-6 {
+    &:is(.border-b) {
+      padding-bottom: calc(var(--spacing) * 6);
+    }
+  }
+  .\[\&\>svg\]\:pointer-events-none {
+    &>svg {
+      pointer-events: none;
+    }
+  }
+  .\[\&\>svg\]\:size-3 {
+    &>svg {
+      width: calc(var(--spacing) * 3);
+      height: calc(var(--spacing) * 3);
+    }
+  }
+  .\[a\&\]\:hover\:bg-accent {
+    a& {
+      &:hover {
+        @media (hover: hover) {
+          background-color: var(--accent);
+        }
+      }
+    }
+  }
+  .\[a\&\]\:hover\:bg-primary\/90 {
+    a& {
+      &:hover {
+        @media (hover: hover) {
+          background-color: color-mix(in srgb, oklch(0.205 0 0) 90%, transparent);
+          @supports (color: color-mix(in lab, red, red)) {
+            background-color: color-mix(in oklab, var(--primary) 90%, transparent);
+          }
+        }
+      }
+    }
+  }
+  .\[a\&\]\:hover\:text-accent-foreground {
+    a& {
+      &:hover {
+        @media (hover: hover) {
+          color: var(--accent-foreground);
+        }
+      }
+    }
+  }
+}
+.h-screen {
+  height: 956px !important;
+}
+.min-h-screen {
+  min-height: 956px !important;
+}
+* {
+  scrollbar-width: none;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+body {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.font-sans {
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.font-mono {
+  font-family: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+.font-serif {
+  font-family: "Source Serif 4", "Inter", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+.bg-background {
+  background: var(--color-background);
+}
+.bg-foreground {
+  background: var(--color-foreground);
+}
+.bg-card {
+  background: var(--color-card);
+}
+.bg-card-foreground {
+  background: var(--color-card-foreground);
+}
+.bg-popover {
+  background: var(--color-popover);
+}
+.bg-popover-foreground {
+  background: var(--color-popover-foreground);
+}
+.bg-primary {
+  background: var(--color-primary);
+}
+.bg-primary-foreground {
+  background: var(--color-primary-foreground);
+}
+.bg-secondary {
+  background: var(--color-secondary);
+}
+.bg-secondary-foreground {
+  background: var(--color-secondary-foreground);
+}
+.bg-muted {
+  background: var(--color-muted);
+}
+.bg-muted-foreground {
+  background: var(--color-muted-foreground);
+}
+.bg-accent {
+  background: var(--color-accent);
+}
+.bg-accent-foreground {
+  background: var(--color-accent-foreground);
+}
+.bg-destructive {
+  background: var(--color-destructive);
+}
+.bg-border {
+  background: var(--color-border);
+}
+.bg-input {
+  background: var(--color-input);
+}
+.bg-ring {
+  background: var(--color-ring);
+}
+.text-card {
+  color: var(--color-card);
+}
+.text-card-foreground {
+  color: var(--color-card-foreground);
+}
+.text-popover {
+  color: var(--color-popover);
+}
+.text-popover-foreground {
+  color: var(--color-popover-foreground);
+}
+.text-primary {
+  color: var(--color-primary);
+}
+.text-primary-foreground {
+  color: var(--color-primary-foreground);
+}
+.text-secondary {
+  color: var(--color-secondary);
+}
+.text-secondary-foreground {
+  color: var(--color-secondary-foreground);
+}
+.text-muted {
+  color: var(--color-muted);
+}
+.text-muted-foreground {
+  color: var(--color-muted-foreground);
+}
+.text-accent {
+  color: var(--color-accent);
+}
+.text-accent-foreground {
+  color: var(--color-accent-foreground);
+}
+.text-destructive {
+  color: var(--color-destructive);
+}
+.text-border {
+  color: var(--color-border);
+}
+.text-input {
+  color: var(--color-input);
+}
+.text-ring {
+  color: var(--color-ring);
+}
+.border {
+  border-color: var(--color-border);
+}
+.border-border {
+  border-color: var(--color-border);
+}
+.border-primary {
+  border-color: var(--color-primary);
+}
+.border-secondary {
+  border-color: var(--color-secondary);
+}
+.border-muted {
+  border-color: var(--color-muted);
+}
+.border-accent {
+  border-color: var(--color-accent);
+}
+.border-destructive {
+  border-color: var(--color-destructive);
+}
+.border-input {
+  border-color: var(--color-input);
+}
+.border-ring {
+  border-color: var(--color-border);
+}
+.border-t {
+  border-color: var(--color-border);
+}
+.border-b {
+  border-color: var(--color-border);
+}
+.border-l {
+  border-color: var(--color-border);
+}
+.border-r {
+  border-color: var(--color-border);
+}
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-tracking {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-inset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-ring-inset {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-offset-width {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+@property --tw-ring-offset-color {
+  syntax: "*";
+  inherits: false;
+  initial-value: #fff;
+}
+@property --tw-ring-offset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
+      --tw-border-style: solid;
+      --tw-leading: initial;
+      --tw-font-weight: initial;
+      --tw-tracking: initial;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-color: initial;
+      --tw-shadow-alpha: 100%;
+      --tw-inset-shadow: 0 0 #0000;
+      --tw-inset-shadow-color: initial;
+      --tw-inset-shadow-alpha: 100%;
+      --tw-ring-color: initial;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-inset-ring-color: initial;
+      --tw-inset-ring-shadow: 0 0 #0000;
+      --tw-ring-inset: initial;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-offset-shadow: 0 0 #0000;
+    }
+  }
+}
+</style></head>
+        <body>
+          <div id="offscreen-mount" style="position:absolute;top:0;left:0;"><div style="position: absolute; top: 0px; left: 0px;"><div class="bg-white text-neutral-950 w-full h-fit h-fit min-h-screen w-screen min-w-screen max-w-screen overflow-visible" data-id="c40962b4-057d-527f-a76e-674fe63a7375"><nav class="bg-white border-neutral-200 border-t-0 border-r-0 border-b-1 border-l-0 border-solid w-full" data-id="fe337112-449d-5ef6-ac03-374396e30c6d"><div class="max-w-[1140px] flex mx-auto px-8 justify-between items-center h-14" data-id="1adc2c82-861f-5c22-84cf-ac508371f606"><div class="flex items-center gap-2" data-id="59d1ce19-82f2-5855-a61e-aa3eafc822c4"><div class="rounded-lg bg-neutral-950 flex justify-center items-center w-7 h-7" data-id="2a8cbc08-3e03-5231-8b62-d1ede2fee9c2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap size-4 text-white" aria-hidden="true" data-id="538fbbea-fdd0-5ea6-9b74-5a16e4038a45"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"></path><path d="M22 10v6"></path><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path></svg></div><span class="font-bold text-base leading-6 tracking-tight" data-id="289c8fe4-7547-5fa8-a3f9-6b476d62f1fc">EduTrack</span></div><div class="flex items-center gap-1" data-id="8c8c53ac-da51-5294-a903-f5da65a0c968"><a class="transition-colors text-neutral-500 text-sm leading-5 flex p-4 items-center gap-2" data-id="b946fd6f-7c3b-5780-8fc3-39bf88de4063"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-dashboard size-4" aria-hidden="true" data-id="269bbb49-f72c-5865-a4df-924157d0c2e7"><rect width="7" height="9" x="3" y="3" rx="1"></rect><rect width="7" height="5" x="14" y="3" rx="1"></rect><rect width="7" height="9" x="14" y="12" rx="1"></rect><rect width="7" height="5" x="3" y="16" rx="1"></rect></svg><span data-id="23232c26-bdd6-547d-8951-f7b4f1e0d23b">Dashboard</span></a><a class="transition-colors text-neutral-500 text-sm leading-5 flex p-4 items-center gap-2" data-id="45d7607d-b4c5-5b45-93f5-bb4e0f36e359"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big size-4" aria-hidden="true" data-id="35cc60f9-aa72-553d-9bdd-e350dc550c05"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg><span data-id="f19f4143-5434-5807-8b85-9115f003fc16">Attendance</span></a><a class="transition-colors font-semibold text-neutral-950 text-sm leading-5 border-neutral-950 border-t-0 border-r-0 border-b-2 border-l-0 border-solid flex p-4 items-center gap-2" data-id="e0178950-c4f0-5024-8d1b-e7e43f6421b2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open size-4" aria-hidden="true" data-id="f9fb444b-bfd9-51c6-aff2-a1fd0781cf73"><path d="M12 7v14"></path><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path></svg><span data-id="21d4c34b-a3bf-541f-b447-bef5595c2f66">Classes</span></a><a class="transition-colors text-neutral-500 text-sm leading-5 flex p-4 items-center gap-2" data-id="ac70efed-66e6-58d3-8f1f-5e6828f08788"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar size-4" aria-hidden="true" data-id="2506a487-62d4-5e87-86b2-0f67d0b7baf5"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg><span data-id="58f35ace-b343-5a78-b525-c1544500172b">Schedule</span></a><a class="transition-colors text-neutral-500 text-sm leading-5 flex p-4 items-center gap-2" data-id="4f1f863f-a8cd-5707-82a4-14f0d3ccebb6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user size-4" aria-hidden="true" data-id="ae560cce-5f69-5a22-a129-f9e1aa3405c2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg><span data-id="b57ea4db-50ae-51ba-95ff-e1bb27931e66">Profile</span></a></div><div class="flex items-center gap-3" data-id="418931a8-d082-5d62-a735-2439f8247e26"><button class="relative transition-colors rounded-full p-2" data-id="6acee107-cabb-58da-87c8-d3edd348da21"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bell size-5 text-neutral-500" aria-hidden="true" data-id="27fb8209-b9b8-5cb4-950b-6d8135aa3aab"><path d="M10.268 21a2 2 0 0 0 3.464 0"></path><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"></path></svg><span class="rounded-full bg-[#e7000b] absolute right-1 top-1 w-2 h-2" data-id="6ebbcd96-919e-51e7-9558-e77275e78771"></span></button><div class="rounded-full bg-neutral-950 flex justify-center items-center w-8 h-8" data-id="2d4e9f1c-dbb9-5321-b970-32d857930b64"><span class="font-bold text-white text-xs leading-4" data-id="d9db10f1-6654-50d7-b410-e7975545ca5d">JS</span></div></div></div></nav><div class="max-w-[1140px] mx-auto p-8" data-id="e5e5dc93-45b4-5431-b55c-2a83375dd752"><div class="flex mb-8 justify-between items-start" data-id="2bfb0ff3-4e5e-5e9a-b05c-b461f36f4cc6"><div data-id="61bebb59-2f38-5871-88bb-b1c7699e1375"><p class="text-neutral-500 text-sm leading-5 mb-1" data-id="713074ba-036a-5160-b88c-e159ef5ea603">Monday, January 27, 2025</p><h1 class="font-bold text-3xl leading-9 tracking-tight mb-1" data-id="b126b0ce-7d1c-5e01-b1d4-6b2e49b02f68">My Classes</h1><p class="text-neutral-500 text-sm leading-5" data-id="fe404653-4feb-5cfa-909d-5c9c2b0f4c94">View and manage your enrolled courses this semester</p></div><div class="flex items-center gap-2" data-id="48418018-d1d2-5470-8b86-f04d986dd1c9"><button data-slot="button" class="min-w-fit justify-center whitespace-nowrap rounded-md font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#39;size-&#39;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-9 px-4 py-2 has-[&gt;svg]:px-3 text-sm leading-5 flex items-center gap-2" data-id="1ea5013c-1489-5508-8d14-302a8946713a"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download size-4" aria-hidden="true" data-id="6d9ba5ab-fa6f-536d-a8b6-e6b0856eb217"><path d="M12 15V3"></path><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path></svg>Download Syllabus</button><button data-slot="button" class="min-w-fit justify-center whitespace-nowrap rounded-md font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#39;size-&#39;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive shadow-xs hover:bg-primary/90 h-9 px-4 py-2 has-[&gt;svg]:px-3 bg-neutral-950 text-white text-sm leading-5 flex items-center gap-2" data-id="ca2c1612-61f1-5897-82ad-d15d1129c23f"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus size-4" aria-hidden="true" data-id="be6d0ecf-9460-5982-9691-4518913ca121"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>Enroll in Class</button></div></div><div class="grid grid-cols-4 mb-8 gap-4" data-id="c6f82bdc-8505-5ab3-92e5-14dad9ee9bae"><div data-slot="card" class="bg-card text-card-foreground flex flex-col rounded-xl border shadow-sm p-6 gap-2" data-id="6fb0515d-b2df-5189-8d72-c271e4b64902"><div data-slot="card-content" class="p-0 gap-1" data-id="780f100a-5bb3-5413-ab98-28cd2139b134"><p class="text-neutral-500 text-xs leading-4" data-id="6c0f3882-ec39-565d-8a96-72376c55ce5b">Enrolled Courses</p><p class="font-bold text-3xl leading-9" data-id="12a15372-b3ad-51a1-9157-5dff23010464">5</p><p class="text-neutral-500 text-xs leading-4 mt-1" data-id="618556aa-90e7-5777-a91b-295629985d71">This semester</p></div></div><div data-slot="card" class="bg-card text-card-foreground flex flex-col rounded-xl border shadow-sm p-6 gap-2" data-id="b9b47d86-b827-514d-9938-1dbec9f77025"><div data-slot="card-content" class="p-0 gap-1" data-id="2147f479-24c4-5384-9f93-eb47e68876fa"><p class="text-neutral-500 text-xs leading-4" data-id="375888ab-330f-5c9e-9919-3493341dcdf6">Total Credits</p><p class="font-bold text-3xl leading-9" data-id="d0a5c06b-7fb4-5d8b-ae02-bebca23e658c">18</p><p class="text-neutral-500 text-xs leading-4 mt-1" data-id="bee9bd3a-752d-50e9-a10f-678305201ef0">of 24 max credits</p></div></div><div data-slot="card" class="bg-card text-card-foreground flex flex-col rounded-xl border shadow-sm p-6 gap-2" data-id="3686c460-ec43-5bce-889f-4c95782b5f3c"><div data-slot="card-content" class="p-0 gap-1" data-id="9ded4399-6787-55c6-913e-528e64d308b1"><p class="text-neutral-500 text-xs leading-4" data-id="8797a32d-04a2-5c3e-a5e5-8da5007bc996">Avg. Grade</p><p class="font-bold text-3xl leading-9" data-id="62ad9d5a-9421-5b10-814e-7fc30309a3ac">B+</p><p class="text-neutral-500 text-xs leading-4 flex mt-1 items-center gap-1" data-id="d2cf51eb-d614-5bd5-9d9d-09736229cdaa"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trending-up size-3 text-green-600" aria-hidden="true" data-id="dbf74a36-7de0-58ca-a6e9-4cf6b465ed0d"><path d="M16 7h6v6"></path><path d="m22 7-8.5 8.5-5-5L2 17"></path></svg><span class="text-green-600" data-id="1a91fcaf-4838-5cb8-b7dc-c15b7f4b3d2a">+0.3 GPA this month</span></p></div></div><div data-slot="card" class="bg-card text-card-foreground flex flex-col rounded-xl border shadow-sm p-6 gap-2" data-id="f4a45e65-c3d1-5b18-89f2-aff414dd1043"><div data-slot="card-content" class="p-0 gap-1" data-id="3ca072e0-31ab-594b-a99b-5b7c3850c7f7"><p class="text-neutral-500 text-xs leading-4" data-id="10c8467c-dcec-5964-bc98-7da126ad4028">Upcoming Assignments</p><p class="font-bold text-3xl leading-9" data-id="f067b761-c991-53ea-be97-228e568fe4a4">7</p><p class="text-neutral-500 text-xs leading-4 flex mt-1 items-center gap-1" data-id="c378109f-b077-5952-81a9-4399b2e4788a"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-alert size-3 text-amber-500" aria-hidden="true" data-id="05b16f43-fb9f-5f65-ab13-c6799e549e6e"><circle cx="12" cy="12" r="10"></circle><line x1="12" x2="12" y1="8" y2="12"></line><line x1="12" x2="12.01" y1="16" y2="16"></line></svg><span class="text-amber-500" data-id="cc34cda1-090d-5431-92a4-982352e22391">3 due this week</span></p></div></div></div><div class="flex mb-6 items-center gap-4" data-id="5eb8f5f3-e073-5c30-a936-fa037b997dcc"><div class="relative max-w-sm flex-1" data-id="a6e3a270-9e92-5a8b-bdc7-599369356a8c"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search top-1/2 -translate-y-1/2 size-4 text-neutral-500 absolute left-3" aria-hidden="true" data-id="23e25a39-cd02-5517-a18a-8602197b3b31"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg><input class="rounded-lg bg-white text-sm leading-5 border-neutral-200 border-1 border-solid pl-9 pr-4 py-2 w-full" placeholder="Search classes..." data-id="c5d96d9b-0988-593f-81b7-27ac945967f9"></div><div class="flex items-center gap-2" data-id="06df32a3-2f55-5c68-8efe-670578184617"><button data-slot="button" class="min-w-fit justify-center whitespace-nowrap rounded-md font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#39;size-&#39;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-9 px-4 py-2 has-[&gt;svg]:px-3 text-sm leading-5 flex items-center gap-2" data-id="2427d54d-eb52-579d-868c-fa40d2b94ad0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-funnel size-4" aria-hidden="true" data-id="df24b4a6-9b12-54f9-b2e5-252a8aaad938"><path d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z"></path></svg>Filter</button><button data-slot="button" class="min-w-fit justify-center whitespace-nowrap rounded-md font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#39;size-&#39;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-9 px-4 py-2 has-[&gt;svg]:px-3 text-sm leading-5 flex items-center gap-2" data-id="9e9f10e7-873a-52c0-b85f-52831fbf2434"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-grid3x3 lucide-grid-3x3 size-4" aria-hidden="true" data-id="dca85cce-1fee-5a03-9ffa-34b24db93394"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M3 9h18"></path><path d="M3 15h18"></path><path d="M9 3v18"></path><path d="M15 3v18"></path></svg>Grid</button><button data-slot="button" class="min-w-fit justify-center whitespace-nowrap rounded-md font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#39;size-&#39;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-9 px-4 py-2 has-[&gt;svg]:px-3 bg-neutral-100 text-sm leading-5 flex items-center gap-2" data-id="54c8a0c5-bcd0-50ad-a0c3-cfba9e043776"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-list size-4" aria-hidden="true" data-id="89dbcee3-ea72-5ad7-869d-acb7e4dabfef"><path d="M3 5h.01"></path><path d="M3 12h.01"></path><path d="M3 19h.01"></path><path d="M8 5h13"></path><path d="M8 12h13"></path><path d="M8 19h13"></path></svg>List</button></div></div><div class="grid grid-cols-3 mb-8 gap-6" data-id="0b58179b-90dd-5f32-aeab-cefb72e984ac"><div data-slot="card" class="bg-card text-card-foreground flex flex-col rounded-xl border shadow-sm p-0 gap-0 overflow-hidden" data-id="b1373960-b811-5cc2-997f-8e2d85438933"><div class="relative h-32 overflow-hidden" data-id="3c6ff92e-0c6f-5d16-aaed-d72a985351ca"><img alt="Mathematics" class="object-cover w-full h-full" data-photoid="hecib2an4T4" data-authorname="Jeswin Thomas" data-authorurl="https://unsplash.com/@jeswinthomas" data-blurhash="LJPZAaIotSiw?^sAV?kXMxkCW=RP" data-id="71b61c59-201c-5f00-9109-322a15c18896" src="./photo-1596495577886-d920f1fb7238"><div class="bg-[linear-gradient(to_top,oklch(0.145_0_0/0.7),transparent)] absolute inset-0" data-id="cc78366e-9818-514e-a43b-7f8013aaadbc"></div><div class="absolute right-3 top-3" data-id="648453eb-6609-5df4-a097-cfbb716deb3b"><span data-slot="badge" class="inline-flex items-center justify-center rounded-md px-2 py-0.5 font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden [a&amp;]:hover:bg-primary/90 bg-green-100 text-green-700 text-xs leading-4 border-black/1 border-0 border-solid" data-id="add9b35c-b128-5396-92df-e9b0c4fd5aa3">Good</span></div><div class="absolute left-4 bottom-3" data-id="dae80e0c-8b74-5070-bc67-630ba47780b7"><span class="font-bold text-white text-lg leading-7" data-id="9d1c2310-3c88-596c-b041-0bf4c517f0c7">Mathematics</span></div></div><div data-slot="card-content" class="p-4 gap-4" data-id="6e059f7e-1159-5616-918b-744cef659012"><div class="flex mb-3 justify-between items-center" data-id="340a6ac6-eac5-57f6-8c7e-d5bd78235147"><div class="flex items-center gap-2" data-id="70c32140-b3c4-57ed-b678-0ec588689d75"><div class="rounded-full bg-neutral-100 flex justify-center items-center w-7 h-7" data-id="530aa61c-bfcc-52f3-a33a-0be68a447542"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user size-3 text-neutral-500" aria-hidden="true" data-id="03ba9dbc-ca7e-59c2-8cfa-accc43b6d085"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div><div data-id="11ff84b3-a5bb-5839-b906-3368e56a07ca"><p class="font-medium text-xs leading-4" data-id="acd4a9d5-8c38-5359-8e69-801976b6e677">Dr. Alan Carter</p><p class="text-neutral-500 text-xs leading-4" data-id="d14c621b-6c34-56a7-9dec-2ce7bbb97fc8">Professor</p></div></div><span data-slot="badge" class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden text-foreground [a&amp;]:hover:bg-accent [a&amp;]:hover:text-accent-foreground text-xs leading-4" data-id="2b8c8ef9-6779-5763-96c2-8ee2278c006c">4 Credits</span></div><div class="grid grid-cols-2 mb-3 gap-2" data-id="daf67979-c1e3-5eeb-9bae-2883b41e0dfd"><div class="rounded-lg bg-neutral-100 p-2" data-id="179a8efa-3f68-5ca9-8891-c44375d3128f"><p class="text-neutral-500 text-xs leading-4" data-id="50dfc893-49b6-5b39-aed0-99f1f2cf4ea0">Room</p><p class="font-semibold text-xs leading-4" data-id="f46384a5-3fe9-5ee6-a9fb-4247bee59401">Room 204</p></div><div class="rounded-lg bg-neutral-100 p-2" data-id="02811539-0174-5cd6-980a-bd465cb9621a"><p class="text-neutral-500 text-xs leading-4" data-id="7d497eda-f628-5421-bf42-81b260355e22">Schedule</p><p class="font-semibold text-xs leading-4" data-id="5f3ee2af-01d8-5b7f-ab84-93ad05b89667">Mon/Wed/Fri</p></div><div class="rounded-lg bg-neutral-100 p-2" data-id="8e8eea3f-a5ed-52f5-aeb7-9109adf6054f"><p class="text-neutral-500 text-xs leading-4" data-id="76381c4b-5441-5ff7-b9d1-6350edf61e08">Time</p><p class="font-semibold text-xs leading-4" data-id="89f72219-faea-5a3a-be6b-95c022ec1199">08:00–09:30</p></div><div class="rounded-lg bg-neutral-100 p-2" data-id="364bea87-4a05-5466-ad5b-83af9aa82e15"><p class="text-neutral-500 text-xs leading-4" data-id="a07ae710-917c-524c-9378-ad8ed948e08d">Attendance</p><p class="font-semibold text-green-600 text-xs leading-4" data-id="0245fb96-30e5-56a7-b89e-4b589a83eaec">92%</p></div></div><div class="mb-2" data-id="01f328c9-ef21-5bee-b1b8-18a4927e19ad"><div class="text-xs leading-4 flex mb-1 justify-between" data-id="23d18cb0-2a0f-5a74-820d-40d68cab1c82"><span class="text-neutral-500" data-id="d3dc30df-4ee1-5eb6-9baf-4371a8dc6c74">Attendance Rate</span><span class="font-medium" data-id="0a2ae0fa-85f5-5dd7-9d02-600f4bd0e4ef">92%</span></div><div class="rounded-full bg-neutral-100 w-full h-1.5" data-id="8ad842b1-46bd-598e-b392-96b4331937a7"><div class="rounded-full bg-neutral-950 h-1.5" data-id="6ebbe3df-2743-5399-84bb-1e36e06dc716" style="width: 92%;"></div></div></div><div class="border-neutral-200 border-t-1 border-r-0 border-b-0 border-l-0 border-solid flex pt-2 justify-between items-center" data-id="d6acdcf2-432d-527e-84cf-e56affc0c74c"><div class="text-neutral-500 text-xs leading-4 flex items-center gap-1" data-id="236f4480-255b-525b-99ee-7095ad7c2874"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-list size-3" aria-hidden="true" data-id="d7849932-3ce4-5972-bc56-d2d66a729596"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="M12 11h4"></path><path d="M12 16h4"></path><path d="M8 11h.01"></path><path d="M8 16h.01"></path></svg><span data-id="12ce8d5f-e223-506c-96e0-8eec272e34de">2 assignments due</span></div><button data-slot="button" class="flex min-w-fit items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#39;size-&#39;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 py-2 has-[&gt;svg]:px-3 text-xs leading-4 px-3 h-7" data-id="78fc52bb-20ed-576e-b3da-34ef41b636c2">View Details</button></div></div></div><div data-slot="card" class="bg-card text-card-foreground flex flex-col rounded-xl border shadow-sm p-0 gap-0 overflow-hidden" data-id="965edf06-2b2c-5b59-91d4-ea3306f80f67"><div class="relative h-32 overflow-hidden" data-id="4b8bd64f-4b53-5e9a-8405-7a28ebdf75cf"><img alt="Physics" class="object-cover w-full h-full" data-photoid="8yS04veb1TQ" data-authorname="ThisisEngineering" data-authorurl="https://unsplash.com/@thisisengineering" data-blurhash="LGLhVy~q8^XnpdS7ITob00Dhx^xu" data-id="3b06c5fb-4c1a-5737-a096-adde0dc7602b" src="./photo-1581093577421-f561a654a353"><div class="bg-[linear-gradient(to_top,oklch(0.145_0_0/0.7),transparent)] absolute inset-0" data-id="7ef63fe8-99df-573a-912f-95c025143191"></div><div class="absolute right-3 top-3" data-id="c1aea66c-e14e-55cb-8589-2f9820efd0e3"><span data-slot="badge" class="inline-flex items-center justify-center rounded-md px-2 py-0.5 font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden [a&amp;]:hover:bg-primary/90 bg-amber-100 text-amber-700 text-xs leading-4 border-black/1 border-0 border-solid" data-id="3c5433bd-4b01-558a-bd69-29bd0bad0de1">Fair</span></div><div class="absolute left-4 bottom-3" data-id="daddbfc2-d745-5b81-9332-bd2bcfc55122"><span class="font-bold text-white text-lg leading-7" data-id="7ff3e75c-3bc7-514e-a98a-5f9ee5c9871b">Physics</span></div></div><div data-slot="card-content" class="p-4 gap-4" data-id="f7d01750-15c2-5d1e-a7d1-f69d713afd8a"><div class="flex mb-3 justify-between items-center" data-id="f4814a2a-5f1f-5f17-ad62-ae939444abc1"><div class="flex items-center gap-2" data-id="854a258a-55f4-5b11-bc3f-a84cbc30bda6"><div class="rounded-full bg-neutral-100 flex justify-center items-center w-7 h-7" data-id="63279c91-31ed-5a57-bddf-49873690bfb1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user size-3 text-neutral-500" aria-hidden="true" data-id="8f52d991-f66f-55ed-a855-c1ff7e282ae4"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div><div data-id="e2171248-9a72-52e1-8495-4a138a67c840"><p class="font-medium text-xs leading-4" data-id="dcff0eba-9808-5e6d-af9b-a6c4f2a85cea">Prof. Sarah Lin</p><p class="text-neutral-500 text-xs leading-4" data-id="c67d0307-c227-5ed8-b87d-9164fcdaa7aa">Professor</p></div></div><span data-slot="badge" class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden text-foreground [a&amp;]:hover:bg-accent [a&amp;]:hover:text-accent-foreground text-xs leading-4" data-id="f6742d73-5a5a-50ea-b4d7-c40dbc4a69cd">4 Credits</span></div><div class="grid grid-cols-2 mb-3 gap-2" data-id="d9354763-97b7-52de-af8b-2f75d667ff11"><div class="rounded-lg bg-neutral-100 p-2" data-id="7349c8c4-3c21-55a8-ba9e-f37117e42f00"><p class="text-neutral-500 text-xs leading-4" data-id="d82fc416-310c-5c23-b687-91a04fa42bb3">Room</p><p class="font-semibold text-xs leading-4" data-id="92d7faa0-9726-5925-87fd-131492c203d4">Room 112</p></div><div class="rounded-lg bg-neutral-100 p-2" data-id="76c10063-4803-5f59-b5ed-92075a6f4b99"><p class="text-neutral-500 text-xs leading-4" data-id="a51c279d-48c1-57ba-8cca-5bdaad3c6acb">Schedule</p><p class="font-semibold text-xs leading-4" data-id="4fd7953a-8bcb-5385-ba9f-c4a362042864">Tue/Thu</p></div><div class="rounded-lg bg-neutral-100 p-2" data-id="c04742e4-f11d-5cdb-8a68-04e2d2f4f278"><p class="text-neutral-500 text-xs leading-4" data-id="7f6d4e94-5b19-5b33-9c71-db55efe2dd3c">Time</p><p class="font-semibold text-xs leading-4" data-id="e41e5cf7-bd80-5335-89e7-4786c991c852">10:00–11:30</p></div><div class="rounded-lg bg-neutral-100 p-2" data-id="6498f34d-c471-53a3-8157-4922a32a3c26"><p class="text-neutral-500 text-xs leading-4" data-id="b7b43660-476a-57d5-9a0f-1af3b4d7d866">Attendance</p><p class="font-semibold text-amber-600 text-xs leading-4" data-id="e00c1422-2eff-5468-8606-81b86d66a101">78%</p></div></div><div class="mb-2" data-id="d798a20c-a41d-5ed6-ac81-be3cb6f88fe1"><div class="text-xs leading-4 flex mb-1 justify-between" data-id="bf15750f-5afd-5bd8-821e-0e84653e76be"><span class="text-neutral-500" data-id="9772680f-9d64-51e9-b258-8d66cd0db9f4">Attendance Rate</span><span class="font-medium" data-id="d0887ac1-4177-5ff6-9609-5a72bfb15677">78%</span></div><div class="rounded-full bg-neutral-100 w-full h-1.5" data-id="2f8adf59-12a7-5d1d-bdd0-484570bf76a4"><div class="rounded-full bg-amber-400 h-1.5" data-id="6dd04ec0-e24d-5934-8d1a-cc8f5f24d606" style="width: 78%;"></div></div></div><div class="border-neutral-200 border-t-1 border-r-0 border-b-0 border-l-0 border-solid flex pt-2 justify-between items-center" data-id="dd30843d-8771-5339-a86b-684a0cd1f0f8"><div class="text-neutral-500 text-xs leading-4 flex items-center gap-1" data-id="f20de218-5a58-580a-bc44-9d54b35d333d"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-list size-3" aria-hidden="true" data-id="4736468c-5ec6-5a23-a904-49aa3b5e2552"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="M12 11h4"></path><path d="M12 16h4"></path><path d="M8 11h.01"></path><path d="M8 16h.01"></path></svg><span data-id="b5e6d655-2dd8-5c80-8791-6fee116adf21">1 assignment due</span></div><button data-slot="button" class="flex min-w-fit items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#39;size-&#39;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 py-2 has-[&gt;svg]:px-3 text-xs leading-4 px-3 h-7" data-id="5c0ef3aa-fa91-5d5d-80fb-a03891dfeb8b">View Details</button></div></div></div><div data-slot="card" class="bg-card text-card-foreground flex flex-col rounded-xl border shadow-sm p-0 gap-0 overflow-hidden" data-id="64c08077-5825-5b48-815b-433808da2b44"><div class="relative h-32 overflow-hidden" data-id="73a805ff-f1b1-5fb4-9159-4cbf409b78e2"><img alt="English Literature" class="object-cover w-full h-full" data-photoid="LUGuCtvlk1Q" data-authorname="Gülfer ERGİN" data-authorurl="https://unsplash.com/@gulfergin_01" data-blurhash="L3F=?k.8D+MwJW%34TW;N}D$?vIU" data-id="04188d35-b436-5f0c-961f-e0cf2a9e33e6" src="./photo-1610116306796-6fea9f4fae38"><div class="bg-[linear-gradient(to_top,oklch(0.145_0_0/0.7),transparent)] absolute inset-0" data-id="9deb7386-b199-5077-8c61-35d9880ea1db"></div><div class="absolute right-3 top-3" data-id="d104a77b-b17a-5b24-aeb9-c5bbcaa7fb0f"><span data-slot="badge" class="inline-flex items-center justify-center rounded-md px-2 py-0.5 font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden [a&amp;]:hover:bg-primary/90 bg-green-100 text-green-700 text-xs leading-4 border-black/1 border-0 border-solid" data-id="76cb4386-7b77-5e7b-895b-3bb3f65d74f9">Good</span></div><div class="absolute left-4 bottom-3" data-id="d088a864-ce35-517b-8ae1-371fb0d63a92"><span class="font-bold text-white text-lg leading-7" data-id="240d7959-a21d-5cb5-b844-6ab6b6b67cb2">English Lit.</span></div></div><div data-slot="card-content" class="p-4 gap-4" data-id="e8a3f264-78b7-577f-b993-9356cab4f8c4"><div class="flex mb-3 justify-between items-center" data-id="36e049d7-4978-508f-815e-067d6458ec33"><div class="flex items-center gap-2" data-id="65b7951f-e79b-5f0e-80db-e3c1ad83f97a"><div class="rounded-full bg-neutral-100 flex justify-center items-center w-7 h-7" data-id="2d47ba88-70bd-58fc-af79-b63627c81bef"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user size-3 text-neutral-500" aria-hidden="true" data-id="1df6eef3-9da5-59d0-a0a1-27ed9c0b33c3"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div><div data-id="4acbd7a7-fb2b-54da-90e4-6ee1f51b5fe3"><p class="font-medium text-xs leading-4" data-id="d42d5bbb-ba83-59d1-936e-e9dfadf32ee0">Ms. Rachel Moore</p><p class="text-neutral-500 text-xs leading-4" data-id="e62c8863-9db2-52a1-b344-6a97ffdf02d6">Instructor</p></div></div><span data-slot="badge" class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden text-foreground [a&amp;]:hover:bg-accent [a&amp;]:hover:text-accent-foreground text-xs leading-4" data-id="6a74fe12-f758-5981-b0c6-f6af7c9ed771">3 Credits</span></div><div class="grid grid-cols-2 mb-3 gap-2" data-id="4ec6d408-d0ce-5293-ab2c-88f141bf261d"><div class="rounded-lg bg-neutral-100 p-2" data-id="c3298f3f-6d2c-578a-a5c6-979f3d784721"><p class="text-neutral-500 text-xs leading-4" data-id="07cb51e4-1a44-56ea-9858-95212563895a">Room</p><p class="font-semibold text-xs leading-4" data-id="c5df8134-8ee3-577d-9149-89e75251cd3b">Room 308</p></div><div class="rounded-lg bg-neutral-100 p-2" data-id="261bd8af-5d6e-56e0-8b42-198c2f59ace4"><p class="text-neutral-500 text-xs leading-4" data-id="4cc39783-e0df-5d79-8368-dd4c39562e94">Schedule</p><p class="font-semibold text-xs leading-4" data-id="ba914665-0231-5846-94c2-d49610c69240">Mon/Wed</p></div><div class="rounded-lg bg-neutral-100 p-2" data-id="b64cff92-49be-5920-87bb-fd43ee7e1380"><p class="text-neutral-500 text-xs leading-4" data-id="b66d4680-c7cc-517b-9789-f9e739b5fb00">Time</p><p class="font-semibold text-xs leading-4" data-id="251be83b-2e3a-5664-9179-c26948f27cb6">13:00–14:30</p></div><div class="rounded-lg bg-neutral-100 p-2" data-id="110537e5-ca6d-5871-b0af-bec81d991fa2"><p class="text-neutral-500 text-xs leading-4" data-id="d361344d-fc8b-5de2-a8b1-58eb15ae2648">Attendance</p><p class="font-semibold text-green-600 text-xs leading-4" data-id="9aaf66e9-7573-57a6-8a4d-e9d22a8f2c95">96%</p></div></div><div class="mb-2" data-id="3293a231-2646-5a89-b143-89be62ff4e35"><div class="text-xs leading-4 flex mb-1 justify-between" data-id="33641ec9-b7d9-5fc8-be03-b6e17e8bd07c"><span class="text-neutral-500" data-id="df1eaac8-0e58-5575-aae0-f9ff0654a004">Attendance Rate</span><span class="font-medium" data-id="dafe05f8-bbf6-58d1-948b-f8b3a00c5505">96%</span></div><div class="rounded-full bg-neutral-100 w-full h-1.5" data-id="be2257d2-20cb-58e0-8e69-e48a718b9c00"><div class="rounded-full bg-neutral-950 h-1.5" data-id="22b34a70-219f-5c33-a83d-d031c1dce673" style="width: 96%;"></div></div></div><div class="border-neutral-200 border-t-1 border-r-0 border-b-0 border-l-0 border-solid flex pt-2 justify-between items-center" data-id="8caf13b0-2cd4-5bc9-9fe5-d60e26e9e574"><div class="text-neutral-500 text-xs leading-4 flex items-center gap-1" data-id="3007061b-1a3c-56a8-8f78-8e423c000443"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-list size-3" aria-hidden="true" data-id="46e6dcc0-dbe5-5ab8-949f-ee845c44ace7"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="M12 11h4"></path><path d="M12 16h4"></path><path d="M8 11h.01"></path><path d="M8 16h.01"></path></svg><span data-id="0237d220-3586-563e-bc4e-e95f400334ae">0 assignments due</span></div><button data-slot="button" class="flex min-w-fit items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#39;size-&#39;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 py-2 has-[&gt;svg]:px-3 text-xs leading-4 px-3 h-7" data-id="a07043d2-d759-5ed6-83eb-4ad45eda274c">View Details</button></div></div></div><div data-slot="card" class="bg-card text-card-foreground flex flex-col rounded-xl border shadow-sm p-0 gap-0 overflow-hidden" data-id="941d2fd1-1325-5a46-bc54-f60d26d6dace"><div class="relative h-32 overflow-hidden" data-id="d901755d-a005-59c0-a293-c6d57c02637d"><img alt="Chemistry" class="object-cover w-full h-full" data-photoid="-lulun7F32c" data-authorname="Ryan Zazueta" data-authorurl="https://unsplash.com/@iza_y_ah" data-blurhash="LDA,at5701%MEgsn-URkD*oJo|xF" data-id="fbb71fce-dffd-5590-b828-e8c198428ffe" src="./photo-1694230155228-cdde50083573"><div class="bg-[linear-gradient(to_top,oklch(0.145_0_0/0.7),transparent)] absolute inset-0" data-id="c10ec325-b801-5a37-b840-dd9b8527716b"></div><div class="absolute right-3 top-3" data-id="c36d1c1f-0c90-57dd-a949-cb059f8defa9"><span data-slot="badge" class="inline-flex items-center justify-center rounded-md px-2 py-0.5 font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden [a&amp;]:hover:bg-primary/90 bg-red-100 text-red-700 text-xs leading-4 border-black/1 border-0 border-solid" data-id="755fc975-a325-5500-ba37-0a6f2e5ba93b">At Risk</span></div><div class="absolute left-4 bottom-3" data-id="ea7b1164-4855-533a-887d-33905afad589"><span class="font-bold text-white text-lg leading-7" data-id="2361a9b6-bb2a-571d-8d95-f83ccec3b966">Chemistry</span></div></div><div data-slot="card-content" class="p-4 gap-4" data-id="b13296bc-dffb-59f4-aa7f-0780f82c60bc"><div class="flex mb-3 justify-between items-center" data-id="9f219179-4300-53c9-b17e-527b5960929b"><div class="flex items-center gap-2" data-id="16b816ba-28e3-5b46-84f0-25b2e83d53f0"><div class="rounded-full bg-neutral-100 flex justify-center items-center w-7 h-7" data-id="bf8f39e5-eb3e-5c93-842c-9793a050cd17"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user size-3 text-neutral-500" aria-hidden="true" data-id="35849ce0-a80a-5243-b1fd-cdac1a452a92"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div><div data-id="c099bf01-1e16-5f66-a45c-e14987c93242"><p class="font-medium text-xs leading-4" data-id="d712cc4c-4b89-56a3-a644-ff70ec5deca8">Dr. James Patel</p><p class="text-neutral-500 text-xs leading-4" data-id="72d3128b-95ee-5687-bbca-b3430193d95c">Professor</p></div></div><span data-slot="badge" class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden text-foreground [a&amp;]:hover:bg-accent [a&amp;]:hover:text-accent-foreground text-xs leading-4" data-id="d9fcf19a-57a3-5c3a-98a2-ff178717ad75">4 Credits</span></div><div class="grid grid-cols-2 mb-3 gap-2" data-id="c6d5b274-b8b1-5b33-ad5f-c23677244455"><div class="rounded-lg bg-neutral-100 p-2" data-id="4371922c-fbb1-5e3b-8b74-a6a43b32d8e5"><p class="text-neutral-500 text-xs leading-4" data-id="a2af8df9-1620-5d79-b140-d6f22ed4eaee">Room</p><p class="font-semibold text-xs leading-4" data-id="b4e0c421-9c33-50c7-9e84-487be23bb6fa">Lab 02</p></div><div class="rounded-lg bg-neutral-100 p-2" data-id="6560b29a-14f2-5194-9548-931d7eb457ca"><p class="text-neutral-500 text-xs leading-4" data-id="a04b9686-5d4b-5371-8a60-f4382da34fc7">Schedule</p><p class="font-semibold text-xs leading-4" data-id="1e06f750-b1d5-5dde-8448-63b7ab8cc067">Mon/Wed/Fri</p></div><div class="rounded-lg bg-neutral-100 p-2" data-id="9eb58d3d-d58f-5579-b64a-57d9a98251f4"><p class="text-neutral-500 text-xs leading-4" data-id="2b68e8b0-68f7-593d-8c91-127b62baa766">Time</p><p class="font-semibold text-xs leading-4" data-id="ec6a8bb1-c605-5353-a935-1ec1f8725957">15:00–16:30</p></div><div class="rounded-lg bg-neutral-100 p-2" data-id="922e9abd-fa50-50d5-b15b-1a5b5956ea69"><p class="text-neutral-500 text-xs leading-4" data-id="c8bc545b-f30a-57b5-811b-d6f666e9967e">Attendance</p><p class="font-semibold text-[#e7000b] text-xs leading-4" data-id="ea8b0fe2-8f40-5ac2-a8cc-e30a5ce7de1a">70%</p></div></div><div class="mb-2" data-id="d8d2634a-8f21-57b2-bf2f-80e575de7323"><div class="text-xs leading-4 flex mb-1 justify-between" data-id="616b7add-2e69-5e4c-bd8a-71cb24a990e9"><span class="text-neutral-500" data-id="09eef2f5-e26c-5895-8083-ea853bee4508">Attendance Rate</span><span class="font-medium text-[#e7000b]" data-id="63250840-f4dc-5a6e-90a1-94366b8624e8">70%</span></div><div class="rounded-full bg-neutral-100 w-full h-1.5" data-id="ba0318ab-e02a-50e5-8c01-c774361b8055"><div class="rounded-full bg-[#e7000b] h-1.5" data-id="31484434-686e-5b50-8311-5c60bdb027d9" style="width: 70%;"></div></div></div><div class="border-neutral-200 border-t-1 border-r-0 border-b-0 border-l-0 border-solid flex pt-2 justify-between items-center" data-id="dca7237c-5b0b-5ca1-8c4f-3d6c734b4707"><div class="text-[#e7000b] text-xs leading-4 flex items-center gap-1" data-id="cb7fcbd3-406d-5f71-94a4-d44047bf8a17"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-triangle-alert size-3" aria-hidden="true" data-id="7de9fd51-ccbd-561e-9ea0-661e6ea6ec37"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg><span data-id="e9246678-f026-5989-a56a-f291e0bed2dc">Below 75% threshold</span></div><button data-slot="button" class="flex min-w-fit items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#39;size-&#39;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 py-2 has-[&gt;svg]:px-3 text-xs leading-4 px-3 h-7" data-id="8ce47899-da51-5c25-8854-55b3c68a47e2">View Details</button></div></div></div><div data-slot="card" class="bg-card text-card-foreground flex flex-col rounded-xl border shadow-sm p-0 gap-0 overflow-hidden" data-id="2ec5063f-2761-5673-8d4a-d6e357f99ff8"><div class="relative h-32 overflow-hidden" data-id="9d1ea011-6d32-5371-aecd-cb8387297e79"><img alt="History" class="object-cover w-full h-full" data-photoid="4Wue5DQnxSw" data-authorname="Andre Chipurenko" data-authorurl="https://unsplash.com/@andre_tch" data-blurhash="L5J@5d^*ADxv8^%gI@w[EmNFWVt8" data-id="390c3386-b060-5a92-b941-bedc1140db96" src="./photo-1649927212239-42d23bc22a24"><div class="bg-[linear-gradient(to_top,oklch(0.145_0_0/0.7),transparent)] absolute inset-0" data-id="63aa5245-bf4e-5243-a115-b26d572772e8"></div><div class="absolute right-3 top-3" data-id="2d3ee33f-ef20-5010-aae1-ccabf2615fd0"><span data-slot="badge" class="inline-flex items-center justify-center rounded-md px-2 py-0.5 font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden [a&amp;]:hover:bg-primary/90 bg-red-100 text-red-700 text-xs leading-4 border-black/1 border-0 border-solid" data-id="603a0df8-7bcd-5bea-aa11-9eca53fc2135">At Risk</span></div><div class="absolute left-4 bottom-3" data-id="ac521d78-7574-5af9-b79f-2ddc3428fb3a"><span class="font-bold text-white text-lg leading-7" data-id="3ba95590-729b-5ab6-84ab-f64f828f3715">History</span></div></div><div data-slot="card-content" class="p-4 gap-4" data-id="74d014b7-0f1c-50e1-81b8-a081c54fa447"><div class="flex mb-3 justify-between items-center" data-id="5431887b-5117-5367-8106-86590e210d55"><div class="flex items-center gap-2" data-id="fdb93b47-0c6f-57ae-81f8-511005b26200"><div class="rounded-full bg-neutral-100 flex justify-center items-center w-7 h-7" data-id="3f10e0e5-dd10-56bb-bef4-dd80227fad81"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user size-3 text-neutral-500" aria-hidden="true" data-id="332d2a40-9616-5a28-a162-a8f0f2ea1a73"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div><div data-id="e3a0363f-6a69-5912-87ad-200a46804e86"><p class="font-medium text-xs leading-4" data-id="ce27223c-7fdb-5b6c-81b9-e63f1141ef94">Prof. Williams</p><p class="text-neutral-500 text-xs leading-4" data-id="802c9998-d46b-50d4-a1d5-33c6a86ee1d8">Professor</p></div></div><span data-slot="badge" class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden text-foreground [a&amp;]:hover:bg-accent [a&amp;]:hover:text-accent-foreground text-xs leading-4" data-id="33866284-7f88-52b3-98d2-410fa8b4f8c0">3 Credits</span></div><div class="grid grid-cols-2 mb-3 gap-2" data-id="778e2794-68f2-51ec-99ab-a34d7ebeb02a"><div class="rounded-lg bg-neutral-100 p-2" data-id="b7dbf010-f0b2-5142-8610-0173debd7a75"><p class="text-neutral-500 text-xs leading-4" data-id="cdc33562-ad07-5a2c-9e9f-4059e7734ce6">Room</p><p class="font-semibold text-xs leading-4" data-id="25bbd7da-992d-5e26-96ac-1faf1f274578">Room 301</p></div><div class="rounded-lg bg-neutral-100 p-2" data-id="97d9589f-b857-57b5-882d-ad4c7548b023"><p class="text-neutral-500 text-xs leading-4" data-id="4b7ddde2-0c73-5627-8e56-cf0555034f37">Schedule</p><p class="font-semibold text-xs leading-4" data-id="1d487357-7a46-570d-a3bf-821b732f288d">Tue/Thu</p></div><div class="rounded-lg bg-neutral-100 p-2" data-id="e2229661-30c8-5225-a34e-55b2530f97d5"><p class="text-neutral-500 text-xs leading-4" data-id="3548c350-6bb9-5930-bec6-5bae4d912fff">Time</p><p class="font-semibold text-xs leading-4" data-id="af849911-8d68-5fcd-b333-ee170d966a3b">11:45–13:15</p></div><div class="rounded-lg bg-neutral-100 p-2" data-id="1c816fc3-cf2f-5d7a-bfe8-4aa7d7335650"><p class="text-neutral-500 text-xs leading-4" data-id="794634be-71c4-54e8-a6d7-25184c405ef4">Attendance</p><p class="font-semibold text-[#e7000b] text-xs leading-4" data-id="fa9a0056-af2d-5680-a5e7-4bfe4b3158b1">72%</p></div></div><div class="mb-2" data-id="961c4d04-7857-5958-b2f5-47d11d7f3866"><div class="text-xs leading-4 flex mb-1 justify-between" data-id="a68c330b-a937-5add-9ee2-d4cf0e11d087"><span class="text-neutral-500" data-id="1a7e2ce9-3561-50b4-a347-4915d0d96c64">Attendance Rate</span><span class="font-medium text-[#e7000b]" data-id="d9e37a52-2616-5003-ae5d-be5acf6f72a7">72%</span></div><div class="rounded-full bg-neutral-100 w-full h-1.5" data-id="186995d9-e998-5278-9212-a81351d72d35"><div class="rounded-full bg-[#e7000b] h-1.5" data-id="abda2c10-83dd-5f39-a34a-99f8cb2fd923" style="width: 72%;"></div></div></div><div class="border-neutral-200 border-t-1 border-r-0 border-b-0 border-l-0 border-solid flex pt-2 justify-between items-center" data-id="5061fbf7-77de-57e5-9b75-4565ee4e2106"><div class="text-[#e7000b] text-xs leading-4 flex items-center gap-1" data-id="27ba2cab-93ba-58af-91d3-82ecbbd30d9b"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-triangle-alert size-3" aria-hidden="true" data-id="0be7c69a-28ae-5b70-8c97-670241d7908e"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg><span data-id="4e121625-ba5f-59c5-8673-e4b259e621a8">Below 75% threshold</span></div><button data-slot="button" class="flex min-w-fit items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#39;size-&#39;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 py-2 has-[&gt;svg]:px-3 text-xs leading-4 px-3 h-7" data-id="67cd8c5d-cbe6-5e49-963d-272b5dd86af8">View Details</button></div></div></div><div data-slot="card" class="bg-card text-card-foreground rounded-xl shadow-sm min-h-[320px] cursor-pointer transition-colors border-black/1 border-2 border-dashed flex p-6 flex-col justify-center items-center gap-4" data-id="46739e19-3f93-5007-81c9-3fd84b354e32"><div class="text-center flex flex-col items-center gap-3" data-id="af00b6ae-efb2-5b7b-aaa0-fd35e0a8c13d"><div class="rounded-full bg-neutral-100 flex justify-center items-center w-12 h-12" data-id="8aa54147-f954-51f1-84da-a90e8d73a632"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus size-6 text-neutral-500" aria-hidden="true" data-id="5cc9c9b8-00b1-50fb-abc9-93f01b65263b"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg></div><p class="font-medium text-neutral-500 text-sm leading-5" data-id="0c32946c-d16e-5474-8dac-c30323f19644">Add New Class</p><p class="text-neutral-500 text-xs leading-4" data-id="c77170b8-665f-5eaf-ba17-1b00ca5fb5d2">Browse available courses and enroll</p></div></div></div><div class="grid grid-cols-3 gap-6" data-id="06130e7d-153b-59ef-9e85-8b66f0127f87"><div data-slot="card" class="bg-card text-card-foreground flex flex-col rounded-xl border shadow-sm p-6 gap-4" data-id="bdb8d613-6646-5ad0-a3f1-c241c1fd273d"><div data-slot="card-header" class="@container/card-header has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 grid auto-rows-min grid-rows-[auto_auto] items-start p-0 gap-1" data-id="c6bf9997-9e9f-5f23-bcde-92159ae586f4"><h3 class="font-semibold text-sm leading-5" data-id="21947341-ee66-5acb-a4cb-aa0853117f23">Upcoming Assignments</h3><p class="text-neutral-500 text-xs leading-4" data-id="2590dcb4-1ba8-5eb5-8d2b-ac18a168fbb6">Due this week</p></div><div data-slot="card-content" class="p-0 gap-2" data-id="5c0df013-1d1f-5a21-b4f9-818eaafeb979"><div class="flex flex-col gap-2" data-id="d2b4146b-20fb-5f3d-8c11-fddedd496f2a"><div class="rounded-lg bg-neutral-100 flex p-3 items-start gap-3" data-id="08a9d037-c1d7-5da5-88f8-87b0e7e85ebb"><div class="min-h-[40px] rounded-full bg-[#e7000b] self-stretch w-1 h-full" data-id="9ec77615-7a86-5871-aade-babf5038cb70"></div><div class="flex-1" data-id="bc795854-5a02-5a4d-a35e-fdbda413c98c"><p class="font-semibold text-xs leading-4" data-id="97d8b7c7-f71f-5a23-accf-bdb35a1d65e0">Problem Set 4</p><p class="text-neutral-500 text-xs leading-4" data-id="13a2b083-06ec-5301-8f6b-a62ec96768b2">Mathematics · Dr. Alan Carter</p><div class="flex mt-1 items-center gap-1" data-id="7d543604-cf2e-54d8-84f5-38e536fe7808"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock size-3 text-[#e7000b]" aria-hidden="true" data-id="941878f0-7750-561d-8669-ca7440f08e1e"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg><span class="font-medium text-[#e7000b] text-xs leading-4" data-id="fd8464cd-c946-505a-b886-e2ad19424a61">Due Jan 28</span></div></div></div><div class="rounded-lg bg-neutral-100 flex p-3 items-start gap-3" data-id="2c65fcd2-fb5c-5ead-8d8b-72d03316498c"><div class="min-h-[40px] rounded-full bg-amber-400 self-stretch w-1 h-full" data-id="393644dd-b195-522e-9e0f-30d78f3defdb"></div><div class="flex-1" data-id="b16d7ece-5087-5c39-8329-cabd7bbdf70c"><p class="font-semibold text-xs leading-4" data-id="8ab35829-d6ab-5caa-92d2-1bac7281f860">Lab Report #3</p><p class="text-neutral-500 text-xs leading-4" data-id="ec79ed73-b757-5e4e-90a2-1841f5c01739">Chemistry · Dr. James Patel</p><div class="flex mt-1 items-center gap-1" data-id="7f4e0b5f-89fc-578e-b48c-950985b7b0e9"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock size-3 text-amber-500" aria-hidden="true" data-id="568e41a5-7e68-55e0-afca-9410d5a5ad4c"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg><span class="font-medium text-amber-500 text-xs leading-4" data-id="df8c2e4c-5774-54b8-b1ec-3a39c5640dc3">Due Jan 30</span></div></div></div><div class="rounded-lg bg-neutral-100 flex p-3 items-start gap-3" data-id="c85a91fe-28e5-5cce-8f89-2c8b66332065"><div class="min-h-[40px] rounded-full bg-neutral-950 self-stretch w-1 h-full" data-id="18591800-56ec-533d-84c9-087f75871b29"></div><div class="flex-1" data-id="ce233386-d87f-5f55-9a71-36b2444ff565"><p class="font-semibold text-xs leading-4" data-id="8cbc7cb8-7ce5-5781-a4d7-0cd2f7e8d1cb">Essay: Victorian Era</p><p class="text-neutral-500 text-xs leading-4" data-id="fd144ebb-5f43-5dad-a31f-78ea621b8245">English Lit. · Ms. Rachel Moore</p><div class="flex mt-1 items-center gap-1" data-id="65a4a231-22ab-590f-a5d8-33ad715b8eaf"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock size-3 text-neutral-500" aria-hidden="true" data-id="527f36c9-8d62-5b1f-9048-469533e76bad"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg><span class="font-medium text-neutral-500 text-xs leading-4" data-id="7a4e863d-0556-574f-b857-68d640301830">Due Feb 2</span></div></div></div></div></div></div><div data-slot="card" class="bg-card text-card-foreground flex flex-col rounded-xl border shadow-sm p-6 gap-4" data-id="7e309e5d-2be8-5559-a931-a12e52cfec30"><div data-slot="card-header" class="@container/card-header has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 grid auto-rows-min grid-rows-[auto_auto] items-start p-0 gap-1" data-id="5741caa4-f8e1-5ac0-9c08-07a0331d406a"><h3 class="font-semibold text-sm leading-5" data-id="8d2976d7-4cbf-5769-b64f-3d860195f967">Grade Overview</h3><p class="text-neutral-500 text-xs leading-4" data-id="2631cc57-3052-54d7-ab15-964b01d0b072">Current semester performance</p></div><div data-slot="card-content" class="p-0 gap-3" data-id="a82bffff-2971-5ff0-962c-eb0b8ce4726f"><div class="flex flex-col gap-3" data-id="c0521e31-1cdb-58db-a165-ee2f566bf068"><div class="flex justify-between items-center" data-id="18cab0e6-c6c5-5e89-a0d9-a920b27b30e7"><div class="flex items-center gap-2" data-id="845eddc7-0051-548e-b381-b439c539553b"><div class="rounded-full bg-neutral-950 w-2 h-2" data-id="e09838a1-dad6-56dc-82ba-77f544dd82b6"></div><span class="text-xs leading-4" data-id="740906a7-c761-5670-9fed-00057a608ece">Mathematics</span></div><div class="flex items-center gap-2" data-id="a6ad10b7-7e85-5d4c-8a3a-0b135d89e582"><div class="rounded-full bg-neutral-100 flex-1 w-24 h-1.5" data-id="35ea670d-657b-5094-895a-dd01729f446c"><div class="rounded-full bg-neutral-950 h-1.5" data-id="fb9f5015-4794-546a-8201-b369fb474759" style="width: 88%;"></div></div><span class="font-semibold text-right text-xs leading-4 w-6" data-id="54fb313a-c922-5bb3-a8b1-6da61df37f92">A-</span></div></div><div class="flex justify-between items-center" data-id="45bcbfee-b60c-589c-b19b-61b272a7256b"><div class="flex items-center gap-2" data-id="e68e13c4-ec60-542e-9e96-4ff26cace2ff"><div class="rounded-full bg-amber-400 w-2 h-2" data-id="6fcc3889-d3a9-5d84-bb7c-068d4bcc8c6c"></div><span class="text-xs leading-4" data-id="c691c9e6-4434-5599-8d49-74a2ec05cfb9">Physics</span></div><div class="flex items-center gap-2" data-id="1b39e12c-dce7-5ebd-a8bc-ed75df3ec9c4"><div class="rounded-full bg-neutral-100 flex-1 w-24 h-1.5" data-id="74f97f4b-3590-510b-ad14-a0238401f4e6"><div class="rounded-full bg-amber-400 h-1.5" data-id="c1e11f66-fd35-55a7-bf2b-ef7a776ed7b3" style="width: 75%;"></div></div><span class="font-semibold text-right text-xs leading-4 w-6" data-id="58f068b5-329e-5b40-a8af-d099ca4a534b">B</span></div></div><div class="flex justify-between items-center" data-id="0df592cc-0bea-52d0-9ecb-8532670bb118"><div class="flex items-center gap-2" data-id="127a0da5-064a-5022-a333-0b31477ada0e"><div class="rounded-full bg-green-500 w-2 h-2" data-id="3d93cc26-a692-5317-aa2d-f9b7d4c5749d"></div><span class="text-xs leading-4" data-id="76696ff2-8d5a-5ac7-9f31-deaedfb89b87">English Lit.</span></div><div class="flex items-center gap-2" data-id="0d1ab06d-8339-5a95-a401-3edb2b4134db"><div class="rounded-full bg-neutral-100 flex-1 w-24 h-1.5" data-id="f995f6fc-6172-5797-8a03-27327aa1d7df"><div class="rounded-full bg-green-500 h-1.5" data-id="1e1cfce5-d878-595e-9f86-140d16914c2b" style="width: 94%;"></div></div><span class="font-semibold text-right text-xs leading-4 w-6" data-id="04663dab-e63d-5ec4-b9ee-0c220572519d">A</span></div></div><div class="flex justify-between items-center" data-id="537b42d3-cc5c-5926-9e9c-db7e4c565a4b"><div class="flex items-center gap-2" data-id="14421174-307d-5e77-9337-4bd244f32d3f"><div class="rounded-full bg-[#e7000b] w-2 h-2" data-id="cd78c72d-d978-5cee-8da9-f61247ca9d15"></div><span class="text-xs leading-4" data-id="2022cb12-b5d2-551b-a15e-e77da038e93a">Chemistry</span></div><div class="flex items-center gap-2" data-id="8cb6e6a9-67e3-5e4c-b2d5-0c4cf826f139"><div class="rounded-full bg-neutral-100 flex-1 w-24 h-1.5" data-id="a0d47274-0552-50e3-a250-4910551e3f47"><div class="rounded-full bg-[#e7000b] h-1.5" data-id="e00ee5e3-c08d-5113-8226-b8659097dfb6" style="width: 68%;"></div></div><span class="font-semibold text-right text-xs leading-4 w-6" data-id="893b24c4-cd77-52e6-847c-f3299638b39e">C+</span></div></div><div class="flex justify-between items-center" data-id="44fbc4f6-c2b0-5af7-b219-70851ccb3cb9"><div class="flex items-center gap-2" data-id="53804829-f1de-521d-9de3-2eb458f699c1"><div class="rounded-full bg-[#e7000b] w-2 h-2" data-id="35d29729-9b22-5547-b292-ab93b49242e8"></div><span class="text-xs leading-4" data-id="e191fef0-a479-5308-b169-8f744a500de7">History</span></div><div class="flex items-center gap-2" data-id="a99c6c0c-ca7a-5554-825a-6ed8d8abbf50"><div class="rounded-full bg-neutral-100 flex-1 w-24 h-1.5" data-id="4c4b3cf1-7ef6-5b59-be0d-0a51f0fbfffe"><div class="rounded-full bg-[#e7000b] h-1.5" data-id="5493fcfb-c69a-53ec-b351-a56001d9d762" style="width: 70%;"></div></div><span class="font-semibold text-right text-xs leading-4 w-6" data-id="76f07f68-ce7c-51e3-b574-de61a1fb85be">C+</span></div></div></div><div class="border-neutral-200 border-t-1 border-r-0 border-b-0 border-l-0 border-solid flex pt-3 justify-between items-center" data-id="ddb05519-4aa6-5d33-9676-7d31d03182bb"><span class="text-neutral-500 text-xs leading-4" data-id="f64f02c7-f6c8-50d1-a9a2-bf3cba6a1e2c">Overall GPA</span><span class="font-bold text-sm leading-5" data-id="be8acfae-3c54-5e69-8dcc-88c3aaace246">3.1 / 4.0</span></div></div></div><div data-slot="card" class="bg-card text-card-foreground flex flex-col rounded-xl border shadow-sm p-6 gap-4" data-id="37d03411-534c-5752-9597-2e1dc51f739a"><div data-slot="card-header" class="@container/card-header has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 grid auto-rows-min grid-rows-[auto_auto] items-start p-0 gap-1" data-id="4a69cd36-bb98-5a55-af84-f017de493290"><h3 class="font-semibold text-sm leading-5" data-id="a3d519a6-2593-5db5-bb56-5a9a31129455">At-Risk Alerts</h3><p class="text-neutral-500 text-xs leading-4" data-id="d3b43984-6197-58dd-9c7f-613f3691c91d">Courses needing attention</p></div><div data-slot="card-content" class="p-0 gap-3" data-id="40c832ff-2e64-5c6f-8a0a-decf12dcfc93"><div class="flex flex-col gap-3" data-id="d198a928-e81f-51fd-985d-bd331edfec44"><div class="rounded-lg bg-[#e7000b]/5 border-[#e7000b]/30 border-1 border-solid p-3" data-id="3ac58bb2-9fb4-5982-96b0-772d3682b3c2"><div class="flex mb-1 items-center gap-2" data-id="c50a886c-3373-573f-b469-01259052446f"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-triangle-alert size-3 text-[#e7000b]" aria-hidden="true" data-id="32ddc7b2-ee07-5b7d-b500-0efe8de1b4be"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg><span class="font-semibold text-[#e7000b] text-xs leading-4" data-id="e77aa4cb-2844-553d-9c70-81dd48bbc069">Chemistry — 70% Attendance</span></div><p class="text-neutral-500 text-xs leading-4" data-id="efe24440-59b1-579e-937b-21e73c8a2fd3">You need to attend at least 4 more classes to meet the 75% minimum requirement.</p><button data-slot="button" class="flex min-w-fit items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#39;size-&#39;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 py-2 has-[&gt;svg]:px-3 text-[#e7000b] text-xs leading-4 border-[#e7000b]/40 border-0 border-solid mt-2 px-2 h-6" data-id="4f581cb4-64bb-5bfc-b83d-58cbdbeb47b6">Contact Dr. Patel</button></div><div class="rounded-lg bg-[#e7000b]/5 border-[#e7000b]/30 border-1 border-solid p-3" data-id="6ba7051d-bdc4-57e4-b08c-d36eab913f7c"><div class="flex mb-1 items-center gap-2" data-id="95573c90-eaef-5e4f-8efd-6e4650249470"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-triangle-alert size-3 text-[#e7000b]" aria-hidden="true" data-id="4d8b63e3-7ab7-5a33-a484-43e7656af820"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg><span class="font-semibold text-[#e7000b] text-xs leading-4" data-id="855d40a6-7d3b-5fad-8e63-0aec9b3926ee">History — 72% Attendance</span></div><p class="text-neutral-500 text-xs leading-4" data-id="cad34efe-6b20-55c6-b072-74221ac7b5f3">You need to attend at least 2 more classes to meet the 75% minimum requirement.</p><button data-slot="button" class="flex min-w-fit items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#39;size-&#39;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 py-2 has-[&gt;svg]:px-3 text-[#e7000b] text-xs leading-4 border-[#e7000b]/40 border-0 border-solid mt-2 px-2 h-6" data-id="a02a8319-adb9-5e82-a012-c606f09db0f8">Contact Prof. Williams</button></div><div class="rounded-lg bg-neutral-100/50 border-neutral-200 border-1 border-solid p-3" data-id="ac84d374-a64d-500b-b7f5-fb0fd195abea"><div class="flex items-center gap-2" data-id="b952541e-454b-59d3-a8c9-e25bed626463"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info size-3 text-neutral-500" aria-hidden="true" data-id="90bfd160-edd4-5dfe-a382-614c000c74b1"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg><span class="text-neutral-500 text-xs leading-4" data-id="df1791ff-db24-5616-8310-276b8f63309a">Physics attendance is fair at 78%. Keep it up to avoid risk.</span></div></div></div></div></div></div></div></div></div></div>
+        
+      
+    </body></html>

@@ -1,0 +1,1425 @@
+<!DOCTYPE html>
+<!-- saved from url=(0012)about:srcdoc -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+    <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&amp;family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Geist+Mono:wght@100..900&amp;family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;family=Open+Sans:ital,wght@0,300..800;1,300..800&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Roboto:ital,wght@0,100..900;1,100..900&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/tailwindcss">
+    
+    /* limit the size of max height elements */
+    .h-screen {
+      height: 956px !important;
+    }
+    .min-h-screen {
+      min-height: 956px !important;
+    }
+    
+    
+    * {
+        scrollbar-width: none;
+    }
+
+    *::-webkit-scrollbar {
+        display: none;
+    }
+
+    body {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0;
+        padding: 0;
+        margin: 0;
+    }
+    
+    
+    :root {
+        font-family: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    }
+
+    .font-sans {
+        font-family: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    }
+
+    .font-mono {
+        font-family: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+
+    .font-serif {
+        font-family: "Source Serif 4", "Inter", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    }
+    
+    @theme inline {
+        --radius: 0.65rem;
+        --background: oklch(1 0 0);
+        --foreground: oklch(0.145 0 0);
+        --card: oklch(1 0 0);
+        --card-foreground: oklch(0.145 0 0);
+        --popover: oklch(1 0 0);
+        --popover-foreground: oklch(0.145 0 0);
+        --primary: oklch(0.205 0 0);
+        --primary-foreground: oklch(0.985 0 0);
+        --secondary: oklch(0.97 0 0);
+        --secondary-foreground: oklch(0.205 0 0);
+        --muted: oklch(0.97 0 0);
+        --muted-foreground: oklch(0.556 0 0);
+        --accent: oklch(0.97 0 0);
+        --accent-foreground: oklch(0.205 0 0);
+        --destructive: oklch(0.577 0.245 27.325);
+        --border: oklch(0.922 0 0);
+        --input: oklch(0.922 0 0);
+        --ring: oklch(0.708 0 0);
+        --chart-1: oklch(0.646 0.222 41.116);
+        --chart-2: oklch(0.6 0.118 184.704);
+        --chart-3: oklch(0.398 0.07 227.392);
+        --chart-4: oklch(0.828 0.189 84.429);
+        --chart-5: oklch(0.769 0.188 70.08);
+        --sidebar: oklch(0.985 0 0);
+        --sidebar-foreground: oklch(0.145 0 0);
+        --sidebar-primary: oklch(0.205 0 0);
+        --sidebar-primary-foreground: oklch(0.985 0 0);
+        --sidebar-accent: oklch(0.97 0 0);
+        --sidebar-accent-foreground: oklch(0.205 0 0);
+        --sidebar-border: oklch(0.922 0 0);
+        --sidebar-ring: oklch(0.708 0 0);
+        --color-background: var(--background);
+        --color-foreground: var(--foreground);
+        --color-card: var(--card);
+        --color-card-foreground: var(--card-foreground);
+        --color-popover: var(--popover);
+        --color-popover-foreground: var(--popover-foreground);
+        --color-primary: var(--primary);
+        --color-primary-foreground: var(--primary-foreground);
+        --color-secondary: var(--secondary);
+        --color-secondary-foreground: var(--secondary-foreground);
+        --color-muted: var(--muted);
+        --color-muted-foreground: var(--muted-foreground);
+        --color-accent: var(--accent);
+        --color-accent-foreground: var(--accent-foreground);
+        --color-destructive: var(--destructive);
+        --color-border: var(--border);
+        --color-input: var(--input);
+        --color-ring: var(--ring);
+        --color-chart-1: var(--chart-1);
+        --color-chart-2: var(--chart-2);
+        --color-chart-3: var(--chart-3);
+        --color-chart-4: var(--chart-4);
+        --color-chart-5: var(--chart-5);
+        --color-sidebar: var(--sidebar);
+        --color-sidebar-foreground: var(--sidebar-foreground);
+        --color-sidebar-primary: var(--sidebar-primary);
+        --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+        --color-sidebar-accent: var(--sidebar-accent);
+        --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+        --color-sidebar-border: var(--sidebar-border);
+        --color-sidebar-ring: var(--sidebar-ring);
+    }
+    
+    .bg-background {
+        background: var(--color-background);
+    }
+    .bg-foreground {
+        background: var(--color-foreground);
+    }
+    .bg-card {
+        background: var(--color-card);
+    }
+    .bg-card-foreground {
+        background: var(--color-card-foreground);
+    }
+    .bg-popover {
+        background: var(--color-popover);
+    }
+    .bg-popover-foreground {
+        background: var(--color-popover-foreground);
+    }
+    .bg-primary {
+        background: var(--color-primary);
+    }
+    .bg-primary-foreground {
+        background: var(--color-primary-foreground);
+    }
+    .bg-secondary {
+        background: var(--color-secondary);
+    }
+    .bg-secondary-foreground {
+        background: var(--color-secondary-foreground);
+    }
+    .bg-muted {
+        background: var(--color-muted);
+    }
+    .bg-muted-foreground {
+        background: var(--color-muted-foreground);
+    }
+    .bg-accent {
+        background: var(--color-accent);
+    }
+    .bg-accent-foreground {
+        background: var(--color-accent-foreground);
+    }
+    .bg-destructive {
+        background: var(--color-destructive);
+    }
+    .bg-border {
+        background: var(--color-border);
+    }
+    .bg-input {
+        background: var(--color-input);
+    }
+    .bg-ring {
+        background: var(--color-ring);
+    }
+
+    .text-card {
+        color: var(--color-card);
+    }
+    .text-card-foreground {
+        color: var(--color-card-foreground);
+    }
+    .text-popover {
+        color: var(--color-popover);
+    }
+    .text-popover-foreground {
+        color: var(--color-popover-foreground);
+    }
+    .text-primary {
+        color: var(--color-primary);
+    }
+    .text-primary-foreground {
+        color: var(--color-primary-foreground);
+    }
+    .text-secondary {
+        color: var(--color-secondary);
+    }
+    .text-secondary-foreground {
+        color: var(--color-secondary-foreground);
+    }
+    .text-muted {
+        color: var(--color-muted);
+    }
+    .text-muted-foreground {
+        color: var(--color-muted-foreground);
+    }
+    .text-accent {
+        color: var(--color-accent);
+    }
+    .text-accent-foreground {
+        color: var(--color-accent-foreground);
+    }
+    .text-destructive {
+        color: var(--color-destructive);
+    }
+    .text-border {
+        color: var(--color-border);
+    }
+    .text-input {
+        color: var(--color-input);
+    }
+    .text-ring {
+        color: var(--color-ring);
+    }
+    .border {
+        border-color: var(--color-border);
+    }
+    .border-border {
+        border-color: var(--color-border);
+    }
+    .border-primary {
+        border-color: var(--color-primary);
+    }
+    .border-secondary {
+        border-color: var(--color-secondary);
+    }
+    .border-muted {
+        border-color: var(--color-muted);
+    }
+    .border-accent {
+        border-color: var(--color-accent);
+    }
+    .border-destructive {
+        border-color: var(--color-destructive);
+    }
+    .border-input {
+        border-color: var(--color-input);
+    }
+    .border-ring {
+        border-color: var(--color-border);
+    }
+    .border-t {
+        border-color: var(--color-border);
+    }
+    .border-b {
+        border-color: var(--color-border);
+    }
+    .border-l {
+        border-color: var(--color-border);
+    }
+    .border-r {
+        border-color: var(--color-border);
+    }    
+    </style>
+       
+        
+    <script type="module" src="https://app.flowstep.ai/tailwindStatic.js"></script>    
+    <link rel="stylesheet" href="https://app.flowstep.ai/tw-animate.css" crossorigin="anonymous">
+     
+      <style>/*! tailwindcss v4.1.11 | MIT License | https://tailwindcss.com */
+@layer properties;
+@layer theme, base, components, utilities;
+@layer theme {
+  :root, :host {
+    --font-sans: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Noto Color Emoji';
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+    monospace;
+    --color-neutral-50: oklch(98.5% 0 0);
+    --color-neutral-100: oklch(97% 0 0);
+    --color-neutral-200: oklch(92.2% 0 0);
+    --color-neutral-500: oklch(55.6% 0 0);
+    --color-neutral-900: oklch(20.5% 0 0);
+    --color-neutral-950: oklch(14.5% 0 0);
+    --color-black: #000;
+    --color-white: #fff;
+    --spacing: 0.25rem;
+    --text-xs: 0.75rem;
+    --text-xs--line-height: calc(1 / 0.75);
+    --text-sm: 0.875rem;
+    --text-sm--line-height: calc(1.25 / 0.875);
+    --text-base: 1rem;
+    --text-base--line-height: calc(1.5 / 1);
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --radius-md: 0.375rem;
+    --radius-lg: 0.5rem;
+    --radius-xl: 0.75rem;
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --default-font-family: var(--font-sans);
+    --default-mono-font-family: var(--font-mono);
+    --background: oklch(1 0 0);
+    --foreground: oklch(0.145 0 0);
+    --card: oklch(1 0 0);
+    --card-foreground: oklch(0.145 0 0);
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch(0.145 0 0);
+    --primary: oklch(0.205 0 0);
+    --primary-foreground: oklch(0.985 0 0);
+    --secondary: oklch(0.97 0 0);
+    --secondary-foreground: oklch(0.205 0 0);
+    --muted: oklch(0.97 0 0);
+    --muted-foreground: oklch(0.556 0 0);
+    --accent: oklch(0.97 0 0);
+    --accent-foreground: oklch(0.205 0 0);
+    --destructive: oklch(0.577 0.245 27.325);
+    --border: oklch(0.922 0 0);
+    --input: oklch(0.922 0 0);
+    --ring: oklch(0.708 0 0);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+    --color-popover: var(--popover);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-destructive: var(--destructive);
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+  }
+}
+@layer base {
+  *, ::after, ::before, ::backdrop, ::file-selector-button {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
+  }
+  html, :host {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+    font-family: var(--default-font-family, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji');
+    font-feature-settings: var(--default-font-feature-settings, normal);
+    font-variation-settings: var(--default-font-variation-settings, normal);
+    -webkit-tap-highlight-color: transparent;
+  }
+  hr {
+    height: 0;
+    color: inherit;
+    border-top-width: 1px;
+  }
+  abbr:where([title]) {
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  a {
+    color: inherit;
+    -webkit-text-decoration: inherit;
+    text-decoration: inherit;
+  }
+  b, strong {
+    font-weight: bolder;
+  }
+  code, kbd, samp, pre {
+    font-family: var(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace);
+    font-feature-settings: var(--default-mono-font-feature-settings, normal);
+    font-variation-settings: var(--default-mono-font-variation-settings, normal);
+    font-size: 1em;
+  }
+  small {
+    font-size: 80%;
+  }
+  sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  sub {
+    bottom: -0.25em;
+  }
+  sup {
+    top: -0.5em;
+  }
+  table {
+    text-indent: 0;
+    border-color: inherit;
+    border-collapse: collapse;
+  }
+  :-moz-focusring {
+    outline: auto;
+  }
+  progress {
+    vertical-align: baseline;
+  }
+  summary {
+    display: list-item;
+  }
+  ol, ul, menu {
+    list-style: none;
+  }
+  img, svg, video, canvas, audio, iframe, embed, object {
+    display: block;
+    vertical-align: middle;
+  }
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+  button, input, select, optgroup, textarea, ::file-selector-button {
+    font: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    border-radius: 0;
+    background-color: transparent;
+    opacity: 1;
+  }
+  :where(select:is([multiple], [size])) optgroup {
+    font-weight: bolder;
+  }
+  :where(select:is([multiple], [size])) optgroup option {
+    padding-inline-start: 20px;
+  }
+  ::file-selector-button {
+    margin-inline-end: 4px;
+  }
+  ::placeholder {
+    opacity: 1;
+  }
+  @supports (not (-webkit-appearance: -apple-pay-button))  or (contain-intrinsic-size: 1px) {
+    ::placeholder {
+      color: currentcolor;
+      @supports (color: color-mix(in lab, red, red)) {
+        color: color-mix(in oklab, currentcolor 50%, transparent);
+      }
+    }
+  }
+  textarea {
+    resize: vertical;
+  }
+  ::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  ::-webkit-date-and-time-value {
+    min-height: 1lh;
+    text-align: inherit;
+  }
+  ::-webkit-datetime-edit {
+    display: inline-flex;
+  }
+  ::-webkit-datetime-edit-fields-wrapper {
+    padding: 0;
+  }
+  ::-webkit-datetime-edit, ::-webkit-datetime-edit-year-field, ::-webkit-datetime-edit-month-field, ::-webkit-datetime-edit-day-field, ::-webkit-datetime-edit-hour-field, ::-webkit-datetime-edit-minute-field, ::-webkit-datetime-edit-second-field, ::-webkit-datetime-edit-millisecond-field, ::-webkit-datetime-edit-meridiem-field {
+    padding-block: 0;
+  }
+  :-moz-ui-invalid {
+    box-shadow: none;
+  }
+  button, input:where([type='button'], [type='reset'], [type='submit']), ::file-selector-button {
+    appearance: button;
+  }
+  ::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+    height: auto;
+  }
+  [hidden]:where(:not([hidden='until-found'])) {
+    display: none !important;
+  }
+}
+@layer utilities {
+  .\@container\/card-header {
+    container-type: inline-size;
+    container-name: card-header;
+  }
+  .absolute {
+    position: absolute;
+  }
+  .relative {
+    position: relative;
+  }
+  .top-0\.5 {
+    top: calc(var(--spacing) * 0.5);
+  }
+  .right-0 {
+    right: calc(var(--spacing) * 0);
+  }
+  .right-0\.5 {
+    right: calc(var(--spacing) * 0.5);
+  }
+  .bottom-0 {
+    bottom: calc(var(--spacing) * 0);
+  }
+  .left-0\.5 {
+    left: calc(var(--spacing) * 0.5);
+  }
+  .col-span-1 {
+    grid-column: span 1 / span 1;
+  }
+  .col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+  .mx-auto {
+    margin-inline: auto;
+  }
+  .mt-2 {
+    margin-top: calc(var(--spacing) * 2);
+  }
+  .mb-1 {
+    margin-bottom: calc(var(--spacing) * 1);
+  }
+  .mb-8 {
+    margin-bottom: calc(var(--spacing) * 8);
+  }
+  .flex {
+    display: flex;
+  }
+  .grid {
+    display: grid;
+  }
+  .inline-flex {
+    display: inline-flex;
+  }
+  .size-3 {
+    width: calc(var(--spacing) * 3);
+    height: calc(var(--spacing) * 3);
+  }
+  .size-4 {
+    width: calc(var(--spacing) * 4);
+    height: calc(var(--spacing) * 4);
+  }
+  .size-5 {
+    width: calc(var(--spacing) * 5);
+    height: calc(var(--spacing) * 5);
+  }
+  .size-9 {
+    width: calc(var(--spacing) * 9);
+    height: calc(var(--spacing) * 9);
+  }
+  .h-2 {
+    height: calc(var(--spacing) * 2);
+  }
+  .h-4 {
+    height: calc(var(--spacing) * 4);
+  }
+  .h-5 {
+    height: calc(var(--spacing) * 5);
+  }
+  .h-7 {
+    height: calc(var(--spacing) * 7);
+  }
+  .h-8 {
+    height: calc(var(--spacing) * 8);
+  }
+  .h-9 {
+    height: calc(var(--spacing) * 9);
+  }
+  .h-14 {
+    height: calc(var(--spacing) * 14);
+  }
+  .h-24 {
+    height: calc(var(--spacing) * 24);
+  }
+  .h-fit {
+    height: fit-content;
+  }
+  .h-full {
+    height: 100%;
+  }
+  .min-h-screen {
+    min-height: 100vh;
+  }
+  .w-2 {
+    width: calc(var(--spacing) * 2);
+  }
+  .w-4 {
+    width: calc(var(--spacing) * 4);
+  }
+  .w-7 {
+    width: calc(var(--spacing) * 7);
+  }
+  .w-8 {
+    width: calc(var(--spacing) * 8);
+  }
+  .w-10 {
+    width: calc(var(--spacing) * 10);
+  }
+  .w-24 {
+    width: calc(var(--spacing) * 24);
+  }
+  .w-\[45\%\] {
+    width: 45%;
+  }
+  .w-\[77\%\] {
+    width: 77%;
+  }
+  .w-\[87\%\] {
+    width: 87%;
+  }
+  .w-fit {
+    width: fit-content;
+  }
+  .w-full {
+    width: 100%;
+  }
+  .w-screen {
+    width: 100vw;
+  }
+  .max-w-\[1140px\] {
+    max-width: 1140px;
+  }
+  .max-w-screen {
+    max-width: 100vw;
+  }
+  .min-w-fit {
+    min-width: fit-content;
+  }
+  .min-w-screen {
+    min-width: 100vw;
+  }
+  .shrink-0 {
+    flex-shrink: 0;
+  }
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  .auto-rows-min {
+    grid-auto-rows: min-content;
+  }
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .grid-rows-\[auto_auto\] {
+    grid-template-rows: auto auto;
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .items-start {
+    align-items: flex-start;
+  }
+  .justify-between {
+    justify-content: space-between;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .justify-start {
+    justify-content: flex-start;
+  }
+  .gap-0 {
+    gap: calc(var(--spacing) * 0);
+  }
+  .gap-1 {
+    gap: calc(var(--spacing) * 1);
+  }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
+  }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
+  }
+  .gap-6 {
+    gap: calc(var(--spacing) * 6);
+  }
+  .overflow-hidden {
+    overflow: hidden;
+  }
+  .overflow-visible {
+    overflow: visible;
+  }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
+  }
+  .rounded-lg {
+    border-radius: var(--radius-lg);
+  }
+  .rounded-md {
+    border-radius: var(--radius-md);
+  }
+  .rounded-xl {
+    border-radius: var(--radius-xl);
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .border-1 {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .border-2 {
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+  }
+  .border-4 {
+    border-style: var(--tw-border-style);
+    border-width: 4px;
+  }
+  .border-t-0 {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 0px;
+  }
+  .border-t-1 {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 1px;
+  }
+  .border-r-0 {
+    border-right-style: var(--tw-border-style);
+    border-right-width: 0px;
+  }
+  .border-b-0 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 0px;
+  }
+  .border-b-1 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+  }
+  .border-b-2 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 2px;
+  }
+  .border-l-0 {
+    border-left-style: var(--tw-border-style);
+    border-left-width: 0px;
+  }
+  .border-solid {
+    --tw-border-style: solid;
+    border-style: solid;
+  }
+  .border-\[oklch\(0\.9_0\.05_27\)\] {
+    border-color: oklch(0.9 0.05 27);
+  }
+  .border-black\/1 {
+    border-color: color-mix(in srgb, #000 1%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-black) 1%, transparent);
+    }
+  }
+  .border-neutral-200 {
+    border-color: var(--color-neutral-200);
+  }
+  .border-neutral-950 {
+    border-color: var(--color-neutral-950);
+  }
+  .border-transparent {
+    border-color: transparent;
+  }
+  .border-white {
+    border-color: var(--color-white);
+  }
+  .bg-\[oklch\(0\.75_0\.15_80\)\] {
+    background-color: oklch(0.75 0.15 80);
+  }
+  .bg-\[oklch\(0\.97_0\.02_27\)\] {
+    background-color: oklch(0.97 0.02 27);
+  }
+  .bg-\[oklch\(0\.97_0\.05_27\)\] {
+    background-color: oklch(0.97 0.05 27);
+  }
+  .bg-\[oklch\(0\.97_0\.05_80\)\] {
+    background-color: oklch(0.97 0.05 80);
+  }
+  .bg-\[oklch\(0\.97_0\.05_150\)\] {
+    background-color: oklch(0.97 0.05 150);
+  }
+  .bg-\[oklch\(0\.577_0\.245_27\.325\)\] {
+    background-color: oklch(0.577 0.245 27.325);
+  }
+  .bg-background {
+    background-color: var(--background);
+  }
+  .bg-card {
+    background-color: var(--card);
+  }
+  .bg-neutral-50 {
+    background-color: var(--color-neutral-50);
+  }
+  .bg-neutral-100 {
+    background-color: var(--color-neutral-100);
+  }
+  .bg-neutral-500 {
+    background-color: var(--color-neutral-500);
+  }
+  .bg-neutral-900 {
+    background-color: var(--color-neutral-900);
+  }
+  .bg-white {
+    background-color: var(--color-white);
+  }
+  .object-cover {
+    object-fit: cover;
+  }
+  .p-0 {
+    padding: calc(var(--spacing) * 0);
+  }
+  .p-3 {
+    padding: calc(var(--spacing) * 3);
+  }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
+  }
+  .p-6 {
+    padding: calc(var(--spacing) * 6);
+  }
+  .p-8 {
+    padding: calc(var(--spacing) * 8);
+  }
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
+  }
+  .px-3 {
+    padding-inline: calc(var(--spacing) * 3);
+  }
+  .px-4 {
+    padding-inline: calc(var(--spacing) * 4);
+  }
+  .px-8 {
+    padding-inline: calc(var(--spacing) * 8);
+  }
+  .py-0\.5 {
+    padding-block: calc(var(--spacing) * 0.5);
+  }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
+  }
+  .pt-4 {
+    padding-top: calc(var(--spacing) * 4);
+  }
+  .text-center {
+    text-align: center;
+  }
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
+  .text-3xl {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
+  .text-base {
+    font-size: var(--text-base);
+    line-height: var(--tw-leading, var(--text-base--line-height));
+  }
+  .text-sm {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
+  .text-xl {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
+  .text-xs {
+    font-size: var(--text-xs);
+    line-height: var(--tw-leading, var(--text-xs--line-height));
+  }
+  .leading-4 {
+    --tw-leading: calc(var(--spacing) * 4);
+    line-height: calc(var(--spacing) * 4);
+  }
+  .leading-5 {
+    --tw-leading: calc(var(--spacing) * 5);
+    line-height: calc(var(--spacing) * 5);
+  }
+  .leading-6 {
+    --tw-leading: calc(var(--spacing) * 6);
+    line-height: calc(var(--spacing) * 6);
+  }
+  .leading-7 {
+    --tw-leading: calc(var(--spacing) * 7);
+    line-height: calc(var(--spacing) * 7);
+  }
+  .leading-8 {
+    --tw-leading: calc(var(--spacing) * 8);
+    line-height: calc(var(--spacing) * 8);
+  }
+  .leading-9 {
+    --tw-leading: calc(var(--spacing) * 9);
+    line-height: calc(var(--spacing) * 9);
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
+  .font-medium {
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+  }
+  .font-semibold {
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+  }
+  .whitespace-nowrap {
+    white-space: nowrap;
+  }
+  .text-\[oklch\(0\.4_0\.15_150\)\] {
+    color: oklch(0.4 0.15 150);
+  }
+  .text-\[oklch\(0\.5_0\.15_80\)\] {
+    color: oklch(0.5 0.15 80);
+  }
+  .text-\[oklch\(0\.5_0\.15_150\)\] {
+    color: oklch(0.5 0.15 150);
+  }
+  .text-\[oklch\(0\.577_0\.245_27\.325\)\] {
+    color: oklch(0.577 0.245 27.325);
+  }
+  .text-card-foreground {
+    color: var(--card-foreground);
+  }
+  .text-neutral-50 {
+    color: var(--color-neutral-50);
+  }
+  .text-neutral-500 {
+    color: var(--color-neutral-500);
+  }
+  .text-neutral-900 {
+    color: var(--color-neutral-900);
+  }
+  .text-neutral-950 {
+    color: var(--color-neutral-950);
+  }
+  .shadow-sm {
+    --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-xs {
+    --tw-shadow: 0 1px 2px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.05));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .transition-\[color\,box-shadow\] {
+    transition-property: color,box-shadow;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .transition-all {
+    transition-property: all;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .outline-none {
+    --tw-outline-style: none;
+    outline-style: none;
+  }
+  .hover\:bg-accent {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--accent);
+      }
+    }
+  }
+  .hover\:bg-primary\/90 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: color-mix(in srgb, oklch(0.205 0 0) 90%, transparent);
+        @supports (color: color-mix(in lab, red, red)) {
+          background-color: color-mix(in oklab, var(--primary) 90%, transparent);
+        }
+      }
+    }
+  }
+  .hover\:text-accent-foreground {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--accent-foreground);
+      }
+    }
+  }
+  .focus-visible\:border-ring {
+    &:focus-visible {
+      border-color: var(--ring);
+    }
+  }
+  .focus-visible\:ring-\[3px\] {
+    &:focus-visible {
+      --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    }
+  }
+  .focus-visible\:ring-ring\/50 {
+    &:focus-visible {
+      --tw-ring-color: color-mix(in srgb, oklch(0.708 0 0) 50%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        --tw-ring-color: color-mix(in oklab, var(--ring) 50%, transparent);
+      }
+    }
+  }
+  .disabled\:pointer-events-none {
+    &:disabled {
+      pointer-events: none;
+    }
+  }
+  .disabled\:opacity-50 {
+    &:disabled {
+      opacity: 50%;
+    }
+  }
+  .has-data-\[slot\=card-action\]\:grid-cols-\[1fr_auto\] {
+    &:has(*[data-slot="card-action"]) {
+      grid-template-columns: 1fr auto;
+    }
+  }
+  .has-\[\>svg\]\:px-2\.5 {
+    &:has(>svg) {
+      padding-inline: calc(var(--spacing) * 2.5);
+    }
+  }
+  .has-\[\>svg\]\:px-3 {
+    &:has(>svg) {
+      padding-inline: calc(var(--spacing) * 3);
+    }
+  }
+  .aria-invalid\:border-destructive {
+    &[aria-invalid="true"] {
+      border-color: var(--destructive);
+    }
+  }
+  .aria-invalid\:ring-destructive\/20 {
+    &[aria-invalid="true"] {
+      --tw-ring-color: color-mix(in srgb, oklch(0.577 0.245 27.325) 20%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        --tw-ring-color: color-mix(in oklab, var(--destructive) 20%, transparent);
+      }
+    }
+  }
+  .dark\:border-input {
+    @media (prefers-color-scheme: dark) {
+      border-color: var(--input);
+    }
+  }
+  .dark\:bg-input\/30 {
+    @media (prefers-color-scheme: dark) {
+      background-color: color-mix(in srgb, oklch(0.922 0 0) 30%, transparent);
+      @supports (color: color-mix(in lab, red, red)) {
+        background-color: color-mix(in oklab, var(--input) 30%, transparent);
+      }
+    }
+  }
+  .dark\:hover\:bg-accent\/50 {
+    @media (prefers-color-scheme: dark) {
+      &:hover {
+        @media (hover: hover) {
+          background-color: color-mix(in srgb, oklch(0.97 0 0) 50%, transparent);
+          @supports (color: color-mix(in lab, red, red)) {
+            background-color: color-mix(in oklab, var(--accent) 50%, transparent);
+          }
+        }
+      }
+    }
+  }
+  .dark\:hover\:bg-input\/50 {
+    @media (prefers-color-scheme: dark) {
+      &:hover {
+        @media (hover: hover) {
+          background-color: color-mix(in srgb, oklch(0.922 0 0) 50%, transparent);
+          @supports (color: color-mix(in lab, red, red)) {
+            background-color: color-mix(in oklab, var(--input) 50%, transparent);
+          }
+        }
+      }
+    }
+  }
+  .dark\:aria-invalid\:ring-destructive\/40 {
+    @media (prefers-color-scheme: dark) {
+      &[aria-invalid="true"] {
+        --tw-ring-color: color-mix(in srgb, oklch(0.577 0.245 27.325) 40%, transparent);
+        @supports (color: color-mix(in lab, red, red)) {
+          --tw-ring-color: color-mix(in oklab, var(--destructive) 40%, transparent);
+        }
+      }
+    }
+  }
+  .\[\&_svg\]\:pointer-events-none {
+    & svg {
+      pointer-events: none;
+    }
+  }
+  .\[\&_svg\]\:shrink-0 {
+    & svg {
+      flex-shrink: 0;
+    }
+  }
+  .\[\&_svg\:not\(\[class\*\=\'size-\'\]\)\]\:size-4 {
+    & svg:not([class*='size-']) {
+      width: calc(var(--spacing) * 4);
+      height: calc(var(--spacing) * 4);
+    }
+  }
+  .\[\.border-b\]\:pb-6 {
+    &:is(.border-b) {
+      padding-bottom: calc(var(--spacing) * 6);
+    }
+  }
+  .\[\&\>svg\]\:pointer-events-none {
+    &>svg {
+      pointer-events: none;
+    }
+  }
+  .\[\&\>svg\]\:size-3 {
+    &>svg {
+      width: calc(var(--spacing) * 3);
+      height: calc(var(--spacing) * 3);
+    }
+  }
+  .\[a\&\]\:hover\:bg-primary\/90 {
+    a& {
+      &:hover {
+        @media (hover: hover) {
+          background-color: color-mix(in srgb, oklch(0.205 0 0) 90%, transparent);
+          @supports (color: color-mix(in lab, red, red)) {
+            background-color: color-mix(in oklab, var(--primary) 90%, transparent);
+          }
+        }
+      }
+    }
+  }
+}
+.h-screen {
+  height: 956px !important;
+}
+.min-h-screen {
+  min-height: 956px !important;
+}
+* {
+  scrollbar-width: none;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+body {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.font-sans {
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.font-mono {
+  font-family: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+.font-serif {
+  font-family: "Source Serif 4", "Inter", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+.bg-background {
+  background: var(--color-background);
+}
+.bg-foreground {
+  background: var(--color-foreground);
+}
+.bg-card {
+  background: var(--color-card);
+}
+.bg-card-foreground {
+  background: var(--color-card-foreground);
+}
+.bg-popover {
+  background: var(--color-popover);
+}
+.bg-popover-foreground {
+  background: var(--color-popover-foreground);
+}
+.bg-primary {
+  background: var(--color-primary);
+}
+.bg-primary-foreground {
+  background: var(--color-primary-foreground);
+}
+.bg-secondary {
+  background: var(--color-secondary);
+}
+.bg-secondary-foreground {
+  background: var(--color-secondary-foreground);
+}
+.bg-muted {
+  background: var(--color-muted);
+}
+.bg-muted-foreground {
+  background: var(--color-muted-foreground);
+}
+.bg-accent {
+  background: var(--color-accent);
+}
+.bg-accent-foreground {
+  background: var(--color-accent-foreground);
+}
+.bg-destructive {
+  background: var(--color-destructive);
+}
+.bg-border {
+  background: var(--color-border);
+}
+.bg-input {
+  background: var(--color-input);
+}
+.bg-ring {
+  background: var(--color-ring);
+}
+.text-card {
+  color: var(--color-card);
+}
+.text-card-foreground {
+  color: var(--color-card-foreground);
+}
+.text-popover {
+  color: var(--color-popover);
+}
+.text-popover-foreground {
+  color: var(--color-popover-foreground);
+}
+.text-primary {
+  color: var(--color-primary);
+}
+.text-primary-foreground {
+  color: var(--color-primary-foreground);
+}
+.text-secondary {
+  color: var(--color-secondary);
+}
+.text-secondary-foreground {
+  color: var(--color-secondary-foreground);
+}
+.text-muted {
+  color: var(--color-muted);
+}
+.text-muted-foreground {
+  color: var(--color-muted-foreground);
+}
+.text-accent {
+  color: var(--color-accent);
+}
+.text-accent-foreground {
+  color: var(--color-accent-foreground);
+}
+.text-destructive {
+  color: var(--color-destructive);
+}
+.text-border {
+  color: var(--color-border);
+}
+.text-input {
+  color: var(--color-input);
+}
+.text-ring {
+  color: var(--color-ring);
+}
+.border {
+  border-color: var(--color-border);
+}
+.border-border {
+  border-color: var(--color-border);
+}
+.border-primary {
+  border-color: var(--color-primary);
+}
+.border-secondary {
+  border-color: var(--color-secondary);
+}
+.border-muted {
+  border-color: var(--color-muted);
+}
+.border-accent {
+  border-color: var(--color-accent);
+}
+.border-destructive {
+  border-color: var(--color-destructive);
+}
+.border-input {
+  border-color: var(--color-input);
+}
+.border-ring {
+  border-color: var(--color-border);
+}
+.border-t {
+  border-color: var(--color-border);
+}
+.border-b {
+  border-color: var(--color-border);
+}
+.border-l {
+  border-color: var(--color-border);
+}
+.border-r {
+  border-color: var(--color-border);
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-inset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-ring-inset {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-offset-width {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+@property --tw-ring-offset-color {
+  syntax: "*";
+  inherits: false;
+  initial-value: #fff;
+}
+@property --tw-ring-offset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-border-style: solid;
+      --tw-leading: initial;
+      --tw-font-weight: initial;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-color: initial;
+      --tw-shadow-alpha: 100%;
+      --tw-inset-shadow: 0 0 #0000;
+      --tw-inset-shadow-color: initial;
+      --tw-inset-shadow-alpha: 100%;
+      --tw-ring-color: initial;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-inset-ring-color: initial;
+      --tw-inset-ring-shadow: 0 0 #0000;
+      --tw-ring-inset: initial;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-offset-shadow: 0 0 #0000;
+    }
+  }
+}
+</style></head>
+      <body>
+        <div style="position:absolute;top:0;left:0;" id="id0ab6d62a"><div class="frame-content"><div class="screenshot-container"><div class="bg-white text-neutral-950 w-full h-fit h-fit min-h-screen w-screen min-w-screen max-w-screen overflow-visible" data-id="54d93348-eeb4-508f-8514-1b960990258c"><nav class="bg-white border-neutral-200 border-t-0 border-r-0 border-b-1 border-l-0 border-solid w-full" data-id="ab65c02e-f367-53b5-8388-469e1fcbb250"><div class="max-w-[1140px] flex mx-auto px-8 justify-between items-center h-14" data-id="ae22a9f7-f313-5b2d-9a89-8172bb602bae"><div class="flex items-center gap-2" data-id="07bc95fa-b0ae-5dae-b7d8-52600db66f43"><div class="rounded-lg bg-neutral-900 flex justify-center items-center w-7 h-7" data-id="40bcd854-6173-5b29-8e96-2afbb72063b1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap size-4 text-neutral-50" aria-hidden="true" data-id="16cca514-9fa8-5ffc-b9bf-a5e5152afb00"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"></path><path d="M22 10v6"></path><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path></svg></div><span class="font-bold text-neutral-950 text-base leading-6" data-id="e29bb689-eb58-5826-9413-87aa87b01a70">EduTrack</span></div><div class="flex items-center gap-1" data-id="0d157a84-720c-5030-af9d-7a7d86520d90"><a class="border-transparent text-neutral-500 text-sm leading-5 border-black/1 border-t-0 border-r-0 border-b-2 border-l-0 border-solid flex px-4 items-center gap-2 h-14" data-id="2632af9f-79bd-5d5d-91dd-f99d10c012bd"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-dashboard size-4" aria-hidden="true" data-id="f9985dec-6b64-5449-b5fa-87a9a94865f0"><rect width="7" height="9" x="3" y="3" rx="1"></rect><rect width="7" height="5" x="14" y="3" rx="1"></rect><rect width="7" height="9" x="14" y="12" rx="1"></rect><rect width="7" height="5" x="3" y="16" rx="1"></rect></svg>Dashboard</a><a class="border-transparent text-neutral-500 text-sm leading-5 border-black/1 border-t-0 border-r-0 border-b-2 border-l-0 border-solid flex px-4 items-center gap-2 h-14" data-id="a8ad293a-50e9-533c-ad71-4d1b91c477e8"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big size-4" aria-hidden="true" data-id="c84e8ec8-916a-578b-a1d8-32fddf3e26fa"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>Attendance</a><a class="border-transparent text-neutral-500 text-sm leading-5 border-black/1 border-t-0 border-r-0 border-b-2 border-l-0 border-solid flex px-4 items-center gap-2 h-14" data-id="87569770-6798-5b70-bd06-1d1e26fb90b8"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open size-4" aria-hidden="true" data-id="9c800075-8019-5ca6-bf42-d8d01c6f2805"><path d="M12 7v14"></path><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"></path></svg>Classes</a><a class="border-transparent text-neutral-500 text-sm leading-5 border-black/1 border-t-0 border-r-0 border-b-2 border-l-0 border-solid flex px-4 items-center gap-2 h-14" data-id="5c5ee38e-5399-55f0-a00d-1628f2a6efdb"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar size-4" aria-hidden="true" data-id="6085d3df-9d66-5746-8c82-41fdaa61d4ac"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg>Schedule</a><a class="font-semibold text-neutral-950 text-sm leading-5 border-neutral-950 border-t-0 border-r-0 border-b-2 border-l-0 border-solid flex px-4 items-center gap-2 h-14" data-id="34f75ba8-27b9-537a-9e08-7adcdecf78ed"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user size-4" aria-hidden="true" data-id="2f25865a-b0e9-5075-b90d-e02955217053"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>Profile</a></div><div class="flex items-center gap-3" data-id="4fa9c024-b682-57df-8254-34067143201b"><div class="relative" data-id="499b2644-35c6-520a-a641-590d1b8f63bf"><button data-slot="button" class="flex min-w-fit items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#39;size-&#39;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 size-9 relative" data-id="6668825e-405c-57bd-8457-b203e84b38f8"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bell size-5" aria-hidden="true" data-id="6316e71a-2058-5aba-b487-d705d8e27f2d"><path d="M10.268 21a2 2 0 0 0 3.464 0"></path><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"></path></svg></button></div><div class="font-bold rounded-full bg-neutral-900 text-neutral-50 text-xs leading-4 flex justify-center items-center w-8 h-8" data-id="0b246c9c-3e69-53d5-a428-542703ff1021">JS</div></div></div></nav><div class="max-w-[1140px] mx-auto p-8" data-id="6a082e2b-5c9e-5d3a-b788-026dfd9eea42"><div class="flex mb-8 justify-between items-start" data-id="edf716a3-53c6-560c-b50f-fb3f8998e792"><div data-id="89c0e0b0-58a8-57dd-b673-00fb51e671b9"><p class="text-neutral-500 text-sm leading-5 mb-1" data-id="e1edb8a4-ab1b-5a3f-a967-5d594f9bd6a2">Monday, January 27, 2025</p><h1 class="font-bold text-neutral-950 text-3xl leading-9 mb-1" data-id="5e8f3a22-85a2-584f-957e-8952a6bed0b5">My Profile</h1><p class="text-neutral-500 text-sm leading-5" data-id="67c304a3-da9f-5e5c-a8ab-045d56e5534d">Manage your personal information and account settings</p></div><div class="flex items-center gap-2" data-id="a3c0695a-7c95-532a-9fe5-9747467b328c"><button data-slot="button" class="min-w-fit justify-center whitespace-nowrap rounded-md font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#39;size-&#39;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-9 px-4 py-2 has-[&gt;svg]:px-3 text-sm leading-5 flex items-center gap-2" data-id="dcc49e57-db08-5bd1-9d0d-5cfce9dd895d"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download size-4" aria-hidden="true" data-id="aed773e8-ae31-5775-b6b4-d7999c15cceb"><path d="M12 15V3"></path><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path></svg>Export Data</button><button data-slot="button" class="min-w-fit justify-center whitespace-nowrap rounded-md font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#39;size-&#39;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive shadow-xs hover:bg-primary/90 h-9 px-4 py-2 has-[&gt;svg]:px-3 bg-neutral-900 text-neutral-50 text-sm leading-5 flex items-center gap-2" data-id="cc979cd4-0e5b-5fa1-bae7-eabdbbd8936e"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings size-4" aria-hidden="true" data-id="c5b63fa4-3378-50a4-9bef-9c00f50ad78a"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"></path><circle cx="12" cy="12" r="3"></circle></svg>Edit Profile</button></div></div><div class="grid grid-cols-3 gap-6" data-id="e5593b97-da47-553d-b14d-6fabac85707e"><div class="col-span-1 flex flex-col gap-6" data-id="6c83cfd7-696c-5c3a-a54b-4f0fbe62891d"><div data-slot="card" class="bg-card text-card-foreground flex flex-col rounded-xl border shadow-sm p-6 gap-4" data-id="4bc24494-b694-5ebc-8e68-4f399019fb03"><div data-slot="card-content" class="p-0 gap-0" data-id="4b039dc4-dbcd-580b-8242-e8d74690ecd4"><div class="text-center flex flex-col items-center gap-4" data-id="93e0e6a7-13a3-55c0-a43e-2beb6464ce17"><div class="relative" data-id="74302059-15c6-50e9-b233-3edfd2fbef36"><div class="rounded-full border-neutral-200 border-4 border-solid w-24 h-24 overflow-hidden" data-id="ab9bbe1f-99c7-5870-943f-5fcd181adeac"><img alt="Student portrait" class="object-cover w-full h-full" data-photoid="1mEKyDTmTaw" data-authorname="Ivan Serediuk" data-authorurl="https://unsplash.com/@iserediuk" data-blurhash="LOGbI]IU00kYDhxa%gM{D%ofxuWB" data-id="986a4ff5-808f-54ed-b395-5746808bdc4f" src="https://images.unsplash.com/photo-1627554785796-f9646d15c2da?crop=entropy&amp;cs=tinysrgb&amp;fit=max&amp;fm=jpg&amp;ixid=M3w3ODc2NDd8MHwxfHNlYXJjaHwxfHxzdHVkZW50JTIwcG9ydHJhaXQlMjB1bml2ZXJzaXR5fGVufDF8Mnx8fDE3ODA4MTExNzl8MA&amp;ixlib=rb-4.1.0&amp;q=80&amp;w=400"></div><div class="rounded-full bg-neutral-900 border-white border-2 border-solid flex absolute right-0 bottom-0 justify-center items-center w-7 h-7" data-id="842aa208-67ff-52be-b98d-e8b4d321cc00"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-camera size-3 text-neutral-50" aria-hidden="true" data-id="deb5d3da-4698-55af-aeda-3a49b079c39d"><path d="M13.997 4a2 2 0 0 1 1.76 1.05l.486.9A2 2 0 0 0 18.003 7H20a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h1.997a2 2 0 0 0 1.759-1.048l.489-.904A2 2 0 0 1 10.004 4z"></path><circle cx="12" cy="13" r="3"></circle></svg></div></div><div data-id="36108f77-d6b7-54ab-81a3-a32fe3382ad4"><h2 class="font-bold text-neutral-950 text-xl leading-7" data-id="3e26b263-33b8-5a1c-9154-3ffc35a65ca0">James Sullivan</h2><p class="text-neutral-500 text-sm leading-5" data-id="5ac240fd-54f8-526e-b3f7-6a327683545b">Student ID: STU-2024-0847</p><span data-slot="badge" class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent [a&amp;]:hover:bg-primary/90 bg-neutral-100 text-neutral-900 text-xs leading-4 mt-2" data-id="8a2f71c7-83d9-597e-a892-7441f9a11edb">Undergraduate</span></div><div class="border-neutral-200 border-t-1 border-r-0 border-b-0 border-l-0 border-solid flex pt-4 flex-col gap-2 w-full" data-id="b6a2bb54-6483-5b38-8bb1-c038309925c7"><div class="text-neutral-500 text-sm leading-5 flex items-center gap-2" data-id="c154c7fa-4352-566f-917b-af7e65cd6e26"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail size-4" aria-hidden="true" data-id="80fc53dd-bafd-54ab-b759-28bebbccd916"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg><span data-id="e11431bb-67ee-5283-b22b-fd427f9f24ae">james.sullivan@edu.ac</span></div><div class="text-neutral-500 text-sm leading-5 flex items-center gap-2" data-id="dba92eb5-1b26-5fea-9b6a-e0cbe47f6920"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone size-4" aria-hidden="true" data-id="6fc26d65-09c3-5fd6-84a0-4042ce3c43d6"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg><span data-id="fb42141d-2bd6-54fd-b0a0-2f16f0a6c9d0">+1 (555) 234-5678</span></div><div class="text-neutral-500 text-sm leading-5 flex items-center gap-2" data-id="08eedb83-bca5-517e-bf60-bed63684f0c1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin size-4" aria-hidden="true" data-id="2b07b6d9-0d4f-5305-a2b3-bb5e1d12985a"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg><span data-id="b9c9f1e1-d709-543b-91f1-182f104b0d9d">Boston, MA</span></div></div></div></div></div><div data-slot="card" class="bg-card text-card-foreground flex flex-col rounded-xl border shadow-sm p-6 gap-4" data-id="311c7960-5dc9-5121-8af1-3c7f8dafe148"><div data-slot="card-header" class="@container/card-header has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 grid auto-rows-min grid-rows-[auto_auto] items-start p-0 gap-1" data-id="8012f301-ee1b-5f9c-8d21-6c3a5f82b0df"><h3 class="font-semibold text-neutral-950 text-sm leading-5" data-id="23328fc6-2b9f-5296-a441-8c50b3093c69">Academic Standing</h3><p class="text-neutral-500 text-xs leading-4" data-id="ed8d382c-0547-50dd-bb2b-d1832ea6ece3">Current semester status</p></div><div data-slot="card-content" class="p-0 gap-4" data-id="26a98418-767a-583f-b527-0c978d48d8e1"><div class="flex flex-col gap-3" data-id="7d955793-a16f-52e6-99bb-c357f4eae30d"><div class="flex justify-between items-center" data-id="f41d3d01-f33d-5501-9758-db7feb4acab0"><span class="text-neutral-500 text-xs leading-4" data-id="25512750-2076-5b60-90a7-a7b51fc4db50">GPA</span><span class="font-bold text-neutral-950 text-sm leading-5" data-id="4560df17-aa81-5b45-b44b-98f95062aa05">3.1 / 4.0</span></div><div class="rounded-full bg-neutral-100 w-full h-2" data-id="218c9e73-b30f-5289-8e7b-8f356bbd6f71"><div class="w-[77%] rounded-full bg-neutral-900 h-2" data-id="83d7749f-ae44-5f0b-a7ae-e1bb64cb9cb7"></div></div><div class="flex justify-between items-center" data-id="ddfe986b-b251-51d6-8703-68e9b44440cb"><span class="text-neutral-500 text-xs leading-4" data-id="21e5b14e-ce1f-52eb-bb76-2388d48ecd01">Attendance Rate</span><span class="font-bold text-neutral-950 text-sm leading-5" data-id="05001810-18fa-58b9-9621-f7baa7d0ec4a">87%</span></div><div class="rounded-full bg-neutral-100 w-full h-2" data-id="cc9977f5-a121-5ee5-9395-0f7eb784205f"><div class="w-[87%] rounded-full bg-neutral-900 h-2" data-id="76dc638d-4f94-5780-b51e-6d482246ad2b"></div></div><div class="flex justify-between items-center" data-id="746e2263-15ed-5278-aead-cda04743ab62"><span class="text-neutral-500 text-xs leading-4" data-id="9d20ebfa-eecc-544c-ba68-635bd1bb8320">Credits Completed</span><span class="font-bold text-neutral-950 text-sm leading-5" data-id="4c738097-286b-5afc-aa78-eb6711997e26">54 / 120</span></div><div class="rounded-full bg-neutral-100 w-full h-2" data-id="85433621-3efa-560d-b283-62b035e9ac98"><div class="w-[45%] rounded-full bg-neutral-900 h-2" data-id="37d4b973-b1fa-5d41-945e-f4c3124f7203"></div></div></div></div></div><div data-slot="card" class="bg-card text-card-foreground flex flex-col rounded-xl border shadow-sm p-6 gap-4" data-id="36189b0b-1352-5c4d-b9c3-e83830a75ce3"><div data-slot="card-header" class="@container/card-header has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 grid auto-rows-min grid-rows-[auto_auto] items-start p-0 gap-1" data-id="00cdb808-194c-56f3-a8e8-20f87d46041c"><h3 class="font-semibold text-neutral-950 text-sm leading-5" data-id="b9030e01-7c33-5db7-9bb2-94c701d38688">Quick Actions</h3></div><div data-slot="card-content" class="p-0 gap-2" data-id="26d5a6ab-56cc-57fc-a6a4-c3131e67d2a8"><div class="flex flex-col gap-2" data-id="7e62fd97-a7a1-5062-831f-5c638ddf2044"><button data-slot="button" class="flex min-w-fit items-center whitespace-nowrap rounded-md font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#39;size-&#39;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-9 px-4 py-2 has-[&gt;svg]:px-3 text-sm leading-5 justify-start gap-2 w-full" data-id="cb114663-d4ec-5264-81d9-de164edb89ef"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text size-4" aria-hidden="true" data-id="c43063d6-7f52-5e43-a167-ffbf8a865c5a"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"></path><path d="M14 2v5a1 1 0 0 0 1 1h5"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>Request Transcript</button><button data-slot="button" class="flex min-w-fit items-center whitespace-nowrap rounded-md font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#39;size-&#39;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-9 px-4 py-2 has-[&gt;svg]:px-3 text-sm leading-5 justify-start gap-2 w-full" data-id="bd9b444f-31e5-5698-a235-55364e24a04e"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square size-4" aria-hidden="true" data-id="b07ad669-8b5d-57e2-85f5-fe3195c10053"><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"></path></svg>Contact Advisor</button><button data-slot="button" class="flex min-w-fit items-center whitespace-nowrap rounded-md font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#39;size-&#39;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-9 px-4 py-2 has-[&gt;svg]:px-3 text-sm leading-5 justify-start gap-2 w-full" data-id="73fcc3ce-3632-5843-bb49-8a7a0af89627"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lock size-4" aria-hidden="true" data-id="eed035b1-6d6e-5d86-8b64-610b920bf39d"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>Change Password</button><button data-slot="button" class="flex min-w-fit items-center whitespace-nowrap rounded-md font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#39;size-&#39;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-9 px-4 py-2 has-[&gt;svg]:px-3 text-sm leading-5 justify-start gap-2 w-full" data-id="e0e0b6f1-c498-5a30-9f18-f51ac9743c3e"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bell size-4" aria-hidden="true" data-id="c856ef05-c1a4-5671-9b8a-14c926f4b6cd"><path d="M10.268 21a2 2 0 0 0 3.464 0"></path><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"></path></svg>Notification Settings</button></div></div></div></div><div class="col-span-2 flex flex-col gap-6" data-id="4fb2c92f-785a-5a51-ab38-54764366e9e5"><div class="grid grid-cols-3 gap-4" data-id="6c462b30-4bba-5186-b505-75de51d6f7f5"><div data-slot="card" class="bg-card text-card-foreground flex flex-col rounded-xl border shadow-sm p-4 gap-2" data-id="690fac0c-9c87-5ff8-9b18-5b6da6132cc5"><div data-slot="card-content" class="p-0" data-id="9139657a-32d7-5b7a-b07b-2ac76831c6a3"><p class="text-neutral-500 text-xs leading-4" data-id="0773a71a-6298-548e-9498-383b64ed74d4">Enrolled Courses</p><p class="font-bold text-neutral-950 text-2xl leading-8" data-id="1e810c44-a4a9-58e8-8e3b-ca6cfb3d9aab">5</p><p class="text-neutral-500 text-xs leading-4" data-id="96659fe8-783e-5302-b7c4-14805fcbff2f">This semester</p></div></div><div data-slot="card" class="bg-card text-card-foreground flex flex-col rounded-xl border shadow-sm p-4 gap-2" data-id="67d0dac0-309d-58b1-831f-2c57d77433d6"><div data-slot="card-content" class="p-0" data-id="bc344c9d-2a93-563a-bde6-099314f1ed6c"><p class="text-neutral-500 text-xs leading-4" data-id="fa2d832c-5779-52ae-bf2d-a5f739f11de9">Total Credits</p><p class="font-bold text-neutral-950 text-2xl leading-8" data-id="0a5ee917-264e-5be1-accf-caf8ba20ee92">18</p><p class="text-neutral-500 text-xs leading-4" data-id="2966b8cc-5973-502a-9cf6-78dd8e0ee825">of 24 max credits</p></div></div><div data-slot="card" class="bg-card text-card-foreground flex flex-col rounded-xl border shadow-sm p-4 gap-2" data-id="dd0c7126-f793-542a-b715-c070d2f72db4"><div data-slot="card-content" class="p-0" data-id="55997f62-b494-5927-9d61-d3f729c8b1c1"><p class="text-neutral-500 text-xs leading-4" data-id="daea1eb4-346a-5f36-9565-2dbec350a3e5">Avg. Grade</p><p class="font-bold text-neutral-950 text-2xl leading-8" data-id="f03552ce-2838-5aa5-b821-365c445f1513">B+</p><p class="text-[oklch(0.5_0.15_150)] text-xs leading-4" data-id="7a713689-0d22-55a5-bb9b-f69c8d1fb22f">+0.3 GPA this month</p></div></div></div><div data-slot="card" class="bg-card text-card-foreground flex flex-col rounded-xl border shadow-sm p-6 gap-4" data-id="34af4d79-0098-528e-b992-7b6e7d7483bc"><div data-slot="card-header" class="@container/card-header has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 grid auto-rows-min grid-rows-[auto_auto] items-start p-0 gap-1" data-id="5ce299a0-4667-5813-bad1-ec0e39820a44"><div class="flex justify-between items-center" data-id="cb67f290-b89d-5f59-9dca-56e872abe34a"><div data-id="f564e8ce-c0d4-5581-9b11-1c34510347ce"><h3 class="font-semibold text-neutral-950 text-sm leading-5" data-id="ee822303-7247-5b78-b5dc-39a71a3e4460">Personal Information</h3><p class="text-neutral-500 text-xs leading-4" data-id="a6388f0d-f23c-5561-aaf1-3f84ca43805a">Your basic profile details</p></div><button data-slot="button" class="flex min-w-fit items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#39;size-&#39;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 h-8 rounded-md px-3 has-[&gt;svg]:px-2.5 text-xs leading-4 gap-1" data-id="3af5416e-532e-5617-bc24-99f36a40b5a7"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pencil size-3" aria-hidden="true" data-id="85816467-0746-5f77-8ed1-c4a4746abfbb"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path><path d="m15 5 4 4"></path></svg>Edit</button></div></div><div data-slot="card-content" class="p-0" data-id="7b8ce83f-13da-500a-aebb-49f1457a4275"><div class="grid grid-cols-2 gap-4" data-id="91ce2be1-4fde-54b6-93af-9e5653a0b8a8"><div class="flex flex-col gap-1" data-id="1d696aec-975e-5975-a95a-41c77146f54f"><label class="text-neutral-500 text-xs leading-4" data-id="b6db633c-f0c1-5bcd-bce2-dbf91709d155">First Name</label><div class="rounded-lg bg-neutral-100 text-neutral-950 text-sm leading-5 border-neutral-200 border-1 border-solid px-3 py-2" data-id="54ece158-f0e7-5cf9-9454-a428a4e6a79c">James</div></div><div class="flex flex-col gap-1" data-id="859a527a-a304-51f1-a49f-95db129bd29b"><label class="text-neutral-500 text-xs leading-4" data-id="60efcd7f-bda1-5139-a1d2-5ed9aecf0d3a">Last Name</label><div class="rounded-lg bg-neutral-100 text-neutral-950 text-sm leading-5 border-neutral-200 border-1 border-solid px-3 py-2" data-id="bbafc464-8620-5cfb-88db-4095ffdcaca4">Sullivan</div></div><div class="flex flex-col gap-1" data-id="ceb0a498-6c3b-511d-9b32-9d693e723102"><label class="text-neutral-500 text-xs leading-4" data-id="d8b7e649-09b9-56ea-846d-7fa6b8f66d29">Email Address</label><div class="rounded-lg bg-neutral-100 text-neutral-950 text-sm leading-5 border-neutral-200 border-1 border-solid px-3 py-2" data-id="b0711412-44e4-5b98-9397-1736a4beeac4">james.sullivan@edu.ac</div></div><div class="flex flex-col gap-1" data-id="a5adbdd7-83d3-5ee8-a0a8-1733d2e39424"><label class="text-neutral-500 text-xs leading-4" data-id="c581ec06-5bb2-53eb-80c0-32a1aa430b5e">Phone Number</label><div class="rounded-lg bg-neutral-100 text-neutral-950 text-sm leading-5 border-neutral-200 border-1 border-solid px-3 py-2" data-id="070c5985-aad4-56ca-b979-76c520fe2ec4">+1 (555) 234-5678</div></div><div class="flex flex-col gap-1" data-id="29ee71f6-c4af-585a-aca6-03861fab7388"><label class="text-neutral-500 text-xs leading-4" data-id="474d30fa-a0cd-5dd6-8f96-2270f673f152">Date of Birth</label><div class="rounded-lg bg-neutral-100 text-neutral-950 text-sm leading-5 border-neutral-200 border-1 border-solid px-3 py-2" data-id="5e7e3f60-7634-5ae0-9779-2e95790c6160">March 14, 2003</div></div><div class="flex flex-col gap-1" data-id="f47bdd83-3aea-530a-81e2-5125ecbe3a8b"><label class="text-neutral-500 text-xs leading-4" data-id="07b128e7-1cdb-501a-ab50-097f4262a89d">Gender</label><div class="rounded-lg bg-neutral-100 text-neutral-950 text-sm leading-5 border-neutral-200 border-1 border-solid px-3 py-2" data-id="cbdb7a23-1e28-5806-991f-ebafe7370574">Male</div></div><div class="flex flex-col gap-1" data-id="0cccebdc-1b48-52d9-b544-93ea6cb4602d"><label class="text-neutral-500 text-xs leading-4" data-id="d3f451c3-90e3-5c30-9773-bff057b23d72">Address</label><div class="rounded-lg bg-neutral-100 text-neutral-950 text-sm leading-5 border-neutral-200 border-1 border-solid px-3 py-2" data-id="79f6bd9a-41c4-5b1b-afff-83a68a677eba">42 Maple Street, Boston, MA 02101</div></div><div class="flex flex-col gap-1" data-id="f86e4144-3d61-5779-815b-c5cb8043e402"><label class="text-neutral-500 text-xs leading-4" data-id="4616e299-bafa-54b8-8b93-8aec7f831577">Nationality</label><div class="rounded-lg bg-neutral-100 text-neutral-950 text-sm leading-5 border-neutral-200 border-1 border-solid px-3 py-2" data-id="b7ea85e1-8575-57fe-b973-91b6fb6db569">American</div></div></div></div></div><div data-slot="card" class="bg-card text-card-foreground flex flex-col rounded-xl border shadow-sm p-6 gap-4" data-id="a6d176b5-5f50-549c-92b2-4cc43e5a65be"><div data-slot="card-header" class="@container/card-header has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 grid auto-rows-min grid-rows-[auto_auto] items-start p-0 gap-1" data-id="9caf03f4-3c7f-5a28-a1a2-f883ec50a109"><div class="flex justify-between items-center" data-id="337dc924-c319-523d-946b-0cdf0e518eb4"><div data-id="be33c8e4-d66a-5f15-a75b-7e2d688ff2b3"><h3 class="font-semibold text-neutral-950 text-sm leading-5" data-id="3f477afd-66bd-579b-8a4d-031b8d36f9d6">Academic Information</h3><p class="text-neutral-500 text-xs leading-4" data-id="e39523b8-f639-5e71-b8b5-7108cc35a090">Your enrollment and program details</p></div><button data-slot="button" class="flex min-w-fit items-center justify-center whitespace-nowrap font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*=&#39;size-&#39;])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 h-8 rounded-md px-3 has-[&gt;svg]:px-2.5 text-xs leading-4 gap-1" data-id="60c0196b-0d58-5d4a-a7ea-6d069ea55ec5"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pencil size-3" aria-hidden="true" data-id="4b4514f6-ca4a-5a72-a3e5-c8bd1d65b180"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path><path d="m15 5 4 4"></path></svg>Edit</button></div></div><div data-slot="card-content" class="p-0" data-id="d17999fb-7fc5-5d8d-808d-02ad81019372"><div class="grid grid-cols-2 gap-4" data-id="88f0386f-fc31-596a-a7e0-6ee96a1e93b8"><div class="flex flex-col gap-1" data-id="08d1c0ba-2d44-5dac-b4eb-bf47c10442dd"><label class="text-neutral-500 text-xs leading-4" data-id="0ce008c2-6d0e-5c89-8ff2-14a5b83af4f3">Student ID</label><div class="rounded-lg bg-neutral-100 text-neutral-950 text-sm leading-5 border-neutral-200 border-1 border-solid px-3 py-2" data-id="56f88a7c-51e0-5812-ae55-24d9ed1b5862">STU-2024-0847</div></div><div class="flex flex-col gap-1" data-id="b7afdd2c-66cf-55be-a8c1-601bbb829188"><label class="text-neutral-500 text-xs leading-4" data-id="e8bf270b-d1e7-51b4-a5b8-eb4e7e7895a7">Program</label><div class="rounded-lg bg-neutral-100 text-neutral-950 text-sm leading-5 border-neutral-200 border-1 border-solid px-3 py-2" data-id="26fd4e9b-4532-5700-974d-407a11885539">B.Sc. Computer Science</div></div><div class="flex flex-col gap-1" data-id="972c76cd-5767-54f7-aae8-6d4039a9edce"><label class="text-neutral-500 text-xs leading-4" data-id="4b71e179-33ac-5c63-abea-edb39db48951">Year of Study</label><div class="rounded-lg bg-neutral-100 text-neutral-950 text-sm leading-5 border-neutral-200 border-1 border-solid px-3 py-2" data-id="95b59fa1-3627-565e-b13b-e64354142b16">2nd Year</div></div><div class="flex flex-col gap-1" data-id="0d9db074-870b-5ef9-a284-d187ed0136c5"><label class="text-neutral-500 text-xs leading-4" data-id="6c1a4afc-8648-54f4-a915-e9073b924149">Semester</label><div class="rounded-lg bg-neutral-100 text-neutral-950 text-sm leading-5 border-neutral-200 border-1 border-solid px-3 py-2" data-id="e9c31891-f43d-5651-92aa-3969e6f101c2">Spring 2025</div></div><div class="flex flex-col gap-1" data-id="608ba5b0-c29b-5687-b382-0a0e8d7f8259"><label class="text-neutral-500 text-xs leading-4" data-id="cd7a5362-f9e7-5170-9d0d-b4c87d5bb66b">Faculty</label><div class="rounded-lg bg-neutral-100 text-neutral-950 text-sm leading-5 border-neutral-200 border-1 border-solid px-3 py-2" data-id="2bab1edb-6b60-577a-a144-df7fea06ac5c">Science &amp; Engineering</div></div><div class="flex flex-col gap-1" data-id="71f1e3bf-966a-5f57-8317-088f6ddbb75c"><label class="text-neutral-500 text-xs leading-4" data-id="98b18d53-1a85-53ab-8188-1f5863ea758f">Academic Advisor</label><div class="rounded-lg bg-neutral-100 text-neutral-950 text-sm leading-5 border-neutral-200 border-1 border-solid px-3 py-2" data-id="2a4025fe-3372-58d0-9074-32b58f59cfde">Dr. Alan Carter</div></div><div class="flex flex-col gap-1" data-id="ef086a83-4afe-5aac-b33c-3c29edb438da"><label class="text-neutral-500 text-xs leading-4" data-id="207f2506-6a95-5d57-b849-f678e2479ac7">Enrollment Date</label><div class="rounded-lg bg-neutral-100 text-neutral-950 text-sm leading-5 border-neutral-200 border-1 border-solid px-3 py-2" data-id="0d541dae-475e-5651-b48d-e9ff21c46379">September 2, 2023</div></div><div class="flex flex-col gap-1" data-id="7d65b701-73f1-5b09-99e1-fb31ac9e866b"><label class="text-neutral-500 text-xs leading-4" data-id="430c90a4-4a25-577d-ae44-b608ba7c001f">Expected Graduation</label><div class="rounded-lg bg-neutral-100 text-neutral-950 text-sm leading-5 border-neutral-200 border-1 border-solid px-3 py-2" data-id="192fb2d2-d9b7-51eb-bb68-8b4b6fc92afc">May 2027</div></div></div></div></div><div class="grid grid-cols-2 gap-4" data-id="512bef74-e0ae-5188-b258-07d59164340a"><div data-slot="card" class="bg-card text-card-foreground flex flex-col rounded-xl border shadow-sm p-6 gap-4" data-id="3ecd456f-64ae-58d6-926b-ffbff21cff59"><div data-slot="card-header" class="@container/card-header has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 grid auto-rows-min grid-rows-[auto_auto] items-start p-0 gap-1" data-id="702cd8dc-9d3e-571d-8078-eae236f29d9b"><h3 class="font-semibold text-neutral-950 text-sm leading-5" data-id="76a41256-552c-5d83-8fcc-a76d8d31558e">Enrolled Subjects</h3><p class="text-neutral-500 text-xs leading-4" data-id="132e2f31-7361-506f-9ff2-98d7f73e2242">Current semester courses</p></div><div data-slot="card-content" class="p-0" data-id="3937ed2d-ed9b-54b3-868d-15ee03bbbc27"><div class="flex flex-col gap-3" data-id="581327fc-f2e4-5d92-8139-2b1586306fd6"><div class="border-neutral-200 border-t-0 border-r-0 border-b-1 border-l-0 border-solid flex py-2 justify-between items-center" data-id="af5a8bf4-e352-5d99-bb7f-8c86947fdcaa"><div class="flex items-center gap-2" data-id="4aa852dd-e79e-5e03-b43e-2607eba2e575"><div class="rounded-full bg-neutral-900 w-2 h-2" data-id="beda39d8-8a62-553c-bd1a-ce497a5016cf"></div><span class="text-neutral-950 text-sm leading-5" data-id="f4c84de7-1836-5692-97ef-db28334731a8">Mathematics</span></div><div class="flex items-center gap-2" data-id="74913c1a-e14b-5dda-b06f-e7b264cb995e"><span class="text-neutral-500 text-xs leading-4" data-id="bfdb0d2a-30f9-5bee-b22c-9b06c9136d27">4 Credits</span><span data-slot="badge" class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent [a&amp;]:hover:bg-primary/90 bg-[oklch(0.97_0.05_150)] text-[oklch(0.4_0.15_150)] text-xs leading-4" data-id="a286158e-cca8-5d02-abbb-6490da6e1f92">Good</span></div></div><div class="border-neutral-200 border-t-0 border-r-0 border-b-1 border-l-0 border-solid flex py-2 justify-between items-center" data-id="9339462b-099f-5abb-8c8e-b82a3c0cca62"><div class="flex items-center gap-2" data-id="aa3ce67a-e293-5428-916c-bce6ffed31d7"><div class="bg-[oklch(0.75_0.15_80)] rounded-full w-2 h-2" data-id="a32da509-47c4-5e56-97fc-878b160657bb"></div><span class="text-neutral-950 text-sm leading-5" data-id="c2ce8548-4626-54ec-b2f5-ea5ef72e0877">Physics</span></div><div class="flex items-center gap-2" data-id="ca10d423-b87d-5d42-8981-f0a8a109c4d8"><span class="text-neutral-500 text-xs leading-4" data-id="0dc6a333-ed1c-58e2-85eb-c0790f40c701">4 Credits</span><span data-slot="badge" class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent [a&amp;]:hover:bg-primary/90 bg-[oklch(0.97_0.05_80)] text-[oklch(0.5_0.15_80)] text-xs leading-4" data-id="5ead931d-77f7-59b9-9466-62dec9ecb221">Fair</span></div></div><div class="border-neutral-200 border-t-0 border-r-0 border-b-1 border-l-0 border-solid flex py-2 justify-between items-center" data-id="8b7bbfc1-1bc2-51da-b3e6-9020bcfdabaa"><div class="flex items-center gap-2" data-id="69e34553-d92b-57d7-badb-9b9a99047668"><div class="rounded-full bg-neutral-900 w-2 h-2" data-id="dcdf77e4-8f00-595e-8a75-5406a3460ef7"></div><span class="text-neutral-950 text-sm leading-5" data-id="671fc0fd-5953-528b-ac63-dbb610d36566">English Lit.</span></div><div class="flex items-center gap-2" data-id="59fceea2-e3a0-568d-8d1f-a48fff12a9fd"><span class="text-neutral-500 text-xs leading-4" data-id="b16cc8a7-12b6-5cdd-b6cc-5d8f8251afff">3 Credits</span><span data-slot="badge" class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent [a&amp;]:hover:bg-primary/90 bg-[oklch(0.97_0.05_150)] text-[oklch(0.4_0.15_150)] text-xs leading-4" data-id="192cba24-29f9-5d9a-a9dc-7ca6d0055fdc">Good</span></div></div><div class="border-neutral-200 border-t-0 border-r-0 border-b-1 border-l-0 border-solid flex py-2 justify-between items-center" data-id="07297d70-71b4-57ac-b3ee-18c3bf4b8cef"><div class="flex items-center gap-2" data-id="cd9f07e4-bb31-5887-8dbc-58579c74a69f"><div class="bg-[oklch(0.577_0.245_27.325)] rounded-full w-2 h-2" data-id="d300c442-48ab-5156-957d-f034fe570f47"></div><span class="text-neutral-950 text-sm leading-5" data-id="efb0a54c-e5d5-5ac9-8be5-f8a05662ed5e">Chemistry</span></div><div class="flex items-center gap-2" data-id="b5f6bec3-b27b-546c-b5e4-31e18ff1d777"><span class="text-neutral-500 text-xs leading-4" data-id="5edc7f40-200e-5816-8376-5a778161d8df">4 Credits</span><span data-slot="badge" class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent [a&amp;]:hover:bg-primary/90 bg-[oklch(0.97_0.05_27)] text-[oklch(0.577_0.245_27.325)] text-xs leading-4" data-id="d35dc931-0c5f-5514-b98c-d5df4437586e">At Risk</span></div></div><div class="flex py-2 justify-between items-center" data-id="a07b1998-5f84-57d7-a830-004e6b4fa03b"><div class="flex items-center gap-2" data-id="2f938a8e-6c8d-544e-b553-7fc55f1ff209"><div class="bg-[oklch(0.577_0.245_27.325)] rounded-full w-2 h-2" data-id="568a9334-9407-5c60-a268-d3c063ee623b"></div><span class="text-neutral-950 text-sm leading-5" data-id="f28286f5-78b2-506a-af2f-a2e434abea7a">History</span></div><div class="flex items-center gap-2" data-id="d1b33972-3e4b-58ce-8a32-14048d6f2de0"><span class="text-neutral-500 text-xs leading-4" data-id="a477d710-2b4f-5ea7-99d1-58a7747f9494">3 Credits</span><span data-slot="badge" class="inline-flex items-center justify-center rounded-md border px-2 py-0.5 font-medium w-fit whitespace-nowrap shrink-0 [&amp;&gt;svg]:size-3 gap-1 [&amp;&gt;svg]:pointer-events-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive transition-[color,box-shadow] overflow-hidden border-transparent [a&amp;]:hover:bg-primary/90 bg-[oklch(0.97_0.05_27)] text-[oklch(0.577_0.245_27.325)] text-xs leading-4" data-id="d7c7dcb2-5b19-53b2-999a-e726bc269975">At Risk</span></div></div></div></div></div><div data-slot="card" class="bg-card text-card-foreground flex flex-col rounded-xl border shadow-sm p-6 gap-4" data-id="d30aa816-a542-5bfe-bb45-85e8cd5e8fce"><div data-slot="card-header" class="@container/card-header has-data-[slot=card-action]:grid-cols-[1fr_auto] [.border-b]:pb-6 grid auto-rows-min grid-rows-[auto_auto] items-start p-0 gap-1" data-id="56a6b47a-7413-5364-bcc1-9ca3b41cd123"><h3 class="font-semibold text-neutral-950 text-sm leading-5" data-id="8126077d-9136-55fe-ad37-ab51d40218e8">Notifications &amp; Privacy</h3><p class="text-neutral-500 text-xs leading-4" data-id="b7aaf13c-dad1-5ed0-bf2d-f4937f25429d">Manage your preferences</p></div><div data-slot="card-content" class="p-0" data-id="727415dd-3cbe-5c67-85dc-d76b413203e7"><div class="flex flex-col gap-4" data-id="9f2deba4-a0e8-5ed4-b244-a075b14622bf"><div class="flex justify-between items-center" data-id="35aba089-394a-55b2-be36-80b5f07260fe"><div data-id="41a67dc7-25f3-5cc3-9839-61722225a53a"><p class="text-neutral-950 text-sm leading-5" data-id="87288794-d5d8-5924-938e-4122337ccf4c">Email Notifications</p><p class="text-neutral-500 text-xs leading-4" data-id="a2ed4a9f-1b61-51dc-8f31-80cdbd1e9dc9">Receive updates via email</p></div><div class="relative cursor-pointer rounded-full bg-neutral-900 w-10 h-5" data-id="031363bd-92c8-5bb3-8121-20f36a6575e6"><div class="rounded-full bg-neutral-50 absolute right-0.5 top-0.5 w-4 h-4" data-id="9384421e-4902-5cb6-b369-a580232ecd9d"></div></div></div><div class="flex justify-between items-center" data-id="a120e5d1-6e64-5df3-85fc-071bf7490588"><div data-id="caae0e6f-af09-506c-a701-6fded916bd42"><p class="text-neutral-950 text-sm leading-5" data-id="bb0c477d-6b1a-57e1-a77e-3e44ef512559">Attendance Alerts</p><p class="text-neutral-500 text-xs leading-4" data-id="2a3a3024-4a20-5932-88f9-4a84ea4d579d">Notify when below threshold</p></div><div class="relative cursor-pointer rounded-full bg-neutral-900 w-10 h-5" data-id="d6375e29-7e80-5136-b8b3-05a3f9acfa70"><div class="rounded-full bg-neutral-50 absolute right-0.5 top-0.5 w-4 h-4" data-id="e62c1f4d-41a1-50c7-855c-ffa946e2ee90"></div></div></div><div class="flex justify-between items-center" data-id="b9a02ea6-946a-5df2-bc59-7d7ee4e38c93"><div data-id="8ccda605-8c9d-52e4-bf22-714cccf1cbc5"><p class="text-neutral-950 text-sm leading-5" data-id="1aa00326-04e7-5cee-9e49-ab5d9773b910">Assignment Reminders</p><p class="text-neutral-500 text-xs leading-4" data-id="cbee7b29-d782-5fe6-baa0-6a9b6ef81109">Due date notifications</p></div><div class="relative cursor-pointer rounded-full bg-neutral-900 w-10 h-5" data-id="6c7e8b57-3f6d-5818-8a84-c6c69a1d897f"><div class="rounded-full bg-neutral-50 absolute right-0.5 top-0.5 w-4 h-4" data-id="9998af03-17c8-5023-84b8-9304320b0ba4"></div></div></div><div class="flex justify-between items-center" data-id="661b1997-1248-5749-99ae-d38c0c09f6c0"><div data-id="66d84960-db4c-52f4-846e-e326f14006cc"><p class="text-neutral-950 text-sm leading-5" data-id="670d0772-ea09-51c7-be73-82522ae66bab">Profile Visibility</p><p class="text-neutral-500 text-xs leading-4" data-id="a6fb8ecb-92f5-5f32-b6b8-2d528a7c9ff4">Visible to instructors only</p></div><div class="relative cursor-pointer rounded-full bg-neutral-100 border-neutral-200 border-1 border-solid w-10 h-5" data-id="19d2ba18-b67d-53cc-ba27-e8324c8835b4"><div class="rounded-full bg-neutral-500 absolute left-0.5 top-0.5 w-4 h-4" data-id="641fa2b4-9fb7-5fbd-859f-e3903ccd0824"></div></div></div><div class="border-neutral-200 border-t-1 border-r-0 border-b-0 border-l-0 border-solid pt-4" data-id="8effc9b7-d418-5fee-9bfa-895e19bb0414"><div class="bg-[oklch(0.97_0.02_27)] border-[oklch(0.9_0.05_27)] rounded-lg border-black/1 border-1 border-solid flex p-3 items-center gap-2" data-id="52cd803e-9341-5fda-b47b-89c0347fb595"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-triangle-alert size-4 text-[oklch(0.577_0.245_27.325)]" aria-hidden="true" data-id="3bec48aa-0a59-54eb-b458-377759f2c496"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg><div data-id="5942cd07-1ba8-5e32-afca-96c0dd051fcd"><p class="text-[oklch(0.577_0.245_27.325)] font-semibold text-xs leading-4" data-id="0d1dc7a0-59a8-5a01-a5bf-7008e6f9e159">Attendance Warning</p><p class="text-neutral-500 text-xs leading-4" data-id="612ed3a2-b9d0-5a10-94e9-86f582d953e5">2 subjects below 75% threshold</p></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
+      
+    
+  </body></html>

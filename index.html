@@ -1,0 +1,1529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git & Github Notes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Progress Bar -->
+    <div id="progress"></div>
+
+    <div class="app-container">
+
+        <!-- Sidebar (Left) with Dynamic Accordion sub-navigation -->
+        <aside class="sidebar" id="sidebar">
+            <a href="#" class="sidebar-brand">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--primary-git);">
+                    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                    <path d="M9 18H8a4 4 0 0 0-4 4v0"></path>
+                </svg>
+                <span class="sidebar-brand-text">Git & GitHub Notes</span>
+            </a>
+
+            <!-- Navigation Bar -->
+            <nav class="navbar">
+                <div class="nav-item-wrapper" id="nav-group-git">
+                    <a href="#git" class="nav-item-link">Git</a>
+                    <ul class="sidebar-sublist" id="sublist-git"></ul>
+                </div>
+                <div class="nav-item-wrapper" id="nav-group-install">
+                    <a href="#install" class="nav-item-link">Install</a>
+                    <ul class="sidebar-sublist" id="sublist-install"></ul>
+                </div>
+                <div class="nav-item-wrapper" id="nav-group-github">
+                    <a href="#github" class="nav-item-link">GitHub</a>
+                    <ul class="sidebar-sublist" id="sublist-github"></ul>
+                </div>
+                <div class="nav-item-wrapper" id="nav-group-config">
+                    <a href="#config" class="nav-item-link">Config</a>
+                    <ul class="sidebar-sublist" id="sublist-config"></ul>
+                </div>
+                <div class="nav-item-wrapper" id="nav-group-commands">
+                    <a href="#commands" class="nav-item-link">Commands</a>
+                    <ul class="sidebar-sublist" id="sublist-commands"></ul>
+                </div>
+                <div class="nav-item-wrapper" id="nav-group-workflow">
+                    <a href="#workflow" class="nav-item-link">Workflow</a>
+                    <ul class="sidebar-sublist" id="sublist-workflow"></ul>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Sidebar overlay for Mobile drawer -->
+        <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+        <!-- Main Content Area -->
+        <div class="main-wrapper">
+            <header class="main-header">
+                <button class="mobile-menu-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </button>
+                
+                <div class="breadcrumbs">
+                    <span>Docs</span>
+                    <span class="breadcrumb-separator">/</span>
+                    <span class="breadcrumb-active" id="current-breadcrumb">Git Overview</span>
+                </div>
+                
+                <div class="header-actions">
+                    <div class="search-container">
+                        <svg class="search-icon" viewBox="0 0 24 24">
+                            <path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/>
+                        </svg>
+                        <input type="text" id="search-input" class="search-input" placeholder="Search notes...">
+                    </div>
+
+                    <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
+                        <!-- Moon Icon -->
+                        <svg class="moon-icon" viewBox="0 0 24 24">
+                            <path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"/>
+                        </svg>
+                        <!-- Sun Icon -->
+                        <svg class="sun-icon" viewBox="0 0 24 24">
+                            <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41l-1.06-1.06zm1.06-12.37c-.39-.39-.39-1.03 0-1.41s1.03-.39 1.41 0l1.06 1.06c.39.39.39 1.03 0 1.41s-1.03.39-1.41 0l-1.06-1.06zm-12.37 12.37c-.39-.39-.39-1.03 0-1.41s1.03-.39 1.41 0l1.06 1.06c.39.39.39 1.03 0 1.41s-1.03.39-1.41 0l-1.06-1.06z"/>
+                        </svg>
+                    </button>
+                </div>
+            </header>
+
+            <main class="content-container">
+
+                <h1 id="githed">Complete Git and GitHub Guide</h1>
+
+                <!-- Anchor for Navigation -->
+                <div id="git"></div>
+                <section id="gitdiv">
+
+                    <h2 id="gitlogo">
+                        <img src="./media/Git setup/git-logo.png" alt="Git Logo" height="35">
+                        Git
+                    </h2>
+
+                    <p>
+                        A <strong>Version Control System (VCS)</strong> is a tool that helps track changes in code over time.
+                    </p>
+
+                    <p>
+                        <strong>Git</strong> is a distributed Version Control System. It is:
+                    </p>
+
+                    <ul>
+                        <li>Popular</li>
+                        <li>Free and Open Source</li>
+                        <li>Fast and Scalable</li>
+                    </ul>
+
+                    <p>Git is mainly used to:</p>
+
+                    <ul>
+                        <li>Track the history of changes in a project</li>
+                        <li>Collaborate with other developers</li>
+                        <li>Manage different versions of code</li>
+                        <li>Backup source code safely</li>
+                    </ul>
+
+                </section>
+
+                <!-- Anchor for Navigation -->
+                <div id="install"></div>
+                <section id="git-install">
+
+                    <h2>Download and Install Git for Windows</h2>
+
+                    <ol>
+                        <li>
+                            Search for "Git Download" or use the official website:
+
+                            <a href="https://git-scm.com/install/" target="_blank">
+                                Click here to download Git for Windows
+                            </a>
+                        </li>
+
+                        <li>
+                            Open the installer and click <strong>Next</strong>.
+
+                            <img src="./media/Git setup/git setup 01.png" alt="Git Setup Step 1">
+                        </li>
+
+                        <li>
+                            Continue with the default installation settings.
+
+                            <img src="./media/Git setup/git setup 02.png" alt="Git Setup Step 2">
+                        </li>
+
+                        <li>
+                            Configure the installation options.
+
+                            <img src="./media/Git setup/git setup 03.png" alt="Git Setup Step 3">
+                        </li>
+
+                        <li>
+                            Proceed with the remaining setup steps.
+
+                            <img src="./media/Git setup/git setup 04.png" alt="Git Setup Step 4">
+                        </li>
+
+                        <!-- Continue similarly for images 05 to 14 -->
+
+                        <li>
+                            Choose the default editor used by Git.
+
+                            <img src="./media/Git setup/git setup 05.png" alt="Git Setup Step 5">
+                        </li>
+
+                        <li>
+                            Adjust the name of the initial branch in new repositories.
+
+                            <img src="./media/Git setup/git setup 06.png" alt="Git Setup Step 6">
+                        </li>
+
+                        <li>
+                            Adjust your PATH environment variables.
+
+                            <img src="./media/Git setup/git setup 07.png" alt="Git Setup Step 7">
+                        </li>
+
+                        <li>
+                            Choose the SSH executable.
+
+                            <img src="./media/Git setup/git setup 08.png" alt="Git Setup Step 8">
+                        </li>
+
+                        <li>
+                            Choose the HTTPS transport backend option.
+
+                            <img src="./media/Git setup/git setup 09.png" alt="Git Setup Step 9">
+                        </li>
+
+                        <li>
+                            Configure the line ending conversions.
+
+                            <img src="./media/Git setup/git setup 10.png" alt="Git Setup Step 10">
+                        </li>
+
+                        <li>
+                            Configure the terminal emulator to use with Git Bash.
+
+                            <img src="./media/Git setup/git setup 11.png" alt="Git Setup Step 11">
+                        </li>
+
+                        <li>
+                            Choose the default behavior of git pull.
+
+                            <img src="./media/Git setup/git setup 12.png" alt="Git Setup Step 12">
+                        </li>
+
+                        <li>
+                            Choose a credential helper to store your logins.
+
+                            <img src="./media/Git setup/git setup 13.png" alt="Git Setup Step 13">
+                        </li>
+
+                        <li>
+                            Complete the installation.
+
+                            <img src="./media/Git setup/git setup 14.png" alt="Git Setup Step 14">
+                        </li>
+
+                    </ol>
+
+                </section>
+
+                <!-- Anchor for Navigation -->
+                <div id="github"></div>
+                <section id="githubdiv">
+
+                    <h2 id="githublogo">
+                        <img src="./media/Github setup/Github-Logo.png" alt="GitHub Logo" height="40">
+                        GitHub
+                    </h2>
+
+                    <p>
+                        GitHub is a web-based platform that allows developers
+                        to store, manage, and share their code using Git.
+                    </p>
+
+                    <p>
+                        Website:
+                        <a href="https://github.com" target="_blank">
+                            https://github.com
+                        </a>
+                    </p>
+
+                    <h3>What is GitHub?</h3>
+
+                    <p>
+                        GitHub is often called the social network for developers.
+                        It allows programmers to share projects, collaborate with
+                        other developers, and contribute to open-source software.
+                    </p>
+
+                    <p id="repo">
+                        <strong>Folder → Repository</strong>
+                    </p>
+
+                </section>
+
+                <section class="github-account" id="github-account">
+
+                    <h2>Create a GitHub Account</h2>
+
+                    <ol>
+
+                        <li>
+                            Visit the GitHub website:
+
+                            <a href="https://github.com" target="_blank">
+                                GitHub
+                            </a>
+                        </li>
+
+                        <li>
+                            Click on <strong>Sign Up</strong> to create a new account.
+                            If you already have an account, click <strong>Sign In</strong>.
+
+                            <img src="./media/Github setup/github sign up.png" alt="GitHub Sign Up">
+                        </li>
+
+                        <li>
+                            Use your email address to create an account.
+                        </li>
+
+                        <li>
+                            After successfully logging in, you will see your dashboard.
+
+                            <img src="./media/Github setup/github dashboard.png" alt="GitHub Dashboard">
+                        </li>
+
+                        <li>
+                            Click <strong>Create Repository</strong>
+                            to create a repository and upload your files.
+                        </li>
+
+                        <li>
+                            Commit your files after uploading them.
+                        </li>
+
+                    </ol>
+
+                    <p>
+                        <strong>Commit:</strong>
+                        A saved snapshot of your project changes.
+                    </p>
+
+                    <p>
+                        <strong>Commit Message:</strong>
+                        A short description explaining what changes were made.
+                    </p>
+
+                </section>
+
+                <!-- Configuring Git -->
+                <!-- Anchor for Navigation -->
+                <div id="config"></div>
+                <div class="git-config" id="git-config">
+
+                    <h2>Configuring Git</h2>
+
+                    <p>
+                        After installing Git, we need to configure it.
+                    </p>
+
+                    <p>
+                        <strong>Configuring Git</strong> means telling Git who you are, so that every commit you make is linked to
+                        your name and email.
+                    </p>
+
+                    <p>
+                        Git stores this information in your commits like this:
+                    </p>
+
+                    <blockquote>
+                        Author: John Doe &lt;john@example.com&gt;
+                    </blockquote>
+
+                    <p>
+                        You usually configure Git only once after installing it.
+                    </p>
+
+                    <hr>
+
+                    <h3>1. Check if Git is Installed</h3>
+
+                    <p>
+                        Open Command Prompt or VS Code Terminal and run:
+                    </p>
+
+                    <pre><code>git --version</code></pre>
+
+                    <p>Example output:</p>
+
+                    <pre><code>git version 2.50.1</code></pre>
+
+                    <hr>
+
+                    <h3>2. Configure Your Name</h3>
+
+                    <p>Use the following command:</p>
+
+                    <pre><code>git config --global user.name "Your Name"</code></pre>
+
+                    <p>Example:</p>
+
+                    <pre><code>git config --global user.name "Manish Kumar"</code></pre>
+
+                    <hr>
+
+                    <h3>3. Configure Your Email</h3>
+
+                    <p>
+                        Use the same email address that you use for GitHub.
+                    </p>
+
+                    <pre><code>git config --global user.email "your_email@example.com"</code></pre>
+
+                    <hr>
+
+                    <h3>4. Verify Your Configuration</h3>
+
+                    <pre><code>git config --global --list</code></pre>
+
+                    <p>Example output:</p>
+
+                    <pre><code>user.name=Manish Kumar
+user.email=abc@gmail.com</code></pre>
+                </div>
+
+                <!-- Basic Git Commands -->
+                <!-- Anchor for Navigation -->
+                <div id="commands"></div>
+                <section class="git-notes">
+                    <h2>Basic Git Commands</h2>
+                    <div class="card">
+
+                        <h2>Git Init</h2>
+
+                        <h3>What is <code>git init</code>?</h3>
+
+                        <p>
+                            The <code>git init</code> command is used to initialize
+                            a new Git repository in an existing project folder.
+                        </p>
+
+                        <p>
+                            When you run this command, Git starts tracking changes
+                            in the project by creating a hidden
+                            <code>.git</code> directory.
+                        </p>
+
+                        <h3>Syntax</h3>
+
+                        <pre><code>git init</code></pre>
+
+                        <h3>Example</h3>
+
+                        <pre><code>git init</code></pre>
+
+                        <h3>What happens after using <code>git init</code>?</h3>
+
+                        <ul>
+                            <li>A hidden <code>.git</code> folder is created inside the project directory.</li>
+                            <li>Git starts tracking changes in the project.</li>
+                            <li>The folder becomes a local Git repository.</li>
+                            <li>You can now use Git commands such as <code>git add</code>, <code>git commit</code>, and
+                                <code>git status</code>.
+                            </li>
+                        </ul>
+
+                        <h3>Use Cases</h3>
+
+                        <ul>
+                            <li>Start version control for a new project.</li>
+                            <li>Convert an existing folder into a Git repository.</li>
+                            <li>Begin tracking changes in source code.</li>
+                        </ul>
+
+                        <h3>Example Workflow</h3>
+
+                        <pre><code>mkdir my-project
+cd my-project
+git init</code></pre>
+
+                        <p>
+                            After running the <code>git init</code> command,
+                            the folder becomes a Git repository.
+                        </p>
+
+                        <h3>Verify Initialization</h3>
+
+                        <p>Run the following command:</p>
+
+                        <pre><code>git status</code></pre>
+
+                        <p>Example output:</p>
+
+                        <pre><code>On branch main
+
+No commits yet
+
+nothing to commit
+(create/copy files and use "git add" to track)</code></pre>
+
+                        <h3>Important Note</h3>
+
+                        <p>
+                            The <code>git init</code> command creates only a
+                            <strong>local repository</strong> on your computer.
+                            To upload the project to GitHub, you need to connect
+                            it to a remote repository and use
+                            <code>git push</code>.
+                        </p>
+
+                        <h3>Example Complete Workflow</h3>
+
+                        <pre><code>git init
+git add .
+git commit -m "Initial commit"
+git remote add origin &lt;repository-url&gt;
+git push -u origin main</code></pre>
+
+                        <h3>Importance of <code>git init</code></h3>
+
+                        <p>
+                            The <code>git init</code> command is the first step
+                            in using Git. It enables version control, helps track
+                            project history, and allows collaboration through GitHub.
+                        </p>
+
+                    </div>
+
+                </section>
+
+                <section class="git-notes">
+
+                    <!-- Git Clone -->
+                    <div class="card">
+
+                        <h2>Git Clone</h2>
+
+                        <h3>What is <code>git clone</code>?</h3>
+
+                        <p>
+                            The <code>git clone</code> command is used to create a copy of an
+                            existing remote repository from GitHub (or another Git server)
+                            to your local computer.
+                        </p>
+
+                        <p>
+                            It downloads all the files, branches, and commit history
+                            from the remote repository.
+                        </p>
+
+                        <h3>Syntax</h3>
+
+                        <pre><code>git clone &lt;repository-url&gt;</code></pre>
+
+                        <h3>Example</h3>
+
+                        <pre><code>git clone https://github.com/username/project-name.git</code></pre>
+
+                        <h3>What happens after cloning?</h3>
+
+                        <ul>
+                            <li>A new folder with the repository name is created.</li>
+                            <li>All project files are downloaded.</li>
+                            <li>The complete commit history is copied.</li>
+                            <li>The remote repository is automatically connected as <code>origin</code>.</li>
+                        </ul>
+
+                        <h3>Use Cases</h3>
+
+                        <ul>
+                            <li>Download an existing project from GitHub.</li>
+                            <li>Contribute to open-source projects.</li>
+                            <li>Work on a project locally.</li>
+                        </ul>
+
+                        <h3>Example Workflow</h3>
+
+                        <pre><code>git clone https://github.com/username/project.git
+cd project</code></pre>
+
+                        <p>
+                            After entering the project folder, you can start making changes.
+                        </p>
+
+                    </div>
+
+                    <!-- Git Status -->
+                    <div class="card">
+
+                        <h2>Git Status</h2>
+
+                        <h3>What is <code>git status</code>?</h3>
+
+                        <p>
+                            The <code>git status</code> command shows the current state
+                            of your Git repository.
+                        </p>
+
+                        <p>It tells you:</p>
+
+                        <ul>
+                            <li>Which files have been modified.</li>
+                            <li>Which files are staged for commit.</li>
+                            <li>Which files are untracked.</li>
+                            <li>Which branch you are currently working on.</li>
+                        </ul>
+
+                        <h3>Syntax</h3>
+
+                        <pre><code>git status</code></pre>
+
+                        <h3>Example Output</h3>
+
+                        <pre><code>On branch main
+
+Changes not staged for commit:
+  modified: index.html
+
+Untracked files:
+  style.css</code></pre>
+
+                        <h3>Meaning of the Output</h3>
+
+                        <ul>
+                            <li><strong>Modified files</strong> → Files changed but not staged.</li>
+                            <li><strong>Untracked files</strong> → New files not added to Git.</li>
+                            <li><strong>Staged files</strong> → Files ready to be committed.</li>
+                        </ul>
+
+                        <h3>Common Workflow</h3>
+
+                        <pre><code>git status
+git add .
+git status
+git commit -m "Updated project files"</code></pre>
+
+                        <h3>Importance of <code>git status</code></h3>
+
+                        <p>
+                            The <code>git status</code> command helps developers track
+                            changes before committing code, reducing mistakes and improving
+                            project management.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <section class="git-notes">
+
+                    <!-- Git Add -->
+                    <div class="card">
+
+                        <h2>Git Add</h2>
+
+                        <h3>What is <code>git add</code>?</h3>
+
+                        <p>
+                            The <code>git add</code> command is used to move changes
+                            from the <strong>Working Directory</strong> to the
+                            <strong>Staging Area</strong>.
+                        </p>
+
+                        <p>
+                            Before creating a commit, Git requires you to select
+                            which files should be included in the next commit.
+                            This process is called <strong>staging</strong>.
+                        </p>
+
+                        <h3>Syntax</h3>
+
+                        <pre><code>git add &lt;file-name&gt;</code></pre>
+
+                        <h3>Example</h3>
+
+                        <pre><code>git add index.html</code></pre>
+
+                        <p>
+                            The above command stages only the
+                            <code>index.html</code> file.
+                        </p>
+
+                        <h3>Add All Files</h3>
+
+                        <pre><code>git add .</code></pre>
+
+                        <h3>What happens after using <code>git add</code>?</h3>
+
+                        <ul>
+                            <li>Modified files are moved to the staging area.</li>
+                            <li>Git prepares the selected files for commit.</li>
+                            <li>Changes are not yet permanently saved.</li>
+                        </ul>
+
+                        <h3>Use Cases</h3>
+
+                        <ul>
+                            <li>Stage a specific file.</li>
+                            <li>Stage multiple files.</li>
+                            <li>Stage all project files before committing.</li>
+                        </ul>
+
+                        <h3>Example Workflow</h3>
+
+                        <pre><code>git status
+git add .
+git status</code></pre>
+
+                        <p>
+                            After running <code>git add</code>, the staged files
+                            are ready to be committed.
+                        </p>
+
+                    </div>
+
+                    <!-- Git Commit -->
+                    <div class="card">
+
+                        <h2>Git Commit</h2>
+
+                        <h3>What is <code>git commit</code>?</h3>
+
+                        <p>
+                            The <code>git commit</code> command is used to save
+                            the staged changes permanently in the local Git repository.
+                        </p>
+
+                        <p>
+                            A commit acts like a <strong>snapshot</strong> of your
+                            project at a specific point in time.
+                        </p>
+
+                        <h3>Syntax</h3>
+
+                        <pre><code>git commit -m "commit message"</code></pre>
+
+                        <h3>Example</h3>
+
+                        <pre><code>git commit -m "Added login page"</code></pre>
+
+                        <p>
+                            The commit message should clearly describe
+                            the changes made.
+                        </p>
+
+                        <h3>What happens after committing?</h3>
+
+                        <ul>
+                            <li>A new commit is created.</li>
+                            <li>Changes are saved in Git history.</li>
+                            <li>Each commit has a unique commit ID (hash).</li>
+                            <li>You can return to previous versions if needed.</li>
+                        </ul>
+
+                        <h3>Best Practices for Commit Messages</h3>
+
+                        <ul>
+                            <li>Use clear and meaningful messages.</li>
+                        </ul>
+
+                        <pre><code>git commit -m "Fixed navbar alignment"
+git commit -m "Added CSS animations"
+git commit -m "Updated README file"</code></pre>
+
+                        <h3>Example Workflow</h3>
+
+                        <pre><code>git add .
+git commit -m "Initial project setup"</code></pre>
+
+                        <h3>Importance of <code>git commit</code></h3>
+
+                        <p>
+                            The <code>git commit</code> command helps developers
+                            track project history, collaborate efficiently, and
+                            manage different versions of a project.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <section class="git-branches">
+
+                    <div class="card">
+
+                        <h2>Git Branches</h2>
+
+                        <h3>What is a Git Branch?</h3>
+
+                        <p>
+                            A branch in Git is an independent line of development
+                            that allows developers to work on new features,
+                            bug fixes, or experiments without affecting the main project.
+                        </p>
+
+                        <p>
+                            Branches help multiple developers work on the same project
+                            simultaneously without interfering with each other's work.
+                        </p>
+
+                        <p>
+                            By default, Git creates a branch named
+                            <code>main</code> (or <code>master</code> in older versions).
+                        </p>
+
+                        <h3>Why Use Branches?</h3>
+
+                        <ul>
+                            <li>Allow developers to work on new features safely.</li>
+                            <li>Prevent changes from affecting the main project.</li>
+                            <li>Enable multiple developers to work simultaneously.</li>
+                            <li>Make it easy to test experimental code.</li>
+                        </ul>
+
+                        <h3>View Existing Branches</h3>
+
+                        <pre><code>git branch</code></pre>
+
+                        <p><strong>Example Output:</strong></p>
+
+                        <pre><code>* main
+  login-feature
+  bug-fix</code></pre>
+
+                        <p>
+                            The <code>*</code> symbol indicates the currently active branch.
+                        </p>
+
+                        <h3>Create a New Branch</h3>
+
+                        <pre><code>git branch &lt;branch-name&gt;</code></pre>
+
+                        <p><strong>Example:</strong></p>
+
+                        <pre><code>git branch login-page</code></pre>
+
+                        <p>
+                            This creates a new branch named
+                            <code>login-page</code>.
+                        </p>
+
+                        <h3>Switch Between Branches</h3>
+
+                        <pre><code>git checkout &lt;branch-name&gt;</code></pre>
+
+                        <p><strong>Example:</strong></p>
+
+                        <pre><code>git checkout login-page</code></pre>
+
+                        <p>
+                            Git now changes the working directory
+                            to the selected branch.
+                        </p>
+
+                        <h3>Create and Switch to a Branch</h3>
+
+                        <pre><code>git checkout -b &lt;branch-name&gt;</code></pre>
+
+                        <p><strong>Example:</strong></p>
+
+                        <pre><code>git checkout -b dashboard</code></pre>
+
+                        <p>
+                            This command creates the
+                            <code>dashboard</code> branch
+                            and switches to it immediately.
+                        </p>
+
+                        <h3>Modern Alternative</h3>
+
+                        <pre><code>git switch &lt;branch-name&gt;</code></pre>
+
+                        <p><strong>Example:</strong></p>
+
+                        <pre><code>git switch login-page</code></pre>
+
+                        <p>To create and switch simultaneously:</p>
+
+                        <pre><code>git switch -c dashboard</code></pre>
+
+                        <h3>Delete a Branch</h3>
+
+                        <pre><code>git branch -d &lt;branch-name&gt;</code></pre>
+
+                        <p><strong>Example:</strong></p>
+
+                        <pre><code>git branch -d login-page</code></pre>
+
+                        <h3>Rename a Branch</h3>
+
+                        <pre><code>git branch -m &lt;new-branch-name&gt;</code></pre>
+
+                        <p><strong>Example:</strong></p>
+
+                        <pre><code>git branch -m feature-login</code></pre>
+
+                        <h3>Merge Branches</h3>
+
+                        <pre><code>git checkout main
+git merge login-page</code></pre>
+
+                        <p>
+                            This merges the
+                            <code>login-page</code>
+                            branch into <code>main</code>.
+                        </p>
+
+                        <h3>Example Workflow</h3>
+
+                        <pre><code>git branch login-page
+git checkout login-page
+
+# Make changes
+
+git add .
+git commit -m "Added login page"
+
+git checkout main
+git merge login-page</code></pre>
+
+                        <h3>Visual Representation</h3>
+
+                        <pre><code>main
+  |
+  |------ login-page
+  |            |
+  |            | Commit A
+  |            | Commit B
+  |
+  |<----- Merge -----|
+  |
+main</code></pre>
+
+                        <h3>Importance of Git Branches</h3>
+
+                        <ul>
+                            <li>Enables parallel development.</li>
+                            <li>Keeps the main branch stable.</li>
+                            <li>Simplifies collaboration.</li>
+                            <li>Helps manage features and bug fixes efficiently.</li>
+                        </ul>
+
+                        <p>
+                            Git branches are one of the most powerful features of Git
+                            and are widely used in professional software development.
+                        </p>
+
+                    </div>
+
+                </section>
+
+                <section class="git-notes">
+
+                    <!-- Git Push -->
+                    <div class="card">
+
+                        <h2>Git Push</h2>
+
+                        <h3>What is <code>git push</code>?</h3>
+
+                        <p>
+                            The <code>git push</code> command is used to upload local
+                            repository changes to a remote repository such as GitHub.
+                        </p>
+
+                        <p>
+                            After making commits in your local repository, you use
+                            <code>git push</code> to send those changes to GitHub so
+                            that other developers can access them.
+                        </p>
+
+                        <h3>Syntax</h3>
+
+                        <pre><code>git push &lt;remote-name&gt; &lt;branch-name&gt;</code></pre>
+
+                        <h3>Example</h3>
+
+                        <pre><code>git push origin main</code></pre>
+
+                        <ul>
+                            <li><strong>origin</strong> → Name of the remote repository.</li>
+                            <li><strong>main</strong> → Name of the branch.</li>
+                        </ul>
+
+                        <h3>First Time Push</h3>
+
+                        <p>
+                            When pushing a branch for the first time, use:
+                        </p>
+
+                        <pre><code>git push -u origin main</code></pre>
+
+                        <p>
+                            The <code>-u</code> option sets the upstream branch,
+                            allowing future pushes using only:
+                        </p>
+
+                        <pre><code>git push</code></pre>
+
+                        <h3>What happens after pushing?</h3>
+
+                        <ul>
+                            <li>Local commits are uploaded to GitHub.</li>
+                            <li>The remote repository is updated.</li>
+                            <li>Other developers can access the latest changes.</li>
+                        </ul>
+
+                        <h3>Use Cases</h3>
+
+                        <ul>
+                            <li>Upload project changes to GitHub.</li>
+                            <li>Share code with team members.</li>
+                            <li>Create backups of your project online.</li>
+                        </ul>
+
+                        <h3>Example Workflow</h3>
+
+                        <pre><code>git add .
+git commit -m "Added login page"
+git push origin main</code></pre>
+
+                        <h3>Importance of <code>git push</code></h3>
+
+                        <p>
+                            The <code>git push</code> command helps synchronize local work
+                            with the remote repository, enabling collaboration and secure
+                            code storage.
+                        </p>
+
+                    </div>
+
+                    <!-- Git Pull -->
+                    <div class="card">
+
+                        <h2>Git Pull</h2>
+
+                        <h3>What is <code>git pull</code>?</h3>
+
+                        <p>
+                            The <code>git pull</code> command is used to download the
+                            latest changes from a remote repository and merge them
+                            into your local repository.
+                        </p>
+
+                        <p>
+                            It keeps your local project up to date with changes made
+                            by other developers.
+                        </p>
+
+                        <h3>Syntax</h3>
+
+                        <pre><code>git pull &lt;remote-name&gt; &lt;branch-name&gt;</code></pre>
+
+                        <h3>Example</h3>
+
+                        <pre><code>git pull origin main</code></pre>
+
+                        <h3>What happens after pulling?</h3>
+
+                        <ul>
+                            <li>Latest commits are downloaded from GitHub.</li>
+                            <li>Changes are merged into the current branch.</li>
+                            <li>Your local repository becomes up to date.</li>
+                        </ul>
+
+                        <h3>Use Cases</h3>
+
+                        <ul>
+                            <li>Get updates from team members.</li>
+                            <li>Synchronize your project with GitHub.</li>
+                            <li>Download newly added files and changes.</li>
+                        </ul>
+
+                        <h3>Example Workflow</h3>
+
+                        <pre><code>git pull origin main
+git status</code></pre>
+
+                        <h3>Best Practice</h3>
+
+                        <p>
+                            Always run <code>git pull</code> before starting work to
+                            ensure you have the latest version of the project.
+                        </p>
+
+                        <h3>Importance of <code>git pull</code></h3>
+
+                        <p>
+                            The <code>git pull</code> command helps prevent conflicts
+                            and keeps all developers working with the latest version
+                            of the code.
+                        </p>
+
+                    </div>
+                </section>
+
+                <!-- Anchor for Navigation -->
+                <div id="workflow"></div>
+                <section class="git-workflow">
+
+                    <div class="card">
+
+                        <h2>Complete Git Workflow</h2>
+
+                        <h3>What is Git Workflow?</h3>
+
+                        <p>
+                            A Git workflow is a sequence of Git commands that developers use
+                            to manage, track, and share changes in a project.
+                        </p>
+
+                        <p>
+                            It helps developers collaborate efficiently and maintain
+                            different versions of the project.
+                        </p>
+
+                        <h3>Basic Git Workflow</h3>
+
+                        <p>
+                            The following steps represent a typical Git workflow used in
+                            software development:
+                        </p>
+
+                        <pre><code>git init
+git status
+git add .
+git commit -m "Your commit message"
+git remote add origin &lt;repository-url&gt;
+git push -u origin main
+git pull origin main</code></pre>
+
+                        <h3>Step-by-Step Explanation</h3>
+
+                        <h4>1. Initialize a Repository</h4>
+
+                        <pre><code>git init</code></pre>
+
+                        <p>Creates a new local Git repository in the current folder.</p>
+
+                        <hr>
+
+                        <h4>2. Check Repository Status</h4>
+
+                        <pre><code>git status</code></pre>
+
+                        <p>
+                            Displays the current state of the repository, including
+                            modified, staged, and untracked files.
+                        </p>
+
+                        <hr>
+
+                        <h4>3. Stage Changes</h4>
+
+                        <pre><code>git add .</code></pre>
+
+                        <p>Adds all modified and new files to the staging area.</p>
+
+                        <hr>
+
+                        <h4>4. Create a Commit</h4>
+
+                        <pre><code>git commit -m "Your commit message"</code></pre>
+
+                        <p>Saves the staged changes permanently in the local repository.</p>
+
+                        <p><strong>Example:</strong></p>
+
+                        <pre><code>git commit -m "Added login page"</code></pre>
+
+                        <hr>
+
+                        <h4>5. Connect to GitHub</h4>
+
+                        <pre><code>git remote add origin &lt;repository-url&gt;</code></pre>
+
+                        <p>
+                            Links the local repository to a remote GitHub repository.
+                        </p>
+
+                        <p><strong>Example:</strong></p>
+
+                        <pre><code>git remote add origin https://github.com/username/project.git</code></pre>
+
+                        <hr>
+
+                        <h4>6. Push Changes to GitHub</h4>
+
+                        <pre><code>git push -u origin main</code></pre>
+
+                        <p>
+                            Uploads local commits to the remote GitHub repository.
+                        </p>
+
+                        <p>
+                            The <code>-u</code> option sets the upstream branch
+                            for future pushes.
+                        </p>
+
+                        <hr>
+
+                        <h4>7. Pull Latest Changes</h4>
+
+                        <pre><code>git pull origin main</code></pre>
+
+                        <p>
+                            Downloads and merges the latest changes from GitHub
+                            into the local repository.
+                        </p>
+
+                        <h3>Visual Workflow</h3>
+
+                        <pre><code>Working Directory
+        ↓
+    git add
+        ↓
+   Staging Area
+        ↓
+    git commit
+        ↓
+ Local Repository
+        ↓
+     git push
+        ↓
+ GitHub Repository
+        ↑
+     git pull</code></pre>
+
+                        <h3>Importance of Git Workflow</h3>
+
+                        <ul>
+                            <li>Helps track project history.</li>
+                            <li>Enables collaboration among developers.</li>
+                            <li>Prevents data loss.</li>
+                            <li>Maintains different versions of the project.</li>
+                            <li>Simplifies project management.</li>
+                        </ul>
+
+                        <h3>Real-Life Example</h3>
+
+                        <ol>
+                            <li>Initialize Git using <code>git init</code>.</li>
+                            <li>Create or modify files.</li>
+                            <li>Check changes using <code>git status</code>.</li>
+                            <li>Stage files using <code>git add .</code>.</li>
+                            <li>Save changes using <code>git commit</code>.</li>
+                            <li>Upload the project to GitHub using <code>git push</code>.</li>
+                            <li>Download updates using <code>git pull</code>.</li>
+                        </ol>
+
+                        <p>
+                            Following this workflow ensures that your project remains
+                            organized and synchronized with GitHub.
+                        </p>
+
+                    </div>
+
+                </section>
+            </main>
+        </div>
+
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top-btn" id="scroll-top-btn" aria-label="Scroll to top">
+        <svg viewBox="0 0 24 24">
+            <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/>
+        </svg>
+    </button>
+
+    <!-- JS Logic -->
+    <script>
+        // ----------------------------------------------------
+        // 1. Theme Toggle
+        // ----------------------------------------------------
+        const themeToggle = document.getElementById('theme-toggle');
+        const getPreferredTheme = () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) return savedTheme;
+            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        };
+
+        const setTheme = (theme) => {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+        };
+
+        setTheme(getPreferredTheme());
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            setTheme(newTheme);
+        });
+
+        // ----------------------------------------------------
+        // 2. Mobile Menu Drawer
+        // ----------------------------------------------------
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const sidebar = document.getElementById('sidebar');
+        const sidebarOverlay = document.getElementById('sidebar-overlay');
+
+        mobileToggle.addEventListener('click', () => {
+            sidebar.classList.add('show');
+            sidebarOverlay.classList.add('show');
+        });
+
+        sidebarOverlay.addEventListener('click', () => {
+            sidebar.classList.remove('show');
+            sidebarOverlay.classList.remove('show');
+        });
+
+        // Close sidebar on link click (mobile)
+        document.querySelectorAll('.navbar a').forEach(link => {
+            link.addEventListener('click', () => {
+                sidebar.classList.remove('show');
+                sidebarOverlay.classList.remove('show');
+            });
+        });
+
+        // ----------------------------------------------------
+        // 3. Dynamic Parser: Populate H2-only Accordion Sub-lists
+        // ----------------------------------------------------
+        const sectionsMapping = {
+            'git': ['#gitdiv'],
+            'install': ['#git-install'],
+            'github': ['#githubdiv', '.github-account'],
+            'config': ['.git-config'],
+            'commands': ['.git-notes'],
+            'workflow': ['.git-workflow']
+        };
+
+        const headingsList = [];
+
+        Object.entries(sectionsMapping).forEach(([key, selectors]) => {
+            const sublist = document.getElementById('sublist-' + key);
+            if (!sublist) return;
+            
+            selectors.forEach(selector => {
+                const containers = document.querySelectorAll(selector);
+                containers.forEach(container => {
+                    // Query H2 tags only (avoid H3/H4 details like Syntax, Example)
+                    const headings = container.querySelectorAll('h2');
+                    headings.forEach((heading, idx) => {
+                        if (heading.id === 'gitlogo' || heading.id === 'githublogo' || heading.id === 'githed') return;
+                        
+                        // Assign a unique ID if not present
+                        if (!heading.id) {
+                            heading.id = key + '-heading-' + Math.random().toString(36).substr(2, 5);
+                        }
+                        
+                        headingsList.push(heading);
+                        
+                        // Create sidebar sublist item
+                        const li = document.createElement('li');
+                        const a = document.createElement('a');
+                        a.href = '#' + heading.id;
+                        a.className = 'subtopic-link';
+                        
+                        let text = heading.textContent.replace(/[\n\r]+/g, ' ').trim();
+                        text = text.replace(/\s+/g, ' ');
+                        a.innerText = text;
+                        a.title = text;
+                        
+                        li.appendChild(a);
+                        sublist.appendChild(li);
+                    });
+                });
+            });
+        });
+
+        // ----------------------------------------------------
+        // 4. ScrollSpy & Progress Indicator
+        // ----------------------------------------------------
+        const scrollTopBtn = document.getElementById('scroll-top-btn');
+        const breadcrumbActive = document.getElementById('current-breadcrumb');
+        const sectionAnchors = ['git', 'install', 'github', 'config', 'commands', 'workflow'];
+
+        const handleScroll = () => {
+            const scrollPos = window.scrollY || document.documentElement.scrollTop;
+            
+            // Progress Bar
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const progress = height > 0 ? (scrollPos / height) * 100 : 0;
+            document.getElementById('progress').style.width = progress + '%';
+
+            // Back to Top Button
+            if (scrollPos > 300) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+
+            // Active State Top Main Sections
+            let activeSection = sectionAnchors[0];
+            for (let i = 0; i < sectionAnchors.length; i++) {
+                const el = document.getElementById(sectionAnchors[i]);
+                if (el) {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top <= 180) {
+                        activeSection = sectionAnchors[i];
+                    }
+                }
+            }
+
+            // Control Accordion Expansion and Active Nav Links
+            sectionAnchors.forEach(section => {
+                const navWrapper = document.getElementById('nav-group-' + section);
+                const navLink = navWrapper.querySelector('.nav-item-link');
+                if (section === activeSection) {
+                    navWrapper.classList.add('expanded');
+                    navLink.classList.add('active');
+                    breadcrumbActive.innerText = navLink.innerText;
+                } else {
+                    navWrapper.classList.remove('expanded');
+                    navLink.classList.remove('active');
+                }
+            });
+
+            // Highlight Active H2 Subtopic Link
+            let activeHeading = null;
+            for (let i = 0; i < headingsList.length; i++) {
+                const rect = headingsList[i].getBoundingClientRect();
+                if (rect.top <= 180) {
+                    activeHeading = headingsList[i];
+                }
+            }
+
+            document.querySelectorAll('.subtopic-link').forEach(link => {
+                const href = link.getAttribute('href');
+                if (activeHeading && href === '#' + activeHeading.id) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('load', handleScroll);
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // ----------------------------------------------------
+        // 5. Search Filtering
+        // ----------------------------------------------------
+        const searchInput = document.getElementById('search-input');
+        const searchableSections = document.querySelectorAll('section, .git-config');
+
+        searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase().trim();
+            let hasResults = false;
+
+            searchableSections.forEach(section => {
+                const text = section.innerText.toLowerCase();
+                if (text.includes(query)) {
+                    section.classList.remove('search-hidden');
+                    hasResults = true;
+                } else {
+                    section.classList.add('search-hidden');
+                }
+            });
+
+            let noResultsMsg = document.getElementById('no-results-message');
+            if (!hasResults && query !== '') {
+                if (!noResultsMsg) {
+                    noResultsMsg = document.createElement('div');
+                    noResultsMsg.id = 'no-results-message';
+                    noResultsMsg.className = 'search-no-results';
+                    noResultsMsg.innerHTML = '<h3>No results found</h3><p>Try searching for other keywords like "init", "commit", "clone", etc.</p>';
+                    document.querySelector('.content-container').appendChild(noResultsMsg);
+                }
+            } else {
+                if (noResultsMsg) {
+                    noResultsMsg.remove();
+                }
+            }
+
+            // Recalculate Scrollspy offsets
+            handleScroll();
+        });
+
+        // ----------------------------------------------------
+        // 6. Copy Code Clips & Terminal Styling
+        // ----------------------------------------------------
+        document.querySelectorAll('pre').forEach((pre) => {
+            const code = pre.querySelector('code');
+            const textToCopy = code ? code.innerText : pre.innerText;
+
+            const copyBtn = document.createElement('button');
+            copyBtn.className = 'copy-btn';
+            copyBtn.innerText = 'Copy';
+
+            copyBtn.addEventListener('click', () => {
+                navigator.clipboard.writeText(textToCopy.trim()).then(() => {
+                    copyBtn.innerText = 'Copied!';
+                    copyBtn.classList.add('copied');
+                    setTimeout(() => {
+                        copyBtn.innerText = 'Copy';
+                        copyBtn.classList.remove('copied');
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Could not copy text: ', err);
+                });
+            });
+
+            pre.appendChild(copyBtn);
+        });
+
+        // ----------------------------------------------------
+        // 7. Screenshot Image Lightbox Modal
+        // ----------------------------------------------------
+        const lightbox = document.createElement('div');
+        lightbox.id = 'lightbox-modal';
+        lightbox.className = 'lightbox-modal';
+        lightbox.innerHTML = `
+            <button class="lightbox-close" id="lightbox-close" aria-label="Close Lightbox">&times;</button>
+            <img class="lightbox-content" id="lightbox-img" src="" alt="Zoomed Image">
+        `;
+        document.body.appendChild(lightbox);
+
+        const lightboxImg = document.getElementById('lightbox-img');
+        
+        document.querySelectorAll('.content-container img').forEach(img => {
+            // Exclude heading icon image elements
+            if (img.closest('h2')) return;
+            
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightbox.classList.add('show');
+            });
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.classList.remove('show');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
